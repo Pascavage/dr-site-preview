@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) — GA4 + Google Ads -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  // Consent Mode default denied; wait briefly for CMP / stored apply below
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    wait_for_update: 500
+  });
+
+  // Apply stored preference BEFORE config / conversion (same KEY as footer banner)
+  (function () {
+    var KEY = 'dr_cookie_consent';
+    var c = null;
+    try { c = JSON.parse(localStorage.getItem(KEY)); } catch (e) { c = null; }
+    if (c && typeof c.analytics === 'boolean') {
+      gtag('consent', 'update', {
+        analytics_storage: c.analytics ? 'granted' : 'denied',
+        ad_storage: c.marketing ? 'granted' : 'denied',
+        ad_user_data: c.marketing ? 'granted' : 'denied',
+        ad_personalization: c.marketing ? 'granted' : 'denied'
+      });
+    }
+  })();
+
+  gtag('config', 'G-5SE3GQ5GK4');
+  gtag('config', 'AW-18371579900');
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="The complete set of Diligence Ready capabilities — cap table & equity, scenario modeling, diligence, data rooms, financials, board management, investor relations, files, AI assistant, security, and billing. Everything an investor asks for, already in order." />
+<title>Features — Diligence Ready</title>
+<link rel="canonical" href="https://diligenceready.com/features" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#0F1E3D" />
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://diligenceready.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Features", "item": "https://diligenceready.com/features" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does Diligence Ready do?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Diligence Ready runs ownership, financials, the board, and the diligence room in one place. It covers cap table and equity, funding rounds, scenario modeling, diligence checklists and evidence, watermarked data rooms, financial statements and reporting periods, board management, stakeholder and investor relations, document storage, and an AI assistant." }
+    },
+    {
+      "@type": "Question",
+      "name": "Where are my documents stored?",
+      "acceptedAnswer": { "@type": "Answer", "text": "In your own Google Drive or OneDrive. Documents live in storage you already own and control, and the file library links them to stakeholders, transactions, diligence items, statements and board materials." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are data room documents watermarked?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every document is watermarked with the viewer's identity, applied server-side. Each recipient gets a personal link, and an access log records who opened which document and when." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can my accountant or fractional CFO get access?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Trusted Advisors such as accountants and fractional CFOs get access grants: requested by them, approved by you, time-limited, and revocable at any time. Roles include admin, editor, investor view, and counsel." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do board members need an account to see the board package?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Board invitees use a personal secure link plus a one-time code — no account and no password. Per-document view tracking shows who read the package before the meeting." }
+    }
+  ]
+}
+</script>
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Diligence Ready" />
+<meta property="og:title" content="Features — Diligence Ready" />
+<meta property="og:description" content="Everything an investor asks for, already in order — the complete capability set, all live today." />
+<meta property="og:url" content="https://diligenceready.com/features" />
+<meta property="og:image" content="https://diligenceready.com/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Features — Diligence Ready" />
+<meta name="twitter:description" content="The complete set of capabilities — equity, financials, documents, board, and controlled sharing." />
+<meta name="twitter:image" content="https://diligenceready.com/og-image.png" />
+
+<!-- Icons -->
+<link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@300;400;450;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a aria-label='Diligence Ready' class='brand' href='./'>
+      <span class="mono-circle">dr</span>
+      <span class="wordmark">Diligence Ready<span class="dot">.</span></span>
+    </a>
+    <nav class="nav-links">
+      <div class="nav-dd" data-dd>
+        <button type="button" class="nav-dd-btn" aria-expanded="false">Product <span class="caret">▾</span></button>
+        <div class="nav-dd-menu">
+          <a href='./cap-table'><span class="t">Cap Table</span><span class="d">Every security class, reconciled</span></a>
+          <a href='./scenario-modeling'><span class="t">Scenario Modeling</span><span class="d">Rounds, dilution &amp; waterfalls</span></a>
+          <a href='./diligence-room'><span class="t">Diligence Room</span><span class="d">Be ready before they ask</span></a>
+          <a href='./ai-assistant'><span class="t">AI Assistant</span><span class="d">It does the work, you approve</span></a>
+          <div class="dd-sep"></div>
+          <a aria-current='page' class='dd-all on' href='./features'><span class="t">See all features</span><span class="arr">→</span></a>
+        </div>
+      </div>
+      <a href='./for-advisors'>Trusted Advisors</a>
+      <a href='./learn/'>Learn</a>
+      <a href='./pricing'>Pricing</a>
+    </nav>
+    <div class="nav-cta">
+      <a class='link sales-link' href='./#contact'>Contact us</a>
+      <a class="link" href="https://app.diligenceready.com/login">Customer Login</a>
+      <a class="btn btn-accent" href="https://app.diligenceready.com/signup?src=features">Sign up <span class="arr">→</span></a>
+    </div>
+    <a class="btn btn-accent nav-cta-m" href="https://app.diligenceready.com/signup?src=features">Start free</a>
+    <button type="button" class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mm-group">Product</div>
+  <a class='sub' href='./cap-table'>Cap Table</a>
+  <a class='sub' href='./scenario-modeling'>Scenario Modeling</a>
+  <a class='sub' href='./diligence-room'>Diligence Room</a>
+  <a class='sub' href='./ai-assistant'>AI Assistant</a>
+  <a class='sub' href='./features'>All Features</a>
+  <div class="mm-group">Explore</div>
+  <a href='./for-advisors'>Trusted Advisors</a>
+  <a href='./learn/'>Learn</a>
+  <a href='./pricing'>Pricing</a>
+  <a href='./why-diligence-ready'>Why Diligence Ready</a>
+  <div class="mm-cta">
+    <a class='btn btn-ghost btn-lg' href='./#contact'>Contact us</a>
+    <a class="btn btn-ghost btn-lg" href="https://app.diligenceready.com/login">Customer Login</a>
+    <a class="btn btn-accent btn-lg" href="https://app.diligenceready.com/signup?src=features">Sign up</a>
+  </div>
+</div>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="feat-hero" data-screen-label="Features hero">
+  <div class="wrap">
+    <div class="breadcrumb reveal">
+      <a href='./'>Home</a><span class="sep">/</span><span class="cur">Features</span>
+    </div>
+    <div class="feat-hero-grid" style="grid-template-columns:1.15fr 0.85fr;align-items:start;">
+      <div>
+        <span class="eyebrow reveal">The whole platform</span>
+        <h1 class="reveal" style="transition-delay:.05s;margin-top:18px;">Everything an investor asks for, <em>already in order.</em></h1>
+        <p class="lead reveal" style="transition-delay:.1s">Diligence requests arrive at the worst possible moment. This is the complete set of capabilities available today — equity, financials, documents, board, and controlled sharing — so the answer is ready the day it's asked.</p>
+        <div class="hero-cta reveal" style="transition-delay:.15s">
+          <a class="btn btn-accent btn-lg" href="https://app.diligenceready.com/signup?src=features">Start free <span class="arr">→</span></a>
+          <a class='btn btn-ghost btn-lg' href='./#contact'>Contact us</a>
+        </div>
+        <div class="hero-note reveal" style="transition-delay:.2s;justify-content:flex-start;">
+          <span><span class="dot"></span> Updated July 2026</span>
+          <span><span class="dot"></span> Everything listed is live</span>
+          <span><span class="dot"></span> The full cap table on every tier</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CATEGORY QUICK-NAV ============ -->
+<nav class="fx-nav" id="fxNav" aria-label="Feature categories">
+  <div class="wrap fx-nav-inner">
+    <a href="#equity">Cap table &amp; equity</a>
+    <a href="#diligence">Diligence</a>
+    <a href="#datarooms">Data rooms</a>
+    <a href="#financials">Financials</a>
+    <a href="#board">Board management</a>
+    <a href="#stakeholders">Investor relations</a>
+    <a href="#files">Files &amp; storage</a>
+    <a href="#assistant">AI assistant</a>
+    <a href="#access">Team &amp; Trusted Advisors</a>
+    <a href="#trust">Security</a>
+    <a href="#account">Account &amp; billing</a>
+    <a href="#integrations">Integrations</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <!-- ===== CAP TABLE & EQUITY ===== -->
+  <section class="fx-cat" id="equity" data-screen-label="Cap table & equity">
+    <div class="cat-head reveal">
+      <h2>Cap table &amp; equity</h2>
+      <span class="cat-tag core">Core</span>
+      <span class="cat-count">Six capabilities</span>
+    </div>
+    <p class="cat-intro reveal">Your cap table is calculated from the transactions underneath it, never typed over. When someone asks why a holder owns what they own, the answer is a documented chain of events.</p>
+    <div class="fx-grid">
+      <div class="fx-card reveal">
+        <h3>Cap table</h3>
+        <ul>
+          <li>Live table derived from underlying transactions</li>
+          <li>Configurable templates so each audience sees the right view</li>
+          <li><b>Version snapshots</b> — take one before a raise or board meeting, and view the table as of that moment</li>
+          <li>One click to an investor-ready PDF</li>
+        </ul>
+      </div>
+      <div class="fx-card reveal">
+        <h3>Transactions</h3>
+        <ul>
+          <li>Issuance, transfer, cancellation, conversion, exercise, repurchase</li>
+          <li><b>Draft → final → voided</b>, so work in progress never touches live numbers</li>
+          <li>Commit drafts one at a time, in a batch, or all on a round</li>
+          <li>CSV import with a preview step before anything commits</li>
+        </ul>
+      </div>
+      <div class="fx-card reveal">
+        <h3>Funding rounds</h3>
+        <ul>
+          <li>Build a round with per-investor allocations, review it whole, then commit</li>
+          <li>New issuance and pool allocation</li>
+          <li>Price by valuation or by price per share</li>
+          <li>Close and reopen as terms move</li>
+        </ul>
+      </div>
+      <div class="fx-card reveal">
+        <h3>Classes &amp; convertibles</h3>
+        <ul>
+          <li>Voting rights, anti-dilution (broad, narrow, full ratchet), participation (non-participating, full, capped)</li>
+          <li>A sensible default set can be seeded</li>
+          <li>SAFEs, convertible notes and KISS instruments</li>
+        </ul>
+      </div>
+      <div class="fx-card reveal">
+        <h3>Grants &amp; vesting</h3>
+        <ul>
+          <li>Grants issued individually or in batch; exercise and cancellation</li>
+          <li>Time, milestone and hybrid schedules; monthly, quarterly or annual</li>
+          <li>Single- and double-trigger acceleration</li>
+          <li>Per-row overrides that clear back to "inherits default"</li>
+        </ul>
+      </div>
+      <div class="fx-card reveal">
+        <h3>Departures &amp; modeling</h3>
+        <ul>
+          <li><b>Termination &amp; forfeiture</b> with a preview before you commit, reversible if entered in error</li>
+          <li>What-if modeling: pre-money, raise, new class, pool refresh, convertible inclusion</li>
+          <li>Exit waterfall at any valuation</li>
+          <li>Save scenarios and compare two side by side</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DILIGENCE ===== -->
+  <section class="fx-cat" id="diligence" data-screen-label="Diligence">
+    <div class="cat-head reveal">
+      <h2>Diligence</h2>
+      <span class="cat-tag core">Core</span>
+    </div>
+    <div class="fx-grid">
+      <div class="fx-card reveal">
+        <h3>Checklists</h3>
+        <ul>
+          <li>Built from templates you control</li>
+          <li>Status per item: pending, complete, not applicable, <b>not available</b></li>
+          <li>Notes on any item</li>
+        </ul>
+      </div>
+      <div class="fx-card reveal">
+        <h3>Evidence</h3>
+        <ul>
+          <li>Attach documents from your library, or upload straight against an item</li>
+          <li><b>AI review</b> checks an attached document against what the item is asking for</li>
+        </ul>
+      </div>
+      <div class="fx-card reveal">
+        <h3>Controlled sharing</h3>
+        <ul>
+          <li>Diligence contacts and rooms for external parties</li>
+          <li>Room structure derives from your checklist categories</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DATA ROOMS ===== -->
+  <section class="fx-cat" id="datarooms" data-screen-label="Data rooms">
+    <div class="cat-head reveal">
+      <h2>Data rooms</h2>
+      <span class="cat-tag admin">Admin only</span>
+    </div>
+    <p class="cat-intro reveal">Built on the assumption that a shared link will be forwarded, a screenshot will be taken, and someone will need to be cut off mid-session.</p>
+    <div class="fx-grid">
+      <div class="fx-card reveal">
+        <h3>Access control</h3>
+        <ul>
+          <li>Each recipient gets a personal link</li>
+          <li>Access requires a <b>one-time 6-digit code</b> — a forwarded link is useless to anyone else</li>
+          <li>Expiry dates; revocation takes effect <b>immediately, mid-session</b></li>
+        </ul>
+      </div>
+      <div class="fx-card reveal">
+        <h3>Document protection</h3>
+        <ul>
+          <li>Every document <b>watermarked with the viewer's identity</b>, applied server-side</li>
+          <li>Streamed through the application — guests never receive a link into your drive</li>
+          <li>Downloads off by default; controllable room-wide and per guest</li>
+        </ul>
+      </div>
+      <div class="fx-card reveal">
+        <h3>Visibility &amp; lifecycle</h3>
+        <ul>
+          <li>Access log: who opened which document, and when</li>
+          <li>Delivery tracking on invitations</li>
+          <li>Revoke, close, archive, delete and restore</li>
+        </ul>
+      </div>
+      <div class="fx-card reveal">
+        <h3>Guest experience</h3>
+        <ul>
+          <li>Folder browsing, search and sort</li>
+          <li>Pinned documents</li>
+          <li>Full-screen in-browser PDF viewer — nothing to download or install</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINANCIALS ===== -->
+  <section class="fx-cat" id="financials" data-screen-label="Financials">
+    <div class="cat-head reveal">
+      <h2>Financials</h2>
+      <span class="cat-tag new">New</span>
+    </div>
+    <div class="fx-grid">
+      <div class="fx-card reveal">
+        <h3>Configuration</h3>
+        <ul>
+          <li>Monthly, quarterly or annual reporting</li>
+          <li>Mark each statement type required or optional</li>
+          <li>Share-price decimal precision</li>
+        </ul>
+      </div>
+      <div class="fx-card reveal">
+        <h3>Statement types</h3>
+        <ul>
+          <li>P&amp;L, balance sheet, cash flow</li>
+          <li><b>Cap table, AR aging, bank statement</b></li>
+          <li>Supporting schedules</li>
+        </ul>
+      </div>
+      <div class="fx-card reveal">
+        <h3>Periods</h3>
+        <ul>
+          <li>Reporting periods <b>open themselves</b> on schedule</li>
+          <li>Backfill tool for historical gaps</li>
+          <li>Per-period slots showing what's filed and what's outstanding</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BOARD MANAGEMENT ===== -->
+  <section class="fx-cat" id="board" data-screen-label="Board management">
+    <div class="cat-head reveal">
+      <h2>Board management</h2>
+      <span class="cat-tag new">New</span>
+    </div>
+    <p class="cat-intro reveal">Run the document side of a board meeting inside Diligence Ready instead of over email — with secure, watermarked materials and a record of who actually read the package.</p>
+    <div class="fx-grid">
+      <div class="fx-card reveal">
+        <h3>Boards &amp; members</h3>
+        <ul>
+          <li>Multiple boards per company</li>
+          <li>Seven roles from chair to observer</li>
+          <li>Start dates, term ends, and a flag when a term is ending soon</li>
+        </ul>
+      </div>
+      <div class="fx-card reveal">
+        <h3>Meetings</h3>
+        <ul>
+          <li>Schedule against a board, with location and agenda detail</li>
+          <li>Multiple documents in the package and the minutes, reorderable</li>
+          <li><b>Team-only notes</b> — visible to your staff, never to invitees</li>
+          <li>RSVP tracking</li>
+        </ul>
+      </div>
+      <div class="fx-card reveal">
+        <h3>Invitee portal</h3>
+        <ul>
+          <li>Personal secure link plus a one-time code — no account, no password</li>
+          <li>Materials watermarked with the member's identity</li>
+          <li>Session persists so they aren't re-prompted while reading</li>
+          <li>Downloads off unless you enable them</li>
+        </ul>
+      </div>
+      <div class="fx-card reveal">
+        <h3>Engagement</h3>
+        <ul>
+          <li>Per-document view tracking — know who read the package before the meeting</li>
+          <li>Daily digest email to admins</li>
+        </ul>
+      </div>
+    </div>
+    <div class="fx-note reveal">
+      <span class="lbl">Note</span>
+      <p>Board invitees can currently open <b>PDF</b> materials in the portal. Word and Excel files can be attached today; in-portal viewing for those formats is coming shortly.</p>
+    </div>
+  </section>
+
+  <!-- ===== STAKEHOLDERS ===== -->
+  <section class="fx-cat" id="stakeholders" data-screen-label="Investor relations">
+    <div class="cat-head reveal">
+      <h2>Stakeholders &amp; investor relations</h2>
+    </div>
+    <div class="fx-grid">
+      <div class="fx-card reveal">
+        <h3>Records</h3>
+        <ul>
+          <li>Individuals, entities, trusts and funds</li>
+          <li>Archive and restore rather than destructive deletion</li>
+        </ul>
+      </div>
+      <div class="fx-card reveal">
+        <h3>Investor portal</h3>
+        <ul>
+          <li>Invite a stakeholder to see their own holdings</li>
+          <li>Read-only — nothing they can alter</li>
+        </ul>
+      </div>
+      <div class="fx-card reveal">
+        <h3>Communication</h3>
+        <ul>
+          <li>Direct chat between company and stakeholders, with unread tracking</li>
+          <li>Investors request agreement documents; requests land in an inbox you fulfil or dismiss</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FILES ===== -->
+  <section class="fx-cat" id="files" data-screen-label="Files & storage">
+    <div class="cat-head reveal">
+      <h2>Files &amp; storage</h2>
+    </div>
+    <div class="fx-grid">
+      <div class="fx-card reveal">
+        <h3>Your storage, not ours</h3>
+        <ul>
+          <li>Documents live in <b>your own Google Drive or OneDrive</b></li>
+          <li>Connected once, at Settings → Integrations</li>
+          <li>One provider at a time</li>
+        </ul>
+      </div>
+      <div class="fx-card reveal">
+        <h3>Library</h3>
+        <ul>
+          <li>Files link to stakeholders, transactions, diligence items, statements and board materials</li>
+          <li>Resumable uploads for large documents</li>
+          <li>Duplicate detection</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AI ASSISTANT ===== -->
+  <section class="fx-cat" id="assistant" data-screen-label="AI assistant">
+    <div class="cat-head reveal">
+      <h2>AI assistant</h2>
+    </div>
+    <div class="fx-grid">
+      <div class="fx-card reveal">
+        <h3>Ask</h3>
+        <ul>
+          <li>Answers questions across stakeholders, classes, rounds and transactions</li>
+          <li>Scoped to your company alone</li>
+        </ul>
+      </div>
+      <div class="fx-card reveal">
+        <h3>Draft</h3>
+        <ul>
+          <li>Prepares stakeholders, security classes and funding rounds</li>
+          <li>Creates <b>draft</b> transactions that don't touch the cap table until a person commits them</li>
+          <li>Extracts terms from a signed agreement</li>
+        </ul>
+      </div>
+      <div class="fx-card reveal">
+        <h3>Limits</h3>
+        <ul>
+          <li>Monthly allowance by plan</li>
+          <li>Unavailable inside read-only advisory sessions</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TEAM & TRUSTED ADVISORS ===== -->
+  <section class="fx-cat" id="access" data-screen-label="Team & Trusted Advisors">
+    <div class="cat-head reveal">
+      <h2>Team, access &amp; Trusted Advisors</h2>
+    </div>
+    <div class="fx-grid">
+      <div class="fx-card reveal">
+        <h3>Roles</h3>
+        <ul>
+          <li>Admin, editor, investor view, counsel</li>
+          <li>Fixed by design — a permissions model you can't misconfigure won't leak</li>
+          <li>A reference chart of exactly what each role can do</li>
+        </ul>
+      </div>
+      <div class="fx-card reveal">
+        <h3>Membership</h3>
+        <ul>
+          <li>Email invitations, resend, revoke</li>
+          <li><b>Pause</b> a member without losing their history</li>
+          <li>One login across multiple companies, with a switcher</li>
+        </ul>
+      </div>
+      <div class="fx-card reveal">
+        <h3>Trusted Advisors</h3>
+        <ul>
+          <li>Access grants for accountants and fractional CFOs: requested, approved by you, time-limited, revocable</li>
+          <li>Trusted Advisor firms get their own dashboard and client work queue</li>
+          <li>Adviser activity appears in your audit log like anyone else's</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECURITY ===== -->
+  <section class="fx-cat" id="trust" data-screen-label="Security & trust">
+    <div class="cat-head reveal">
+      <h2>Security &amp; trust</h2>
+    </div>
+    <p class="cat-intro reveal">Specific controls rather than reassuring language. We'd rather tell you exactly what is in place and let you judge it.</p>
+    <dl class="fx-trust reveal">
+      <div class="ti"><dt>Company isolation</dt><dd>Row-level isolation in the database between companies</dd></div>
+      <div class="ti"><dt>Audit log</dt><dd>Who did what and when, visible to you in settings</dd></div>
+      <div class="ti"><dt>External access</dt><dd>One-time codes valid 15 minutes, 5 attempts, then a temporary lock</dd></div>
+      <div class="ti"><dt>Watermarking</dt><dd>Server-side identity watermark on every externally shared document</dd></div>
+      <div class="ti"><dt>Revocation</dt><dd>Effective on the next document opened, not at next sign-in</dd></div>
+      <div class="ti"><dt>Multi-factor</dt><dd>Authenticator app, with backup codes</dd></div>
+      <div class="ti"><dt>Credentials</dt><dd>Encrypted at rest, with key rotation support</dd></div>
+      <div class="ti"><dt>Your data</dt><dd>Export your records; delete your account, with safeguards against removing a company's last administrator</dd></div>
+    </dl>
+  </section>
+
+  <!-- ===== ACCOUNT & BILLING ===== -->
+  <section class="fx-cat" id="account" data-screen-label="Account & billing">
+    <div class="cat-head reveal">
+      <h2>Account &amp; billing</h2>
+      <span class="cat-tag new">New</span>
+    </div>
+    <div class="fx-grid">
+      <div class="fx-card reveal">
+        <h3>Subscription</h3>
+        <ul>
+          <li><b>Self-serve upgrade</b> through Stripe Checkout</li>
+          <li>Billing portal for payment methods, invoices and plan changes</li>
+          <li>Payment history in-app</li>
+        </ul>
+      </div>
+      <div class="fx-card reveal">
+        <h3>Seats</h3>
+        <ul>
+          <li>Counted across team members and invited investors</li>
+          <li>Adding a new person is blocked at the limit — <b>existing people are never cut off</b></li>
+          <li>Archiving a stakeholder frees their seat</li>
+        </ul>
+      </div>
+      <div class="fx-card reveal">
+        <h3>Platform</h3>
+        <ul>
+                    <li>Your logo and colors</li>
+          <li>Sign in with email, Google or <b>Microsoft</b></li>
+          <li>In-app bug reporting with status you can follow</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INTEGRATIONS ===== -->
+  <section class="fx-cat" id="integrations" data-screen-label="Integrations">
+    <div class="cat-head reveal">
+      <h2>Integrations</h2>
+    </div>
+    <div class="legal-table-wrap reveal" style="max-width:760px;">
+      <table class="legal-table">
+        <thead>
+          <tr><th scope="col">Service</th><th scope="col">What it does</th><th scope="col">Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Google Drive</td><td>Document storage in your own Drive</td><td><span class="badge-live"><span class="d"></span> Live</span></td></tr>
+          <tr><td>Microsoft OneDrive</td><td>Document storage in your own OneDrive</td><td><span class="badge-live"><span class="d"></span> Live</span></td></tr>
+          <tr><td>Google sign-in</td><td>Authentication</td><td><span class="badge-live"><span class="d"></span> Live</span></td></tr>
+          <tr><td>Microsoft sign-in</td><td>Authentication</td><td><span class="badge-live"><span class="d"></span> Live</span></td></tr>
+          <tr><td>Claude</td><td>The AI assistant, and document review</td><td><span class="badge-live"><span class="d"></span> Live</span></td></tr>
+          <tr><td>Stripe</td><td>Self-serve upgrades, billing portal, invoices</td><td><span class="badge-live"><span class="d"></span> Live</span></td></tr>
+          <tr><td>Resend</td><td>Transactional email with delivery tracking</td><td><span class="badge-live"><span class="d"></span> Live</span></td></tr>
+          <tr><td>Cloudflare Turnstile</td><td>Sign-up abuse protection</td><td><span class="badge-live"><span class="d"></span> Live</span></td></tr>
+          <tr><td>Document conversion</td><td>Preparing office documents for secure viewing</td><td><span class="badge-live"><span class="d"></span> Live</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</div>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="sec-pad" style="padding-top:96px;" data-screen-label="Final CTA">
+  <div class="wrap">
+    <div class="final-card reveal">
+      <span class="eyebrow on-dark" style="justify-content:center;display:flex;">Everything is live today</span>
+      <h2 class="display" style="margin-top:22px;">Set it up once. <em>Stay ready.</em></h2>
+      <p class="lead">Start free. Adding the people who need to see the numbers is never a line item.</p>
+      <div class="hero-cta">
+        <a class="btn btn-accent btn-lg" href="https://app.diligenceready.com/signup?src=features">Start free <span class="arr">→</span></a>
+        <a class='btn btn-ghost btn-lg' href='./pricing'>See pricing</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<div class="mcta" id="mcta"><a class="p" href="https://app.diligenceready.com/signup?src=features">Start free <span class="arr">→</span></a><a class='s' href='./#contact'>Contact</a></div>
+
+<!-- ============ FOOTER ============ -->
+<footer data-screen-label="Footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a aria-label='Diligence Ready' class='brand' href='./'>
+          <span class="mono-circle">dr</span>
+          <span class="wordmark">Diligence Ready<span class="dot">.</span></span>
+        </a>
+        <p>The equity platform that keeps growing companies continuously ready for fundraising, M&amp;A, and capital events.</p>
+        <div class="promise">Readiness is the standard.</div>
+      </div>
+      <div class="foot-col">
+        <h6>Product</h6>
+        <a href='./cap-table'>Cap table</a>
+        <a href='./scenario-modeling'>What-if modeling</a>
+        <a href='./diligence-room'>Diligence room</a>
+        <a href='./ai-assistant'>AI assistant</a>
+        <a href='./for-advisors'>For Trusted Advisors</a>
+        <a href='./features'>All features</a>
+      </div>
+      <div class="foot-col">
+        <h6>Company</h6>
+        <a href='./why-diligence-ready'>Why Diligence Ready</a>
+        <a href='./#contact'>Request a demo</a>
+        <a href='./pricing'>Pricing</a>
+        <a href='./#contact'>Become a Trusted Advisor</a>
+        <a href='./#contact'>Contact</a>
+      </div>
+      <div class="foot-col">
+        <h6>Legal</h6>
+        <a href='./privacy'>Privacy</a>
+        <a href='./terms'>Terms</a>
+        <a href='./security'>Security &amp; trust</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Diligence Ready. All rights reserved.</span>
+      <div class="legal"><span>diligenceready.com</span><span>Built for the way modern founders raise.</span></div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ NAV / REVEAL / QUICK-NAV JS ============ -->
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+  onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
+  if (!document.hidden) {
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  }
+
+  // Product dropdown
+  document.querySelectorAll('[data-dd]').forEach(dd => {
+    const btn = dd.querySelector('.nav-dd-btn');
+    btn.addEventListener('click', (e) => { e.stopPropagation(); const open = dd.classList.toggle('open'); btn.setAttribute('aria-expanded', open); });
+  });
+  document.addEventListener('click', () => document.querySelectorAll('[data-dd].open').forEach(dd => { dd.classList.remove('open'); dd.querySelector('.nav-dd-btn').setAttribute('aria-expanded', 'false'); }));
+
+  // Mobile menu toggle
+  const burger = document.getElementById('navBurger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (burger && mobileMenu) {
+    const closeMenu = () => { burger.classList.remove('open'); mobileMenu.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; document.body.classList.remove('menu-open'); };
+    burger.addEventListener('click', () => {
+      const open = burger.classList.toggle('open');
+      mobileMenu.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.style.overflow = open ? 'hidden' : ''; document.body.classList.toggle('menu-open', open);
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  }
+
+  // Category quick-nav: highlight the section in view
+  const fxLinks = [].slice.call(document.querySelectorAll('.fx-nav a'));
+  const fxMap = {};
+  fxLinks.forEach(a => { const id = a.getAttribute('href').slice(1); const s = document.getElementById(id); if (s) fxMap[id] = a; });
+  const spy = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        fxLinks.forEach(x => x.classList.remove('active'));
+        const a = fxMap[e.target.id];
+        if (a) { a.classList.add('active'); a.scrollIntoView({ block: 'nearest', inline: 'center' }); }
+      }
+    });
+  }, { rootMargin: '-140px 0px -62% 0px', threshold: 0 });
+  Object.keys(fxMap).forEach(id => spy.observe(document.getElementById(id)));
+</script>
+
+<script>
+  (function(){
+    var bar = document.getElementById('mcta'); if(!bar) return;
+    var stop = document.getElementById('contact') || document.querySelector('footer');
+    var tick = function(){
+      var past = window.scrollY > 520;
+      var near = stop && stop.getBoundingClientRect().top < window.innerHeight * 0.75;
+      bar.classList.toggle('up', past && !near);
+    };
+    tick(); window.addEventListener('scroll', tick, { passive: true });
+  })();
+</script>
+
+<!-- ============ COOKIE NOTICE ============ -->
+<div id="dr-cookie-root" hidden role="dialog" aria-modal="true" aria-labelledby="dr-cookie-title">
+  <div id="dr-cookie-card">
+    <div id="dr-cookie-main">
+      <h2 id="dr-cookie-title">diligenceready.com</h2>
+      <p>We use cookies to run the site and improve it.</p>
+      <button type="button" id="dr-cookie-accept">Accept all</button>
+      <button type="button" id="dr-cookie-essential">Essential only</button>
+      <button type="button" id="dr-cookie-prefs-open">Preferences</button>
+      <a class='dr-cookie-legal' href='./privacy'>Privacy Policy</a>
+    </div>
+    <div id="dr-cookie-prefs-panel" hidden>
+      <h2>Cookie Preferences</h2>
+      <p>Choose which cookies we can use. Essential cookies are always on.</p>
+      <label><input type="checkbox" checked disabled /> Essential (required)</label>
+      <label><input type="checkbox" id="dr-cookie-analytics" /> Analytics</label>
+      <label><input type="checkbox" id="dr-cookie-marketing" /> Marketing</label>
+      <button type="button" id="dr-cookie-save">Save Preferences</button>
+      <button type="button" id="dr-cookie-back">Back</button>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var KEY = 'dr_cookie_consent';
+  var root = document.getElementById('dr-cookie-root');
+  if (!root) return;
+  var main = document.getElementById('dr-cookie-main');
+  var panel = document.getElementById('dr-cookie-prefs-panel');
+  var cbA = document.getElementById('dr-cookie-analytics');
+  var cbM = document.getElementById('dr-cookie-marketing');
+
+  function apply(c) {
+    if (typeof gtag !== 'function') return;
+    gtag('consent', 'update', {
+      analytics_storage: c.analytics ? 'granted' : 'denied',
+      ad_storage: c.marketing ? 'granted' : 'denied',
+      ad_user_data: c.marketing ? 'granted' : 'denied',
+      ad_personalization: c.marketing ? 'granted' : 'denied'
+    });
+  }
+  function save(c) {
+    c.ts = new Date().toISOString();
+    try { localStorage.setItem(KEY, JSON.stringify(c)); } catch (e) {}
+    apply(c);
+    root.hidden = true;
+  }
+  function read() {
+    try { return JSON.parse(localStorage.getItem(KEY)); } catch (e) { return null; }
+  }
+
+  var stored = read();
+  if (stored && typeof stored.analytics === 'boolean') {
+    apply(stored);
+  } else {
+    root.hidden = false;
+  }
+
+  document.getElementById('dr-cookie-accept').addEventListener('click', function () {
+    save({ analytics: true, marketing: true });
+  });
+  document.getElementById('dr-cookie-essential').addEventListener('click', function () {
+    save({ analytics: false, marketing: false });
+  });
+  document.getElementById('dr-cookie-prefs-open').addEventListener('click', function () {
+    main.hidden = true; panel.hidden = false;
+  });
+  document.getElementById('dr-cookie-back').addEventListener('click', function () {
+    panel.hidden = true; main.hidden = false;
+  });
+  document.getElementById('dr-cookie-save').addEventListener('click', function () {
+    save({ analytics: !!cbA.checked, marketing: !!cbM.checked });
+  });
+})();
+</script>
+<script>
+// signup_click: GA4 event on every signup / Start free link (21 Oct 2026)
+document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href*="app.diligenceready.com/signup"]'):null;if(!a||typeof gtag!=='function')return;var s='';try{s=new URL(a.href).searchParams.get('src')||''}catch(x){}gtag('event','signup_click',{src:s,link_text:(a.textContent||'').replace(/\s+/g,' ').trim().slice(0,60),link_url:a.href});});
+</script>
+<div id="dr-preview-flag" style="position:fixed;left:16px;bottom:16px;z-index:9999;padding:8px 12px;border-radius:8px;background:#0F1E3D;color:#fff;font:500 12px/1.3 Inter,system-ui,sans-serif;box-shadow:0 8px 24px -8px rgba(0,0,0,.4);pointer-events:none;">Preview copy · not the live site</div>
+<script>document.addEventListener("submit",function(e){var f=e.target;if(f&&f.tagName==="FORM"){e.preventDefault();var b=f.querySelector("[type=submit]");if(b){b.textContent="Forms are off in this preview";b.disabled=true;}}},true);</script>
+</body>
+</html>

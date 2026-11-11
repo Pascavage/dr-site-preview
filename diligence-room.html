@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) — GA4 + Google Ads -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  // Consent Mode default denied; wait briefly for CMP / stored apply below
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    wait_for_update: 500
+  });
+
+  // Apply stored preference BEFORE config / conversion (same KEY as footer banner)
+  (function () {
+    var KEY = 'dr_cookie_consent';
+    var c = null;
+    try { c = JSON.parse(localStorage.getItem(KEY)); } catch (e) { c = null; }
+    if (c && typeof c.analytics === 'boolean') {
+      gtag('consent', 'update', {
+        analytics_storage: c.analytics ? 'granted' : 'denied',
+        ad_storage: c.marketing ? 'granted' : 'denied',
+        ad_user_data: c.marketing ? 'granted' : 'denied',
+        ad_personalization: c.marketing ? 'granted' : 'denied'
+      });
+    }
+  })();
+
+  gtag('config', 'G-5SE3GQ5GK4');
+  gtag('config', 'AW-18371579900');
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Diligence room with checklist, documents tied to each transaction, gated access, and full audit trail — already built, not assembled under a term sheet." />
+<title>Diligence Room &amp; Data Room Software — Diligence Ready</title>
+<link rel="canonical" href="https://diligenceready.com/diligence-room" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#0F1E3D" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Diligence Ready" />
+<meta property="og:title" content="Diligence Room &amp; Data Room Software — Diligence Ready" />
+<meta property="og:description" content="A built-in diligence checklist, document-linked transactions, and gated access — so the work is already done when someone asks." />
+<meta property="og:url" content="https://diligenceready.com/diligence-room" />
+<meta property="og:image" content="https://diligenceready.com/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Diligence Room &amp; Data Room Software — Diligence Ready" />
+<meta name="twitter:description" content="Be ready before they ask — a built-in diligence checklist, document-linked transactions, and gated access." />
+<meta name="twitter:image" content="https://diligenceready.com/og-image.png" />
+
+<!-- Icons -->
+<link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://diligenceready.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Diligence Room", "item": "https://diligenceready.com/diligence-room" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a data room?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A data room — sometimes called a virtual data room or diligence room — is the secure, organized place where a company shares the documents an investor, acquirer, or lender needs during due diligence: incorporation papers, the cap table, financials, contracts, and IP assignments." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is due diligence software?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Due diligence software keeps the documents and records a transaction requires continuously organized and verifiable — with a checklist of what's needed, each item linked to its underlying record, an audit trail of every change, and controlled access for the people reviewing." }
+    },
+    {
+      "@type": "Question",
+      "name": "What does it take to open the data room?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Diligence Ready keeps your documents organized in one room as you go, and the checklist shows anything still missing. When you're ready to share, you grant access to the specific investors, advisors, or counsel you choose, and every view is logged." }
+    },
+    {
+      "@type": "Question",
+      "name": "Who can I give access to, and how is it controlled?",
+      "acceptedAnswer": { "@type": "Answer", "text": "You grant gated, role-based access to specific investors, advisors, or counsel. Each viewer sees only what you share, enforced at the database with row-level security, and every view and change is recorded in the audit log." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the diligence room secure?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Access is gated and role-based, security is enforced at the database rather than only in the app, files can live in your own Google Drive or OneDrive, and every action is attributed and timestamped in an audit log." }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@300;400;450;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a aria-label='Diligence Ready' class='brand' href='./'>
+      <span class="mono-circle">dr</span>
+      <span class="wordmark">Diligence Ready<span class="dot">.</span></span>
+    </a>
+    <nav class="nav-links">
+      <div class="nav-dd" data-dd>
+        <button type="button" class="nav-dd-btn" aria-expanded="false">Product <span class="caret">▾</span></button>
+        <div class="nav-dd-menu">
+          <a href='./cap-table'><span class="t">Cap Table</span><span class="d">Every security class, reconciled</span></a>
+          <a href='./scenario-modeling'><span class="t">Scenario Modeling</span><span class="d">Rounds, dilution &amp; waterfalls</span></a>
+          <a class='on' href='./diligence-room'><span class="t">Diligence Room</span><span class="d">Be ready before they ask</span></a>
+          <a href='./ai-assistant'><span class="t">AI Assistant</span><span class="d">It does the work, you approve</span></a>
+          <div class="dd-sep"></div>
+          <a class='dd-all' href='./features'><span class="t">See all features</span><span class="arr">→</span></a>
+        </div>
+      </div>
+      <a href='./for-advisors'>Trusted Advisors</a>
+      <a href='./learn/'>Learn</a>
+      <a href='./pricing'>Pricing</a>
+    </nav>
+    <div class="nav-cta">
+      <a class='link sales-link' href='./#contact'>Contact us</a>
+      <a class="link" href="https://app.diligenceready.com/login">Customer Login</a>
+      <a class="btn btn-accent" href="https://app.diligenceready.com/signup?src=diligence-room">Sign up <span class="arr">→</span></a>
+    </div>
+    <a class="btn btn-accent nav-cta-m" href="https://app.diligenceready.com/signup?src=diligence-room">Start free</a>
+    <button type="button" class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mm-group">Product</div>
+  <a class='sub' href='./cap-table'>Cap Table</a>
+  <a class='sub' href='./scenario-modeling'>Scenario Modeling</a>
+  <a class='sub' href='./diligence-room'>Diligence Room</a>
+  <a class='sub' href='./ai-assistant'>AI Assistant</a>
+  <a class='sub' href='./features'>All Features</a>
+  <div class="mm-group">Explore</div>
+  <a href='./for-advisors'>Trusted Advisors</a>
+  <a href='./learn/'>Learn</a>
+  <a href='./pricing'>Pricing</a>
+  <a href='./why-diligence-ready'>Why Diligence Ready</a>
+  <div class="mm-cta">
+    <a class='btn btn-ghost btn-lg' href='./#contact'>Contact us</a>
+    <a class="btn btn-ghost btn-lg" href="https://app.diligenceready.com/login">Customer Login</a>
+    <a class="btn btn-accent btn-lg" href="https://app.diligenceready.com/signup?src=diligence-room">Sign up</a>
+  </div>
+</div>
+
+<main>
+
+<!-- ============ FEATURE HERO ============ -->
+<section class="feat-hero" data-screen-label="Diligence hero">
+  <div class="wrap">
+    <div class="breadcrumb reveal">
+      <a href='./'>Home</a><span class="sep">/</span><span class="cur">Diligence Room</span>
+    </div>
+    <div class="feat-hero-grid">
+      <div>
+        <span class="eyebrow reveal">Diligence room &amp; data room</span>
+        <h1 class="reveal" style="transition-delay:.05s;margin-top:18px;">Data rooms priced by plan,<br /> <em>not by page.</em></h1>
+        <p class="lead reveal" style="transition-delay:.1s">Same price at 50 pages or 5,000. Start free, and upgrading takes no sales call. See <a href='./learn/data-room-pricing' style="text-decoration:underline;text-underline-offset:2px;">how data room pricing compares</a>.</p>
+        <div class="hero-cta reveal" style="transition-delay:.15s">
+          <a class="btn btn-accent btn-lg" href="https://app.diligenceready.com/signup?src=diligence-room">Start free <span class="arr">→</span></a>
+          <a class='btn btn-ghost btn-lg' href='./pricing'>See pricing</a>
+        </div>
+        <div class="hero-note reveal" style="transition-delay:.2s">
+          <span><span class="dot"></span> Gated, role-based access</span>
+          <span><span class="dot"></span> Full audit trail</span>
+        </div>
+      </div>
+      <div class="showcase-art reveal" style="transition-delay:.18s">
+        <div class="art-frame" style="padding:26px 24px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+            <h5 style="font-family:var(--serif);font-size:18px;font-weight:600;">Diligence checklist</h5>
+            <span class="badge-live"><span class="d"></span> 1 open item</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--faint);font-family:var(--mono);margin-bottom:8px;"><span>18 of 19 documents in</span></div>
+          <div style="height:8px;border-radius:5px;background:var(--bg-3);overflow:hidden;margin-bottom:20px;"><span style="display:block;height:100%;width:95%;background:var(--coral);"></span></div>
+          <div style="display:flex;flex-direction:column;gap:1px;">
+            <div class="scn-row"><span class="nm">Corporate &amp; formation</span><span style="font-family:var(--mono);font-size:11px;color:#1f9d57;">✓ Complete</span></div>
+            <div class="scn-row"><span class="nm">Cap table &amp; equity</span><span style="font-family:var(--mono);font-size:11px;color:#1f9d57;">✓ Complete</span></div>
+            <div class="scn-row"><span class="nm">Financials &amp; tax</span><span style="font-family:var(--mono);font-size:11px;color:#1f9d57;">✓ Complete</span></div>
+            <div class="scn-row"><span class="nm">Material contracts</span><span style="font-family:var(--mono);font-size:11px;color:#1f9d57;">✓ Complete</span></div>
+            <div class="scn-row"><span class="nm">IP assignments</span><span style="font-family:var(--mono);font-size:11px;color:var(--coral-ink-s);">! 1 missing</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROBLEM ============ -->
+<section class="sec-pad-sm" data-screen-label="The problem">
+  <div class="wrap-narrow center">
+    <span class="eyebrow center reveal">Why diligence hurts</span>
+    <h2 class="section-title reveal" style="margin-top:22px;transition-delay:.05s">The scramble is what <span class="accent-line">kills deals.</span></h2>
+    <p class="lead reveal" style="margin-top:24px;transition-delay:.1s">When the room opens cold, weeks vanish into hunting for documents, reconciling numbers, and answering the same questions twice. Momentum stalls, and a stalled deal is a deal at risk.</p>
+    <p class="lead reveal" style="margin-top:18px;transition-delay:.15s"><a href='./learn/how-to-get-diligence-ready' style="text-decoration:underline;text-underline-offset:2px;"><strong style="color:var(--ink);font-weight:600;">Keep the room built in the background</strong></a> — so opening it is a permission, not a project.</p>
+  </div>
+</section>
+
+<!-- ============ CAPABILITIES ============ -->
+<section class="sec-pad" data-screen-label="Capabilities" style="padding-top:24px;">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">What's inside</span>
+      <h2 class="section-title" style="margin-top:20px;">Everything a reviewer asks for, already in place.</h2>
+    </div>
+    <div class="feat-cards">
+      <div class="pillar reveal">
+        <div class="pic coral">◷</div>
+        <h3>Built-in checklist</h3>
+        <p>A diligence list with templates for each category — corporate, cap table, financials, contracts, IP — so you always know exactly what's complete and what's missing.</p>
+      </div>
+      <div class="pillar reveal" style="transition-delay:.05s">
+        <div class="pic">⛓</div>
+        <h3>Documents linked to records</h3>
+        <p>Every file ties to the transaction or stakeholder it supports. A reviewer clicks from a line on the cap table straight to the signed agreement behind it.</p>
+      </div>
+      <div class="pillar reveal" style="transition-delay:.1s">
+        <div class="pic">⛂</div>
+        <h3>Gated, role-based access</h3>
+        <p>Grant specific investors, advisors, or counsel access to exactly what you choose — enforced at the database with row-level security, not just hidden in the UI.</p>
+      </div>
+      <div class="pillar reveal" style="transition-delay:.15s">
+        <div class="pic">◎</div>
+        <h3>The what's-missing list</h3>
+        <p>A live list of what's complete and what's still open — so you fix the one missing item before an investor ever finds it.</p>
+      </div>
+      <div class="pillar reveal" style="transition-delay:.2s">
+        <div class="pic coral">▤</div>
+        <h3>Bring your own storage</h3>
+        <p>Files can live in <a href='./google-drive-onedrive-data-room' style="text-decoration:underline;text-underline-offset:2px;">your Google Drive or OneDrive</a> — your policies, your backups, your permissions — while the room organizes and references them.</p>
+      </div>
+      <div class="pillar reveal" style="transition-delay:.25s">
+        <div class="pic">◫</div>
+        <h3>Audit trail on everything</h3>
+        <p>Every change and every view is attributed and timestamped, so the record you present is one you can stand behind line by line.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SHOWCASE: DATA ROOM ============ -->
+<section class="sec-pad" style="padding-top:0;" data-screen-label="Data room showcase">
+  <div class="wrap">
+    <div class="showcase-row flip">
+      <div class="showcase-copy reveal">
+        <span class="eyebrow">Inside the room</span>
+        <h2>One source of truth, <span class="accent-line">shared on your terms.</span></h2>
+        <p class="lead">Reviewers see an organized index, not a folder dump. Each item is current, linked to its underlying record, and visible only to the people you've granted access — with every action logged.</p>
+        <ul class="feat-list">
+          <li><span class="ck">✓</span> Organized index by diligence category</li>
+          <li><span class="ck">✓</span> Per-viewer access for investors, advisors, and counsel</li>
+          <li><span class="ck">✓</span> Documents always tied to the live record</li>
+          <li><span class="ck">✓</span> Every view and change in the audit log</li>
+        </ul>
+      </div>
+      <div class="showcase-art reveal" style="transition-delay:.1s">
+        <div class="art-frame" style="padding:24px 22px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
+            <h5 style="font-family:var(--serif);font-size:18px;font-weight:600;">Data room · Series B</h5>
+            <span class="badge-live"><span class="d"></span> 3 reviewers</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:11px 13px;border:1px solid var(--line);border-radius:10px;">
+              <span style="display:flex;align-items:center;gap:11px;font-size:13.5px;"><span style="width:26px;height:26px;border-radius:7px;background:var(--bg-3);display:grid;place-items:center;font-size:12px;">▦</span>Certificate of incorporation</span>
+              <span style="font-family:var(--mono);font-size:10.5px;color:var(--coral-ink-s);background:var(--coral-wash);padding:3px 8px;border-radius:999px;">Investors</span>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:11px 13px;border:1px solid var(--line);border-radius:10px;">
+              <span style="display:flex;align-items:center;gap:11px;font-size:13.5px;"><span style="width:26px;height:26px;border-radius:7px;background:var(--bg-3);display:grid;place-items:center;font-size:12px;">▤</span>Cap table — fully diluted v41</span>
+              <span style="font-family:var(--mono);font-size:10.5px;color:var(--coral-ink-s);background:var(--coral-wash);padding:3px 8px;border-radius:999px;">Investors</span>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:11px 13px;border:1px solid var(--line);border-radius:10px;">
+              <span style="display:flex;align-items:center;gap:11px;font-size:13.5px;"><span style="width:26px;height:26px;border-radius:7px;background:var(--bg-3);display:grid;place-items:center;font-size:12px;">◷</span>Audited financials 2025</span>
+              <span style="font-family:var(--mono);font-size:10.5px;color:var(--muted);background:var(--bg-2);padding:3px 8px;border-radius:999px;">Counsel</span>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:11px 13px;border:1px dashed var(--coral-line);border-radius:10px;background:var(--coral-wash);">
+              <span style="display:flex;align-items:center;gap:11px;font-size:13.5px;"><span style="width:26px;height:26px;border-radius:7px;background:#fff;display:grid;place-items:center;font-size:12px;">!</span>IP assignment — founder #2</span>
+              <span style="font-family:var(--mono);font-size:10.5px;color:var(--coral-ink-s);">Requested</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHOWCASE: PROTECTION -->
+    <div class="showcase-row" style="margin-top:128px;">
+      <div class="showcase-copy reveal">
+        <span class="eyebrow">Locked down by design</span>
+        <h2>Share it wide. <span class="accent-line">Keep control anyway.</span></h2>
+        <p class="lead">Built on the assumption a link gets forwarded and a screenshot gets taken. Every guest gets their own link and a one-time code, every page carries their identity, and you can cut anyone off mid-session.</p>
+        <ul class="feat-list">
+          <li><span class="ck">✓</span> Personal link plus a one-time 6-digit code — a forwarded link is useless</li>
+          <li><span class="ck">✓</span> Every document watermarked with the viewer's identity, server-side</li>
+          <li><span class="ck">✓</span> Downloads off by default; controllable room-wide and per guest</li>
+          <li><span class="ck">✓</span> Revoke access immediately, mid-session — with a full view-and-download log</li>
+        </ul>
+      </div>
+      <div class="showcase-art reveal" style="transition-delay:.1s">
+        <div class="art-frame" style="padding:24px 22px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+            <h5 style="font-family:var(--serif);font-size:18px;font-weight:600;">Guest access · Series B room</h5>
+            <span class="badge-live"><span class="d"></span> Live log</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="display:flex;align-items:center;gap:12px;padding:11px 13px;border:1px solid var(--line);border-radius:10px;"><span style="width:30px;height:30px;border-radius:8px;background:var(--midnight);color:#fff;display:grid;place-items:center;font-size:11px;font-weight:700;flex:0 0 auto;">CV</span><div style="flex:1;"><div style="font-weight:500;font-size:13.5px;color:var(--ink);">Catalyst Ventures</div><div style="font-size:11px;color:var(--faint);font-family:var(--mono);">verified · code sent</div></div><span style="font-family:var(--mono);font-size:10.5px;color:#1f9d57;">Viewing now</span></div>
+            <div style="display:flex;align-items:center;gap:12px;padding:11px 13px;border:1px solid var(--line);border-radius:10px;"><span style="width:30px;height:30px;border-radius:8px;background:var(--midnight-3);color:#fff;display:grid;place-items:center;font-size:11px;font-weight:700;flex:0 0 auto;">GC</span><div style="flex:1;"><div style="font-weight:500;font-size:13.5px;color:var(--ink);">Greenfield Capital</div><div style="font-size:11px;color:var(--faint);font-family:var(--mono);">downloads off</div></div><span style="font-family:var(--mono);font-size:10.5px;color:var(--muted);">Opened 3 docs</span></div>
+            <div style="display:flex;align-items:center;gap:12px;padding:11px 13px;border:1px dashed var(--coral-line);border-radius:10px;background:var(--coral-wash);"><span style="width:30px;height:30px;border-radius:8px;background:#fff;color:var(--coral-ink-s);display:grid;place-items:center;font-size:13px;font-weight:700;flex:0 0 auto;">⊘</span><div style="flex:1;"><div style="font-weight:500;font-size:13.5px;color:var(--ink);">Former advisor</div><div style="font-size:11px;color:var(--coral-ink-s);font-family:var(--mono);">access revoked · mid-session</div></div><span style="font-family:var(--mono);font-size:10.5px;color:var(--coral-ink-s);">Cut off</span></div>
+          </div>
+          <div style="margin-top:14px;font-family:var(--mono);font-size:10.5px;color:var(--faint);">Every open watermarked · every action logged</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ READY BAND ============ -->
+<section class="strip sec-pad" data-screen-label="Ready band">
+  <div class="wrap">
+    <div class="sec-head reveal" style="max-width:680px;">
+      <span class="eyebrow on-dark">Always ready</span>
+      <h2 class="section-title" style="color:var(--cream);margin-top:18px;">Know what's missing <span style="font-style:italic;color:var(--coral);font-family:var(--serif)">before they ask.</span></h2>
+      <p class="lead" style="color:var(--ice);margin-top:22px;">The checklist shows what's missing for you. The one outstanding IP assignment shows up for you first, not in front of an investor. You close the gap on your schedule, not theirs.</p>
+      <a class="btn btn-accent" href="https://app.diligenceready.com/signup?src=diligence-room" style="margin-top:30px;">See what's missing <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec-pad" data-screen-label="FAQ">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow center">Questions, answered</span>
+      <h2 class="section-title" style="margin-top:20px;">Diligence room basics.</h2>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-item reveal">
+        <h3>What is a data room?</h3>
+        <p><a href='./learn/what-is-a-data-room'>A data room</a> — sometimes called a virtual data room or diligence room — is the secure, organized place where a company shares the documents an investor, acquirer, or lender needs during due diligence: incorporation papers, the cap table, financials, contracts, and IP assignments.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>What is due diligence software?</h3>
+        <p><a href='./startup-due-diligence'>Due diligence software</a> keeps the documents and records a transaction requires continuously organized and verifiable — with a checklist of what's needed, each item linked to its underlying record, an audit trail of every change, and controlled access for the people reviewing.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>What does it take to open the data room?</h3>
+        <p>Diligence Ready keeps your documents organized in one room as you go, and the checklist shows anything still missing. When you're ready to share, you grant access to the specific investors, advisors, or counsel you choose, and every view is logged.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>Who can I give access to, and how is it controlled?</h3>
+        <p>You grant gated, role-based access to specific investors, advisors, or counsel. Each viewer sees only what you share, enforced at the database with row-level security, and every view and change is recorded in the audit log.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>Is the diligence room secure?</h3>
+        <p>Yes. Access is gated and role-based, security is enforced at the database rather than only in the app, files can live in your own Google Drive or OneDrive, and every action is attributed and timestamped in an audit log.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CROSS-LINKS ============ -->
+<!-- ============ RELATED GUIDES (internal links to Learn) ============ -->
+<section class="sec-pad" style="padding-top:0;" data-screen-label="Diligence guides">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Learn the basics</span>
+      <h2 class="section-title" style="margin-top:18px;">Diligence guides.</h2>
+      <p class="lead">What buyers and investors ask for, and how to have it ready. <a href='./learn/'>Browse all guides →</a></p>
+    </div>
+    <div class="learn-grid">
+      <a class='learn-card reveal' href='./learn/what-is-a-data-room'>
+        <span class="kicker">Diligence</span>
+        <h3>What is a data room?</h3>
+        <p>What goes in a virtual data room, why a shared folder isn't enough, and how to keep control of what you share.</p>
+        <span class="rm">Read the guide →</span>
+      </a>
+      <a class='learn-card reveal' href='./learn/buy-side-due-diligence' style='transition-delay:.06s'>
+        <span class="kicker">Diligence</span>
+        <h3>Buy-side due diligence</h3>
+        <p>What a clean room looks like from the buyer side — organized index, gated access, documents tied to records.</p>
+        <span class="rm">Read the guide →</span>
+      </a>
+      <a class='learn-card reveal' href='./learn/how-to-get-diligence-ready' style='transition-delay:.12s'>
+        <span class="kicker">Getting ready</span>
+        <h3>How to get diligence-ready</h3>
+        <p>A practical checklist to keep the documents, numbers, and trail in order before the term sheet lands.</p>
+        <span class="rm">Read the guide →</span>
+      </a>
+      <a class='learn-card reveal' href='./learn/what-goes-in-a-board-package' style='transition-delay:.18s'>
+        <span class="kicker">Governance</span>
+        <h3>What goes in a board package?</h3>
+        <p>What to include, how to run the document side of a board meeting, and how to know who's read it.</p>
+        <span class="rm">Read the guide →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="sec-pad" style="padding-top:0;" data-screen-label="Explore">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Explore the platform</span>
+      <h2 class="section-title" style="margin-top:18px;">A room that's only as good as its records.</h2>
+    </div>
+    <div class="xlinks">
+      <a class='xlink reveal' href='./cap-table'>
+        <span class="xt">Cap table</span>
+        <span class="xd">The reconciled ledger every diligence item links back to.</span>
+        <span class="xm">Explore →</span>
+      </a>
+      <a class='xlink reveal' href='./scenario-modeling' style='transition-delay:.06s'>
+        <span class="xt">Scenario modeling</span>
+        <span class="xd">Walk into the room knowing what every offer does to your ownership.</span>
+        <span class="xm">Explore →</span>
+      </a>
+      <a class='xlink reveal' href='./for-advisors' style='transition-delay:.12s'>
+        <span class="xt">For Trusted Advisors</span>
+        <span class="xd">Keep every client company room-ready from one workspace.</span>
+        <span class="xm">Explore →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="sec-pad" style="padding-top:0;" data-screen-label="Final CTA">
+  <div class="wrap">
+    <div class="final-card reveal">
+      <span class="eyebrow on-dark" style="justify-content:center;display:flex;">Diligence room</span>
+      <h2 class="display" style="margin-top:22px;">Be ready before they ask.</h2>
+      <p class="lead">Start free and keep your diligence room built in the background — so opening it is a permission, not a project.</p>
+      <div class="hero-cta">
+        <a class="btn btn-accent btn-lg" href="https://app.diligenceready.com/signup?src=diligence-room">Start free <span class="arr">→</span></a>
+        <a class='btn btn-ghost btn-lg' href='./#contact'>Contact us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<div class="mcta" id="mcta"><a class="p" href="https://app.diligenceready.com/signup?src=diligence-room">Start free <span class="arr">→</span></a><a class='s' href='./#contact'>Contact</a></div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a aria-label='Diligence Ready' class='brand on-dark' href='./'>
+          <span class="mono-circle">dr</span>
+          <span class="wordmark">Diligence Ready<span class="dot">.</span></span>
+        </a>
+        <div class="promise">Readiness is the standard.</div>
+      </div>
+      <div class="foot-col">
+        <h6>Product</h6>
+        <a href='./cap-table'>Cap table</a>
+        <a href='./scenario-modeling'>What-if modeling</a>
+        <a href='./diligence-room'>Diligence room</a>
+        <a href='./ai-assistant'>AI assistant</a>
+        <a href='./for-advisors'>For Trusted Advisors</a>
+        <a href='./features'>All features</a>
+      </div>
+      <div class="foot-col">
+        <h6>Company</h6>
+        <a href='./why-diligence-ready'>Why Diligence Ready</a>
+        <a href='./#contact'>Request a demo</a>
+        <a href='./pricing'>Pricing</a>
+        <a href='./#contact'>Become a Trusted Advisor</a>
+        <a href='./#contact'>Contact</a>
+      </div>
+      <div class="foot-col">
+        <h6>Legal</h6>
+        <a href='./privacy'>Privacy</a>
+        <a href='./terms'>Terms</a>
+        <a href='./security'>Security &amp; trust</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Diligence Ready. All rights reserved.</span>
+      <div class="legal"><span>diligenceready.com</span><span>Built for the way modern founders raise.</span></div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ REVEAL + NAV JS ============ -->
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+  onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
+  if (!document.hidden) {
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  }
+
+  // Product dropdown — click/keyboard toggle (hover handled in CSS)
+  document.querySelectorAll('[data-dd]').forEach(dd => {
+    const btn = dd.querySelector('.nav-dd-btn');
+    btn.addEventListener('click', (e) => { e.stopPropagation(); const open = dd.classList.toggle('open'); btn.setAttribute('aria-expanded', open); });
+  });
+  document.addEventListener('click', () => document.querySelectorAll('[data-dd].open').forEach(dd => { dd.classList.remove('open'); dd.querySelector('.nav-dd-btn').setAttribute('aria-expanded', 'false'); }));
+
+  // Mobile menu toggle
+  const burger = document.getElementById('navBurger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (burger && mobileMenu) {
+    const closeMenu = () => { burger.classList.remove('open'); mobileMenu.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; document.body.classList.remove('menu-open'); };
+    burger.addEventListener('click', () => {
+      const open = burger.classList.toggle('open');
+      mobileMenu.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.style.overflow = open ? 'hidden' : ''; document.body.classList.toggle('menu-open', open);
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  }
+</script>
+
+<script>
+  (function(){
+    var bar = document.getElementById('mcta'); if(!bar) return;
+    var stop = document.getElementById('contact') || document.querySelector('footer');
+    var tick = function(){
+      var past = window.scrollY > 520;
+      var near = stop && stop.getBoundingClientRect().top < window.innerHeight * 0.75;
+      bar.classList.toggle('up', past && !near);
+    };
+    tick(); window.addEventListener('scroll', tick, { passive: true });
+  })();
+</script>
+
+<!-- ============ COOKIE NOTICE ============ -->
+<div id="dr-cookie-root" hidden role="dialog" aria-modal="true" aria-labelledby="dr-cookie-title">
+  <div id="dr-cookie-card">
+    <div id="dr-cookie-main">
+      <h2 id="dr-cookie-title">diligenceready.com</h2>
+      <p>We use cookies to run the site and improve it.</p>
+      <button type="button" id="dr-cookie-accept">Accept all</button>
+      <button type="button" id="dr-cookie-essential">Essential only</button>
+      <button type="button" id="dr-cookie-prefs-open">Preferences</button>
+      <a class='dr-cookie-legal' href='./privacy'>Privacy Policy</a>
+    </div>
+    <div id="dr-cookie-prefs-panel" hidden>
+      <h2>Cookie Preferences</h2>
+      <p>Choose which cookies we can use. Essential cookies are always on.</p>
+      <label><input type="checkbox" checked disabled /> Essential (required)</label>
+      <label><input type="checkbox" id="dr-cookie-analytics" /> Analytics</label>
+      <label><input type="checkbox" id="dr-cookie-marketing" /> Marketing</label>
+      <button type="button" id="dr-cookie-save">Save Preferences</button>
+      <button type="button" id="dr-cookie-back">Back</button>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var KEY = 'dr_cookie_consent';
+  var root = document.getElementById('dr-cookie-root');
+  if (!root) return;
+  var main = document.getElementById('dr-cookie-main');
+  var panel = document.getElementById('dr-cookie-prefs-panel');
+  var cbA = document.getElementById('dr-cookie-analytics');
+  var cbM = document.getElementById('dr-cookie-marketing');
+
+  function apply(c) {
+    if (typeof gtag !== 'function') return;
+    gtag('consent', 'update', {
+      analytics_storage: c.analytics ? 'granted' : 'denied',
+      ad_storage: c.marketing ? 'granted' : 'denied',
+      ad_user_data: c.marketing ? 'granted' : 'denied',
+      ad_personalization: c.marketing ? 'granted' : 'denied'
+    });
+  }
+  function save(c) {
+    c.ts = new Date().toISOString();
+    try { localStorage.setItem(KEY, JSON.stringify(c)); } catch (e) {}
+    apply(c);
+    root.hidden = true;
+  }
+  function read() {
+    try { return JSON.parse(localStorage.getItem(KEY)); } catch (e) { return null; }
+  }
+
+  var stored = read();
+  if (stored && typeof stored.analytics === 'boolean') {
+    apply(stored);
+  } else {
+    root.hidden = false;
+  }
+
+  document.getElementById('dr-cookie-accept').addEventListener('click', function () {
+    save({ analytics: true, marketing: true });
+  });
+  document.getElementById('dr-cookie-essential').addEventListener('click', function () {
+    save({ analytics: false, marketing: false });
+  });
+  document.getElementById('dr-cookie-prefs-open').addEventListener('click', function () {
+    main.hidden = true; panel.hidden = false;
+  });
+  document.getElementById('dr-cookie-back').addEventListener('click', function () {
+    panel.hidden = true; main.hidden = false;
+  });
+  document.getElementById('dr-cookie-save').addEventListener('click', function () {
+    save({ analytics: !!cbA.checked, marketing: !!cbM.checked });
+  });
+})();
+</script>
+<script>
+// signup_click: GA4 event on every signup / Start free link (21 Oct 2026)
+document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href*="app.diligenceready.com/signup"]'):null;if(!a||typeof gtag!=='function')return;var s='';try{s=new URL(a.href).searchParams.get('src')||''}catch(x){}gtag('event','signup_click',{src:s,link_text:(a.textContent||'').replace(/\s+/g,' ').trim().slice(0,60),link_url:a.href});});
+</script>
+<div id="dr-preview-flag" style="position:fixed;left:16px;bottom:16px;z-index:9999;padding:8px 12px;border-radius:8px;background:#0F1E3D;color:#fff;font:500 12px/1.3 Inter,system-ui,sans-serif;box-shadow:0 8px 24px -8px rgba(0,0,0,.4);pointer-events:none;">Preview copy · not the live site</div>
+<script>document.addEventListener("submit",function(e){var f=e.target;if(f&&f.tagName==="FORM"){e.preventDefault();var b=f.querySelector("[type=submit]");if(b){b.textContent="Forms are off in this preview";b.disabled=true;}}},true);</script>
+</body>
+</html>

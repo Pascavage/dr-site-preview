@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) — GA4 + Google Ads -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  // Consent Mode default denied; wait briefly for CMP / stored apply below
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    wait_for_update: 500
+  });
+
+  // Apply stored preference BEFORE config / conversion (same KEY as footer banner)
+  (function () {
+    var KEY = 'dr_cookie_consent';
+    var c = null;
+    try { c = JSON.parse(localStorage.getItem(KEY)); } catch (e) { c = null; }
+    if (c && typeof c.analytics === 'boolean') {
+      gtag('consent', 'update', {
+        analytics_storage: c.analytics ? 'granted' : 'denied',
+        ad_storage: c.marketing ? 'granted' : 'denied',
+        ad_user_data: c.marketing ? 'granted' : 'denied',
+        ad_personalization: c.marketing ? 'granted' : 'denied'
+      });
+    }
+  })();
+
+  gtag('config', 'G-5SE3GQ5GK4');
+  gtag('config', 'AW-18371579900');
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="The Terms of Service governing your access to and use of the Diligence Ready cap-table and diligence platform." />
+<title>Terms of Service — Diligence Ready</title>
+<link rel="canonical" href="https://diligenceready.com/terms" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#0F1E3D" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Diligence Ready" />
+<meta property="og:title" content="Terms of Service — Diligence Ready" />
+<meta property="og:description" content="The Terms of Service governing your access to and use of the Diligence Ready cap-table and diligence platform." />
+<meta property="og:url" content="https://diligenceready.com/terms" />
+<link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@300;400;450;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a aria-label='Diligence Ready' class='brand' href='./#top'>
+      <span class="mono-circle">dr</span>
+      <span class="wordmark">Diligence Ready<span class="dot">.</span></span>
+    </a>
+    <nav class="nav-links">
+      <div class="nav-dd" data-dd>
+        <button type="button" class="nav-dd-btn" aria-expanded="false">Product <span class="caret">▾</span></button>
+        <div class="nav-dd-menu">
+          <a href='./cap-table'><span class="t">Cap Table</span><span class="d">Every security class, reconciled</span></a>
+          <a href='./scenario-modeling'><span class="t">Scenario Modeling</span><span class="d">Rounds, dilution &amp; waterfalls</span></a>
+          <a href='./diligence-room'><span class="t">Diligence Room</span><span class="d">Be ready before they ask</span></a>
+          <a href='./ai-assistant'><span class="t">AI Assistant</span><span class="d">It does the work, you approve</span></a>
+          <div class="dd-sep"></div>
+          <a class='dd-all' href='./features'><span class="t">See all features</span><span class="arr">→</span></a>
+        </div>
+      </div>
+      <a href='./for-advisors'>Trusted Advisors</a>
+      <a href='./learn/'>Learn</a>
+      <a href='./pricing'>Pricing</a>
+    </nav>
+    <div class="nav-cta">
+      <a class='link sales-link' href='./#contact'>Contact us</a>
+      <a class="link" href="https://app.diligenceready.com/login">Customer Login</a>
+      <a class="btn btn-accent" href="https://app.diligenceready.com/signup?src=terms">Sign up <span class="arr">→</span></a>
+    </div>
+    <a class="btn btn-accent nav-cta-m" href="https://app.diligenceready.com/signup?src=terms">Start free</a>
+    <button type="button" class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mm-group">Product</div>
+  <a class='sub' href='./cap-table'>Cap Table</a>
+  <a class='sub' href='./scenario-modeling'>Scenario Modeling</a>
+  <a class='sub' href='./diligence-room'>Diligence Room</a>
+  <a class='sub' href='./ai-assistant'>AI Assistant</a>
+  <a class='sub' href='./features'>All Features</a>
+  <div class="mm-group">Explore</div>
+  <a href='./for-advisors'>Trusted Advisors</a>
+  <a href='./learn/'>Learn</a>
+  <a href='./pricing'>Pricing</a>
+  <a href='./why-diligence-ready'>Why Diligence Ready</a>
+  <div class="mm-cta">
+    <a class='btn btn-ghost btn-lg' href='./#contact'>Contact us</a>
+    <a class="btn btn-ghost btn-lg" href="https://app.diligenceready.com/login">Customer Login</a>
+    <a class="btn btn-accent btn-lg" href="https://app.diligenceready.com/signup?src=terms">Sign up</a>
+  </div>
+</div>
+
+<main id="top">
+
+<section class="legal-hero" data-screen-label="Legal hero">
+  <div class="wrap">
+    <span class="eyebrow">Legal</span>
+    <h1>Terms of Service</h1>
+    <div class="legal-meta">
+      <span class="updated"><span style="width:6px;height:6px;border-radius:50%;background:currentColor;display:inline-block;"></span> Last updated June 1, 2026</span>
+      <span class="sep">·</span>
+      <span>Entrevest, LLC dba Diligence Ready</span>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Legal">
+  <div class="wrap legal-wrap">
+    <nav class="legal-toc" aria-label="On this page">
+      <div class="toc-label">On this page</div>
+        <a href="#s1">Description of Services</a>
+        <a href="#s2">Eligibility, Accounts, and User Roles</a>
+        <a href="#s3">Data Ownership and Licensing</a>
+        <a href="#s4">Fees, Billing, and Subscription Plans</a>
+        <a href="#s5">Strict Disclaimers: No Professional Advice</a>
+        <a href="#s6">Prohibited Conduct</a>
+        <a href="#s7">Intellectual Property Rights</a>
+        <a href="#s8">Termination</a>
+        <a href="#s9">Indemnification and Limitation of Liability</a>
+        <a href="#s10">Governing Law and Dispute Resolution</a>
+        <a href="#s11">Miscellaneous</a>
+    </nav>
+    <article class="legal-body">
+      <div class="legal-lead"><p>Welcome to Diligence Ready! These Terms of Service ("Terms") constitute a binding contract between you and Entrevest, LLC dba Diligence Ready ("Diligence Ready," "we," "us," or "our"). These Terms govern your access to and use of our website, platform, data rooms, software, and related corporate diligence readiness services (collectively, the "Services").</p><p>By clicking "I Agree," registering for an account, or otherwise accessing or using the Services, you represent that you have read, understood, and agree to be bound by these Terms. If you are entering into these Terms on behalf of a company, organization, or other legal entity (a "Customer"), you represent that you have the legal authority to bind that entity to these Terms.</p></div>
+      <h2 id="s1">1. Description of Services</h2><p>Diligence Ready provides a software-as-a-service (SaaS) platform designed to help companies centralize corporate governance documents, track equity records, organize cap tables, and prepare structural data for investor due diligence workflows.</p><h2 id="s2">2. Eligibility, Accounts, and User Roles</h2><h3>2.1 Eligibility</h3><p>You must be at least 18 years old (or the age of majority in your jurisdiction) and capable of forming a binding contract to use our Services.</p><h3>2.2 Registration and Security</h3><p>To access the platform, you must create an account. You agree to provide accurate, current, and complete information and to keep this information updated. You are solely responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.</p><h3>2.3 User Roles and Access</h3><p>Our platform supports multiple tiers of access:</p><ul class="legal-list"><li><b>Company Administrators:</b> Individuals authorized by the Customer to manage the corporate profile, upload legal/financial artifacts, and grant access to third parties.</li><li><b>Stakeholders / Third-Party Viewers:</b> Shareholders, employees, investors, or auditors granted limited or view-only access by a Company Administrator.</li></ul><p>The Customer is fully responsible for all permissions, data access controls, and invitations extended via their account interface.</p><h2 id="s3">3. Data Ownership and Licensing</h2><h3>3.1 Your Data is Your Data</h3><p>As between you and Diligence Ready, you retain exclusive ownership of all legal documents, financial statements, cap table metrics, and other proprietary materials you upload to the platform ("Customer Data"). We do not sell or monetize your data.</p><h3>3.2 License to Diligence Ready</h3><p>To enable us to provide the Services, you hereby grant Diligence Ready a worldwide, non-exclusive, royalty-free, fully paid-up license to host, store, transfer, display, perform, reproduce, modify, and process your Customer Data solely for the purpose of operating, maintaining, securing, and improving the platform on your behalf.</p><h3>3.3 Accuracy of Data</h3><p>You represent and warrant that you have all necessary rights to upload the Customer Data and that such data is accurate and complete. Diligence Ready does not independently verify, audit, or substantiate the information or legal records uploaded to the platform.</p><h2 id="s4">4. Fees, Billing, and Subscription Plans</h2><h3>4.1 Fees</h3><p>Access to certain features or tiers of the platform requires a paid subscription ("Subscription Fee"). Pricing and tiers are specified on our pricing page or in a mutually executed Order Form.</p><h3>4.2 Billing and Auto-Renewal</h3><p>Unless otherwise stated, subscriptions automatically renew at the end of each billing cycle (e.g., monthly or annually) under the same terms. You authorize us to charge your designated payment method for the applicable renewal fees unless you cancel your subscription prior to the renewal date.</p><h3>4.3 Non-Refundable</h3><p>All fees paid are non-refundable except as expressly provided in these Terms or required by applicable law.</p><h2 id="s5">5. Strict Disclaimers: No Professional Advice</h2><div class="legal-flag">CRITICAL NOTICE</div><p>Diligence Ready is an administrative, organizational software platform. We do not provide legal, tax, financial, or securities advice.</p><ul class="legal-list"><li><b>No Professional Relationship:</b> Your use of the Services does not create an attorney-client relationship, certified public accountant (CPA) relationship, or any other professional-client fiduciary relationship.</li><li><b>Independent Verification Required:</b> While our platform features tools to parse documents, model dilution, or score diligence readiness, these are automated calculations meant for directional guidance only.</li><li><b>Consult Professionals:</b> You acknowledge that you are entirely responsible for determining the accuracy and legal suitability of your corporate documentation. You are strongly encouraged to consult a licensed corporate attorney and a qualified tax professional before finalizing equity allocations, financing rounds, or corporate transactions.</li></ul><h2 id="s6">6. Prohibited Conduct</h2><p>You agree that you will not, and will not permit any third party to:</p><ul class="legal-list"><li>Copy, modify, host, stream, sublicense, or resell the Services;</li><li>Reverse engineer, decompile, or attempt to extract the source code or underlying architecture of the platform;</li><li>Use any automated system, including "scrapers," "spiders," or "offline readers," to access or harvest data from the platform;</li><li>Bypass or breach any security measures or access controls implemented by Diligence Ready;</li><li>Upload any material that contains viruses, malware, or harmful code, or that infringes upon the intellectual property or privacy rights of any third party.</li></ul><h2 id="s7">7. Intellectual Property Rights</h2><p>The Services, including all software, user interfaces, branding, logos, text, graphics, and proprietary algorithms, are the sole property of Diligence Ready and its licensors and are protected by copyright, trademark, and other intellectual property laws. We grant you a limited, revocable, non-exclusive, non-transferable license to access the platform during your subscription term in strict compliance with these Terms.</p><h2 id="s8">8. Termination</h2><h3>8.1 Termination by You</h3><p>You may cancel your account and terminate your subscription at any time via your account settings.</p><h3>8.2 Termination by Us</h3><p>We reserve the right to suspend or terminate your access to the platform immediately and without notice if you materially breach these Terms, fail to pay outstanding fees, or engage in activity that poses a security or legal risk to Diligence Ready or its users.</p><h3>8.3 Effect of Termination</h3><p>Upon termination, your right to access and use the platform ceases. It is your responsibility to export your Customer Data prior to effective termination.</p><h2 id="s9">9. Indemnification and Limitation of Liability</h2><h3>9.1 Indemnification</h3><p>You agree to indemnify, defend, and hold harmless Diligence Ready and its officers, directors, employees, and affiliates from and against any third-party claims, liabilities, damages, losses, and expenses (including reasonable attorneys' fees) arising out of or closely tied to: (a) your breach of these Terms, (b) your Customer Data, or (c) your violation of any applicable corporate or securities law.</p><h3>9.2 Limitation of Liability</h3><p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL DILIGENCE READY BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, REVENUE, DATA, OR USE, WHETHER IN AN ACTION IN CONTRACT OR TORT, ARISING OUT OF OR IN CONNECTION WITH THE SERVICES.</p><p>OUR TOTAL AGGREGATE LIABILITY FOR ALL CLAIMS ARISING OUT OF OR RELATED TO THESE TERMS SHALL NOT EXCEED THE TOTAL AMOUNT OF FEES PAID BY YOU TO DILIGENCE READY IN THE TWELVE (12) MONTHS IMMEDIATELY PRECEDING THE EVENT GIVING RISE TO LIABILITY.</p><h2 id="s10">10. Governing Law and Dispute Resolution</h2><h3>10.1 Governing Law</h3><p>These Terms and any dispute arising hereunder shall be governed by and construed in accordance with the laws of the State of Delaware, without regard to its conflict of law principles.</p><h3>10.2 Arbitration Agreement</h3><p>Any dispute, claim, or controversy arising out of or relating to these Terms or the breach, termination, enforcement, interpretation, or validity thereof, shall be settled by binding arbitration administered by the American Arbitration Association (AAA) or JAMS in accordance with its commercial arbitration rules. Judgment on the award rendered by the arbitrator may be entered in any court having jurisdiction thereof.</p><h2 id="s11">11. Miscellaneous</h2><ul class="legal-list"><li><b>Entire Agreement:</b> These Terms constitute the complete and exclusive agreement between the parties regarding its subject matter and supersedes all prior or contemporaneous agreements.</li><li><b>Severability:</b> If any provision of these Terms is held to be invalid or unenforceable, the remaining provisions will continue in full force and effect.</li><li><b>Modifications:</b> We may update these Terms from time to time. If we make material changes, we will notify you by email or via a prominent notification on the platform. Your continued use of the Services after the effective date of modified terms signifies your acceptance.</li></ul><p class="legal-callout">Contact Information: For any questions regarding these Terms, please contact us at <a href="mailto:legal@diligenceready.com">legal@diligenceready.com</a>.</p>
+    </article>
+  </div>
+</section>
+
+</main>
+<div class="mcta" id="mcta"><a class="p" href="https://app.diligenceready.com/signup?src=terms">Start free <span class="arr">→</span></a><a class='s' href='./#contact'>Contact</a></div>
+
+<footer data-screen-label="Footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class='brand' href='./#top'>
+          <span class="mono-circle">dr</span>
+          <span class="wordmark">Diligence Ready<span class="dot">.</span></span>
+        </a>
+        <p>The equity platform that keeps growing companies continuously ready for fundraising, M&amp;A, and capital events.</p>
+        <div class="promise">Readiness is the standard.</div>
+      </div>
+      <div class="foot-col">
+        <h6>Product</h6>
+        <a href='./cap-table'>Cap table</a>
+        <a href='./scenario-modeling'>What-if modeling</a>
+        <a href='./diligence-room'>Diligence room</a>
+        <a href='./ai-assistant'>AI assistant</a>
+        <a href='./for-advisors'>For Trusted Advisors</a>
+        <a href='./features'>All features</a>
+      </div>
+      <div class="foot-col">
+        <h6>Company</h6>
+        <a href='./why-diligence-ready'>Why Diligence Ready</a>
+        <a href='./#contact'>Request a demo</a>
+        <a href='./pricing'>Pricing</a>
+        <a href='./#contact'>Become a Trusted Advisor</a>
+        <a href='./#contact'>Contact</a>
+      </div>
+      <div class="foot-col">
+        <h6>Legal</h6>
+        <a href='./privacy'>Privacy</a>
+        <a href='./terms'>Terms</a>
+        <a href='./security'>Security &amp; trust</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Diligence Ready. All rights reserved.</span>
+      <div class="legal"><span>diligenceready.com</span><span>Built for the way modern founders raise.</span></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+  onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Decorative entrance only — content is visible by default in CSS, so nothing
+  // can get stuck hidden. We add `.in` (which fires the keyframe) only while the
+  // page is actually being rendered; if backgrounded we simply skip the animation.
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
+  if (!document.hidden) {
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  }
+
+  // Product dropdown — click/keyboard toggle (hover handled in CSS)
+  document.querySelectorAll('[data-dd]').forEach(dd => {
+    const btn = dd.querySelector('.nav-dd-btn');
+    btn.addEventListener('click', (e) => { e.stopPropagation(); const open = dd.classList.toggle('open'); btn.setAttribute('aria-expanded', open); });
+  });
+  document.addEventListener('click', () => document.querySelectorAll('[data-dd].open').forEach(dd => { dd.classList.remove('open'); dd.querySelector('.nav-dd-btn').setAttribute('aria-expanded', 'false'); }));
+
+  // Mobile menu toggle
+  const burger = document.getElementById('navBurger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (burger && mobileMenu) {
+    const closeMenu = () => { burger.classList.remove('open'); mobileMenu.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; document.body.classList.remove('menu-open'); };
+    burger.addEventListener('click', () => {
+      const open = burger.classList.toggle('open');
+      mobileMenu.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.style.overflow = open ? 'hidden' : ''; document.body.classList.toggle('menu-open', open);
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  }
+
+  // Pricing billing toggle (Monthly / Annual — 2 months free)
+  const billBtns = document.querySelectorAll('.bill-toggle .bt');
+  const billPrices = document.querySelectorAll('[data-m]');
+  billBtns.forEach(b => b.addEventListener('click', () => {
+    const mode = b.dataset.bill;
+    billBtns.forEach(x => x.classList.toggle('on', x === b));
+    billPrices.forEach(p => { p.innerHTML = mode === 'annual' ? p.dataset.a : p.dataset.m; });
+  }));
+
+  // Contact form — composes the team address at runtime (split to deter scrapers)
+  var _drTo = ['info', 'diligenceready.com'].join('@');
+  var _drEmail = document.getElementById('contactEmail');
+  if (_drEmail) { _drEmail.href = 'mailto:' + _drTo; }
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    const note = document.getElementById('cf-note');
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const v = (id) => (document.getElementById(id).value || '').trim();
+      const name = v('cf-name'), email = v('cf-email'), company = v('cf-company'), message = v('cf-message');
+      const subject = encodeURIComponent('Diligence Ready inquiry' + (company ? ' — ' + company : ''));
+      const body = encodeURIComponent(
+        'Name: ' + name + '\n' +
+        'Email: ' + email + '\n' +
+        'Company: ' + (company || '—') + '\n\n' +
+        message + '\n'
+      );
+      window.location.href = 'mailto:' + _drTo + '?subject=' + subject + '&body=' + body;
+      if (note) note.textContent = 'Opening your email app… if nothing happens, please try again in a moment.';
+    });
+  }
+</script>
+<script>
+  (function(){
+    const links=[...document.querySelectorAll('.legal-toc a')];
+    const map=new Map(links.map(a=>[a.getAttribute('href').slice(1),a]));
+    const spy=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.remove('active'));const a=map.get(e.target.id);if(a)a.classList.add('active');}});},{rootMargin:'-80px 0px -70% 0px',threshold:0});
+    document.querySelectorAll('.legal-body h2').forEach(h=>spy.observe(h));
+  })();
+</script>
+
+<style id="__om-edit-overrides"></style>
+
+<script>
+  (function(){
+    var bar = document.getElementById('mcta'); if(!bar) return;
+    var stop = document.getElementById('contact') || document.querySelector('footer');
+    var tick = function(){
+      var past = window.scrollY > 520;
+      var near = stop && stop.getBoundingClientRect().top < window.innerHeight * 0.75;
+      bar.classList.toggle('up', past && !near);
+    };
+    tick(); window.addEventListener('scroll', tick, { passive: true });
+  })();
+</script>
+
+<!-- ============ COOKIE NOTICE ============ -->
+<div id="dr-cookie-root" hidden role="dialog" aria-modal="true" aria-labelledby="dr-cookie-title">
+  <div id="dr-cookie-card">
+    <div id="dr-cookie-main">
+      <h2 id="dr-cookie-title">diligenceready.com</h2>
+      <p>We use cookies to run the site and improve it.</p>
+      <button type="button" id="dr-cookie-accept">Accept all</button>
+      <button type="button" id="dr-cookie-essential">Essential only</button>
+      <button type="button" id="dr-cookie-prefs-open">Preferences</button>
+      <a class='dr-cookie-legal' href='./privacy'>Privacy Policy</a>
+    </div>
+    <div id="dr-cookie-prefs-panel" hidden>
+      <h2>Cookie Preferences</h2>
+      <p>Choose which cookies we can use. Essential cookies are always on.</p>
+      <label><input type="checkbox" checked disabled /> Essential (required)</label>
+      <label><input type="checkbox" id="dr-cookie-analytics" /> Analytics</label>
+      <label><input type="checkbox" id="dr-cookie-marketing" /> Marketing</label>
+      <button type="button" id="dr-cookie-save">Save Preferences</button>
+      <button type="button" id="dr-cookie-back">Back</button>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var KEY = 'dr_cookie_consent';
+  var root = document.getElementById('dr-cookie-root');
+  if (!root) return;
+  var main = document.getElementById('dr-cookie-main');
+  var panel = document.getElementById('dr-cookie-prefs-panel');
+  var cbA = document.getElementById('dr-cookie-analytics');
+  var cbM = document.getElementById('dr-cookie-marketing');
+
+  function apply(c) {
+    if (typeof gtag !== 'function') return;
+    gtag('consent', 'update', {
+      analytics_storage: c.analytics ? 'granted' : 'denied',
+      ad_storage: c.marketing ? 'granted' : 'denied',
+      ad_user_data: c.marketing ? 'granted' : 'denied',
+      ad_personalization: c.marketing ? 'granted' : 'denied'
+    });
+  }
+  function save(c) {
+    c.ts = new Date().toISOString();
+    try { localStorage.setItem(KEY, JSON.stringify(c)); } catch (e) {}
+    apply(c);
+    root.hidden = true;
+  }
+  function read() {
+    try { return JSON.parse(localStorage.getItem(KEY)); } catch (e) { return null; }
+  }
+
+  var stored = read();
+  if (stored && typeof stored.analytics === 'boolean') {
+    apply(stored);
+  } else {
+    root.hidden = false;
+  }
+
+  document.getElementById('dr-cookie-accept').addEventListener('click', function () {
+    save({ analytics: true, marketing: true });
+  });
+  document.getElementById('dr-cookie-essential').addEventListener('click', function () {
+    save({ analytics: false, marketing: false });
+  });
+  document.getElementById('dr-cookie-prefs-open').addEventListener('click', function () {
+    main.hidden = true; panel.hidden = false;
+  });
+  document.getElementById('dr-cookie-back').addEventListener('click', function () {
+    panel.hidden = true; main.hidden = false;
+  });
+  document.getElementById('dr-cookie-save').addEventListener('click', function () {
+    save({ analytics: !!cbA.checked, marketing: !!cbM.checked });
+  });
+})();
+</script>
+<script>
+// signup_click: GA4 event on every signup / Start free link (21 Oct 2026)
+document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href*="app.diligenceready.com/signup"]'):null;if(!a||typeof gtag!=='function')return;var s='';try{s=new URL(a.href).searchParams.get('src')||''}catch(x){}gtag('event','signup_click',{src:s,link_text:(a.textContent||'').replace(/\s+/g,' ').trim().slice(0,60),link_url:a.href});});
+</script>
+<div id="dr-preview-flag" style="position:fixed;left:16px;bottom:16px;z-index:9999;padding:8px 12px;border-radius:8px;background:#0F1E3D;color:#fff;font:500 12px/1.3 Inter,system-ui,sans-serif;box-shadow:0 8px 24px -8px rgba(0,0,0,.4);pointer-events:none;">Preview copy · not the live site</div>
+<script>document.addEventListener("submit",function(e){var f=e.target;if(f&&f.tagName==="FORM"){e.preventDefault();var b=f.querySelector("[type=submit]");if(b){b.textContent="Forms are off in this preview";b.disabled=true;}}},true);</script>
+</body>
+</html>

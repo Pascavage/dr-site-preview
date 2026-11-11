@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) — GA4 + Google Ads -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  // Consent Mode default denied; wait briefly for CMP / stored apply below
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    wait_for_update: 500
+  });
+
+  // Apply stored preference BEFORE config / conversion (same KEY as footer banner)
+  (function () {
+    var KEY = 'dr_cookie_consent';
+    var c = null;
+    try { c = JSON.parse(localStorage.getItem(KEY)); } catch (e) { c = null; }
+    if (c && typeof c.analytics === 'boolean') {
+      gtag('consent', 'update', {
+        analytics_storage: c.analytics ? 'granted' : 'denied',
+        ad_storage: c.marketing ? 'granted' : 'denied',
+        ad_user_data: c.marketing ? 'granted' : 'denied',
+        ad_personalization: c.marketing ? 'granted' : 'denied'
+      });
+    }
+  })();
+
+  gtag('config', 'G-5SE3GQ5GK4');
+  gtag('config', 'AW-18371579900');
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="An AI assistant built into your cap table from day one. It answers questions, extracts SAFEs and convertible notes, drafts investor updates, and proposes every action for your approval — so nothing changes without your sign-off." />
+<title>AI Cap-Table Assistant — Diligence Ready</title>
+<link rel="canonical" href="https://diligenceready.com/ai-assistant" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#0F1E3D" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Diligence Ready" />
+<meta property="og:title" content="AI Cap-Table Assistant — Diligence Ready" />
+<meta property="og:description" content="It does the work — answers, extracts agreements, drafts updates — and waits for your sign-off before a single number changes." />
+<meta property="og:url" content="https://diligenceready.com/ai-assistant" />
+<meta property="og:image" content="https://diligenceready.com/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="AI Cap-Table Assistant — Diligence Ready" />
+<meta name="twitter:description" content="It does the work. You approve it. A cap-table AI that proposes every action for review." />
+<meta name="twitter:image" content="https://diligenceready.com/og-image.png" />
+
+<!-- Icons -->
+<link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://diligenceready.com/" },
+    { "@type": "ListItem", "position": 2, "name": "AI Assistant", "item": "https://diligenceready.com/ai-assistant" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What can the AI assistant do?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It answers questions about your cap table and transactions in plain language, models what-if scenarios, extracts terms from SAFEs and convertible notes, and drafts investor updates. Anything that would change your records is proposed as a reviewable action, not executed automatically." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the AI change my cap table automatically?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. The assistant proposes — you approve. Every action that would mutate your data is presented for review with the exact changes shown, and nothing is committed until you sign off. There are no surprise edits." }
+    },
+    {
+      "@type": "Question",
+      "name": "What AI model is it built on?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It's built on a leading frontier large language model, chosen for careful reasoning over your numbers rather than generic chat. The emphasis is on nuance and accuracy — not bullet-point summaries that sound confident and get the math wrong." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can it read my SAFEs and convertible notes?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Upload an agreement and the assistant extracts the key terms — amount, valuation cap, discount, and dates — and drafts the corresponding transaction for you to review side by side with the source document before committing." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my data used to train AI models?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Your company's data is yours. It is used to answer your questions and do your work — not to train public models. Sensitive records stay within your account and your chosen storage." }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@300;400;450;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a aria-label='Diligence Ready' class='brand' href='./'>
+      <span class="mono-circle">dr</span>
+      <span class="wordmark">Diligence Ready<span class="dot">.</span></span>
+    </a>
+    <nav class="nav-links">
+      <div class="nav-dd" data-dd>
+        <button type="button" class="nav-dd-btn" aria-expanded="false">Product <span class="caret">▾</span></button>
+        <div class="nav-dd-menu">
+          <a href='./cap-table'><span class="t">Cap Table</span><span class="d">Every security class, reconciled</span></a>
+          <a href='./scenario-modeling'><span class="t">Scenario Modeling</span><span class="d">Rounds, dilution &amp; waterfalls</span></a>
+          <a href='./diligence-room'><span class="t">Diligence Room</span><span class="d">Be ready before they ask</span></a>
+          <a class='on' href='./ai-assistant'><span class="t">AI Assistant</span><span class="d">It does the work, you approve</span></a>
+          <div class="dd-sep"></div>
+          <a class='dd-all' href='./features'><span class="t">See all features</span><span class="arr">→</span></a>
+        </div>
+      </div>
+      <a href='./for-advisors'>Trusted Advisors</a>
+      <a href='./learn/'>Learn</a>
+      <a href='./pricing'>Pricing</a>
+    </nav>
+    <div class="nav-cta">
+      <a class='link sales-link' href='./#contact'>Contact us</a>
+      <a class="link" href="https://app.diligenceready.com/login">Customer Login</a>
+      <a class="btn btn-accent" href="https://app.diligenceready.com/signup?src=ai-assistant">Sign up <span class="arr">→</span></a>
+    </div>
+    <a class="btn btn-accent nav-cta-m" href="https://app.diligenceready.com/signup?src=ai-assistant">Start free</a>
+    <button type="button" class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mm-group">Product</div>
+  <a class='sub' href='./cap-table'>Cap Table</a>
+  <a class='sub' href='./scenario-modeling'>Scenario Modeling</a>
+  <a class='sub' href='./diligence-room'>Diligence Room</a>
+  <a class='sub' href='./ai-assistant'>AI Assistant</a>
+  <a class='sub' href='./features'>All Features</a>
+  <div class="mm-group">Explore</div>
+  <a href='./for-advisors'>Trusted Advisors</a>
+  <a href='./learn/'>Learn</a>
+  <a href='./pricing'>Pricing</a>
+  <a href='./why-diligence-ready'>Why Diligence Ready</a>
+  <div class="mm-cta">
+    <a class='btn btn-ghost btn-lg' href='./#contact'>Contact us</a>
+    <a class="btn btn-ghost btn-lg" href="https://app.diligenceready.com/login">Customer Login</a>
+    <a class="btn btn-accent btn-lg" href="https://app.diligenceready.com/signup?src=ai-assistant">Sign up</a>
+  </div>
+</div>
+
+<main>
+
+<!-- ============ FEATURE HERO ============ -->
+<section class="feat-hero" data-screen-label="AI hero">
+  <div class="wrap">
+    <div class="breadcrumb reveal">
+      <a href='./'>Home</a><span class="sep">/</span><span class="cur">AI Assistant</span>
+    </div>
+    <div class="feat-hero-grid">
+      <div>
+        <span class="eyebrow reveal">AI assistant</span>
+        <h1 class="reveal" style="transition-delay:.05s;margin-top:18px;">It does the work.<br /> <em>You approve it.</em></h1>
+        <p class="lead reveal" style="transition-delay:.1s">Built into your cap table from day one — it answers questions, extracts agreements, and drafts the work, then waits for your sign-off before a single number changes.</p>
+        <div class="hero-cta reveal" style="transition-delay:.15s">
+          <a class="btn btn-accent btn-lg" href="https://app.diligenceready.com/signup?src=ai-assistant">Start free <span class="arr">→</span></a>
+          <a class='btn btn-ghost btn-lg' href='./pricing'>See pricing</a>
+        </div>
+        <div class="hero-note reveal" style="transition-delay:.2s">
+          <span><span class="dot"></span> Human in the loop</span>
+          <span><span class="dot"></span> No surprise edits</span>
+        </div>
+      </div>
+      <div class="showcase-art reveal" style="transition-delay:.18s">
+        <div class="browser">
+        <div class="browser-bar">
+          <div class="dots"><i></i><i></i><i></i></div>
+          <div class="url">app.diligenceready.com<b>/assistant</b></div>
+        </div>
+        <img class="hero-app-shot" src="assistant-app.png" alt="Diligence Ready AI assistant — the Acme Corp LLC cap-table workspace with chat, context panel, and quick actions" width="3354" height="1807" decoding="async" />
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROBLEM ============ -->
+<section class="sec-pad-sm" data-screen-label="The problem">
+  <div class="wrap-narrow center">
+    <span class="eyebrow center reveal">How it works</span>
+    <h2 class="section-title reveal" style="margin-top:22px;transition-delay:.05s">Propose, review, <span class="accent-line">then commit.</span></h2>
+    <p class="lead reveal" style="margin-top:24px;transition-delay:.1s">An assistant is only useful on a cap table if it can act — and only safe if it can't act alone. So every action runs the same way: the assistant drafts it against your live data, you see exactly what will change, and nothing is written until you approve it.</p>
+    <p class="lead reveal" style="margin-top:18px;transition-delay:.15s"><strong style="color:var(--ink);font-weight:600;">It does the work. You approve it.</strong> Every proposal lands in the same audit trail as the rest of the ledger, attributed and timestamped.</p>
+  </div>
+</section>
+
+<!-- ============ CAPABILITIES ============ -->
+<section class="sec-pad" data-screen-label="Capabilities" style="padding-top:24px;">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">What it does</span>
+      <h2 class="section-title" style="margin-top:20px;">A teammate for your cap table.</h2>
+    </div>
+    <div class="feat-cards">
+      <div class="pillar reveal">
+        <div class="pic">✦</div>
+        <h3>Answers in plain language</h3>
+        <p>Ask about ownership, dilution, or any transaction and get a precise answer drawn from your live cap table — not a generic guess.</p>
+      </div>
+      <div class="pillar reveal" style="transition-delay:.05s">
+        <div class="pic coral">⇧</div>
+        <h3>Extracts your agreements</h3>
+        <p>Upload a SAFE or convertible note and it pulls amount, cap, discount, and dates, then drafts the matching transaction for review.</p>
+      </div>
+      <div class="pillar reveal" style="transition-delay:.1s">
+        <div class="pic">⊞</div>
+        <h3>Drafts investor updates</h3>
+        <p>Turn this quarter's numbers into a board- or investor-ready update in your voice — you edit and send, it does the assembly.</p>
+      </div>
+      <div class="pillar reveal" style="transition-delay:.15s">
+        <div class="pic coral">↗</div>
+        <h3>Models scenarios on request</h3>
+        <p>Ask it to price a round or refresh the pool and it runs the scenario against your live table, then explains the result.</p>
+      </div>
+      <div class="pillar reveal" style="transition-delay:.2s">
+        <div class="pic">⛉</div>
+        <h3>Proposes, never mutates</h3>
+        <p>Every change is a proposal with the exact edits shown. Nothing touches your records until you approve it — by design.</p>
+      </div>
+      <div class="pillar reveal" style="transition-delay:.25s">
+        <div class="pic">◷</div>
+        <h3>Reviews your diligence docs</h3>
+        <p>Attach a document to a diligence item and it checks the file against what the item actually asks for — then flags the one thing still standing between you and ready.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SHOWCASE: ASK ANYTHING ============ -->
+<section class="sec-pad" style="padding-top:0;" data-screen-label="Ask showcase">
+  <div class="wrap">
+    <div class="showcase-row flip">
+      <div class="showcase-copy reveal">
+        <span class="eyebrow">Ask anything</span>
+        <h2>The answer, <span class="accent-line">with the math behind it.</span></h2>
+        <p class="lead">No exports, no formulas, no waiting on someone to "pull the numbers." Ask in plain language and get an answer you can act on — every figure traceable back to the live cap table.</p>
+        <ul class="feat-list">
+          <li><span class="ck">✓</span> Natural-language questions across cap table and transactions</li>
+          <li><span class="ck">✓</span> Every figure traceable to its source record</li>
+          <li><span class="ck">✓</span> Follow-ups that remember the thread</li>
+          <li><span class="ck">✓</span> One step from an answer to a proposed action</li>
+        </ul>
+      </div>
+      <div class="showcase-art reveal" style="transition-delay:.1s">
+        <div class="art-frame">
+          <div style="padding:20px;font-size:13px;">
+            <div style="display:flex;gap:11px;margin-bottom:16px;justify-content:flex-end;">
+              <div style="background:var(--midnight);color:var(--cream);border-radius:12px;padding:11px 14px;max-width:80%;">What's my fully-diluted ownership after the Series B?</div>
+            </div>
+            <div style="display:flex;gap:11px;">
+              <div class="ai-mark" style="width:28px;height:28px;border-radius:8px;flex:0 0 auto;font-size:13px;">✦</div>
+              <div style="flex:1;color:var(--ink-2);line-height:1.6;">
+                After the $4M round at $16M pre, founders hold <strong style="color:var(--ink);">39.2%</strong> fully diluted — down 9.4 points from 48.6%. Here's the post-round split:
+                <div style="margin-top:12px;border:1px solid var(--line);border-radius:11px;padding:6px 14px;">
+                  <div class="scn-row"><span class="nm">Founders &amp; common</span><span class="vl">39.20%</span></div>
+                  <div class="scn-row"><span class="nm">Series B (new)</span><span class="vl num-coral">20.00%</span></div>
+                  <div class="scn-row"><span class="nm">Existing preferred</span><span class="vl">28.80%</span></div>
+                  <div class="scn-row"><span class="nm">Option pool</span><span class="vl">12.00%</span></div>
+                </div>
+                <div style="margin-top:12px;font-size:12px;color:var(--faint);font-family:var(--mono);">Source · cap table v41 · scenario "$4M @ $16M pre"</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APPROVAL BAND ============ -->
+<section class="strip sec-pad" data-screen-label="Approval band">
+  <div class="wrap">
+    <div class="sec-head reveal" style="max-width:680px;">
+      <span class="eyebrow on-dark">Safe by design</span>
+      <h2 class="section-title" style="color:var(--cream);margin-top:18px;">It proposes. You approve. <span style="font-style:italic;color:var(--coral);font-family:var(--serif)">Nothing else.</span></h2>
+      <p class="lead" style="color:var(--ice);margin-top:22px;">Every action the assistant takes against your cap table is a proposal — shown in full, approved by a human, logged in the audit trail. The speed of AI with the control of a four-eyes review. No mutation without your sign-off, ever.</p>
+      <a class="btn btn-accent" href="https://app.diligenceready.com/signup?src=ai-assistant" style="margin-top:30px;">See it in your account <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec-pad" data-screen-label="FAQ">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow center">Questions, answered</span>
+      <h2 class="section-title" style="margin-top:20px;">How the assistant works.</h2>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-item reveal">
+        <h3>What can the AI assistant do?</h3>
+        <p>It answers questions about your cap table and transactions in plain language, models what-if scenarios, extracts terms from SAFEs and convertible notes, and drafts investor updates. Anything that would change your records is proposed as a reviewable action, not executed automatically.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>Does the AI change my cap table automatically?</h3>
+        <p>No. The assistant proposes — you approve. Every action that would mutate your data is presented for review with the exact changes shown, and nothing is committed until you sign off. There are no surprise edits.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>What AI model is it built on?</h3>
+        <p>It's built on a leading frontier large language model, chosen for careful reasoning over your numbers rather than generic chat. The emphasis is on nuance and accuracy — not bullet-point summaries that sound confident and get the math wrong.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>Can it read my SAFEs and convertible notes?</h3>
+        <p>Yes. Upload an agreement and the assistant extracts the key terms — amount, valuation cap, discount, and dates — and drafts the corresponding transaction for you to review side by side with the source document before committing.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>Is my data used to train AI models?</h3>
+        <p>Your company's data is yours. It is used to answer your questions and do your work — not to train public models. Sensitive records stay within your account and your chosen storage.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CROSS-LINKS ============ -->
+<section class="sec-pad" style="padding-top:0;" data-screen-label="Explore">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Explore the platform</span>
+      <h2 class="section-title" style="margin-top:18px;">The assistant works on everything here.</h2>
+    </div>
+    <div class="xlinks">
+      <a class='xlink reveal' href='./cap-table'>
+        <span class="xt">Cap table</span>
+        <span class="xd">The reconciled ledger the assistant reads, reasons over, and proposes changes to.</span>
+        <span class="xm">Explore →</span>
+      </a>
+      <a class='xlink reveal' href='./scenario-modeling' style='transition-delay:.06s'>
+        <span class="xt">Scenario modeling</span>
+        <span class="xd">Ask the assistant to price a round, and it runs the model for you.</span>
+        <span class="xm">Explore →</span>
+      </a>
+      <a class='xlink reveal' href='./diligence-room' style='transition-delay:.12s'>
+        <span class="xt">Diligence room</span>
+        <span class="xd">"What's left for diligence?" — it checks the readiness list and tells you.</span>
+        <span class="xm">Explore →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="sec-pad" style="padding-top:0;" data-screen-label="Final CTA">
+  <div class="wrap">
+    <div class="final-card reveal">
+      <span class="eyebrow on-dark" style="justify-content:center;display:flex;">AI assistant</span>
+      <h2 class="display" style="margin-top:22px;">It does the work. You approve it.</h2>
+      <p class="lead">Start free and put a cap-table teammate to work — one that never changes a number without your sign-off.</p>
+      <div class="hero-cta">
+        <a class="btn btn-accent btn-lg" href="https://app.diligenceready.com/signup?src=ai-assistant">Start free <span class="arr">→</span></a>
+        <a class='btn btn-ghost btn-lg' href='./#contact'>Contact us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<div class="mcta" id="mcta"><a class="p" href="https://app.diligenceready.com/signup?src=ai-assistant">Start free <span class="arr">→</span></a><a class='s' href='./#contact'>Contact</a></div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a aria-label='Diligence Ready' class='brand on-dark' href='./'>
+          <span class="mono-circle">dr</span>
+          <span class="wordmark">Diligence Ready<span class="dot">.</span></span>
+        </a>
+        <div class="promise">Readiness is the standard.</div>
+      </div>
+      <div class="foot-col">
+        <h6>Product</h6>
+        <a href='./cap-table'>Cap table</a>
+        <a href='./scenario-modeling'>What-if modeling</a>
+        <a href='./diligence-room'>Diligence room</a>
+        <a href='./ai-assistant'>AI assistant</a>
+        <a href='./for-advisors'>For Trusted Advisors</a>
+        <a href='./features'>All features</a>
+      </div>
+      <div class="foot-col">
+        <h6>Company</h6>
+        <a href='./why-diligence-ready'>Why Diligence Ready</a>
+        <a href='./#contact'>Request a demo</a>
+        <a href='./pricing'>Pricing</a>
+        <a href='./#contact'>Become a Trusted Advisor</a>
+        <a href='./#contact'>Contact</a>
+      </div>
+      <div class="foot-col">
+        <h6>Legal</h6>
+        <a href='./privacy'>Privacy</a>
+        <a href='./terms'>Terms</a>
+        <a href='./security'>Security &amp; trust</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Diligence Ready. All rights reserved.</span>
+      <div class="legal"><span>diligenceready.com</span><span>Built for the way modern founders raise.</span></div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ REVEAL + NAV JS ============ -->
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+  onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
+  if (!document.hidden) {
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  }
+
+  // Product dropdown — click/keyboard toggle (hover handled in CSS)
+  document.querySelectorAll('[data-dd]').forEach(dd => {
+    const btn = dd.querySelector('.nav-dd-btn');
+    btn.addEventListener('click', (e) => { e.stopPropagation(); const open = dd.classList.toggle('open'); btn.setAttribute('aria-expanded', open); });
+  });
+  document.addEventListener('click', () => document.querySelectorAll('[data-dd].open').forEach(dd => { dd.classList.remove('open'); dd.querySelector('.nav-dd-btn').setAttribute('aria-expanded', 'false'); }));
+
+  // Mobile menu toggle
+  const burger = document.getElementById('navBurger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (burger && mobileMenu) {
+    const closeMenu = () => { burger.classList.remove('open'); mobileMenu.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; document.body.classList.remove('menu-open'); };
+    burger.addEventListener('click', () => {
+      const open = burger.classList.toggle('open');
+      mobileMenu.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.style.overflow = open ? 'hidden' : ''; document.body.classList.toggle('menu-open', open);
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  }
+</script>
+
+<script>
+  (function(){
+    var bar = document.getElementById('mcta'); if(!bar) return;
+    var stop = document.getElementById('contact') || document.querySelector('footer');
+    var tick = function(){
+      var past = window.scrollY > 520;
+      var near = stop && stop.getBoundingClientRect().top < window.innerHeight * 0.75;
+      bar.classList.toggle('up', past && !near);
+    };
+    tick(); window.addEventListener('scroll', tick, { passive: true });
+  })();
+</script>
+
+<!-- ============ COOKIE NOTICE ============ -->
+<div id="dr-cookie-root" hidden role="dialog" aria-modal="true" aria-labelledby="dr-cookie-title">
+  <div id="dr-cookie-card">
+    <div id="dr-cookie-main">
+      <h2 id="dr-cookie-title">diligenceready.com</h2>
+      <p>We use cookies to run the site and improve it.</p>
+      <button type="button" id="dr-cookie-accept">Accept all</button>
+      <button type="button" id="dr-cookie-essential">Essential only</button>
+      <button type="button" id="dr-cookie-prefs-open">Preferences</button>
+      <a class='dr-cookie-legal' href='./privacy'>Privacy Policy</a>
+    </div>
+    <div id="dr-cookie-prefs-panel" hidden>
+      <h2>Cookie Preferences</h2>
+      <p>Choose which cookies we can use. Essential cookies are always on.</p>
+      <label><input type="checkbox" checked disabled /> Essential (required)</label>
+      <label><input type="checkbox" id="dr-cookie-analytics" /> Analytics</label>
+      <label><input type="checkbox" id="dr-cookie-marketing" /> Marketing</label>
+      <button type="button" id="dr-cookie-save">Save Preferences</button>
+      <button type="button" id="dr-cookie-back">Back</button>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var KEY = 'dr_cookie_consent';
+  var root = document.getElementById('dr-cookie-root');
+  if (!root) return;
+  var main = document.getElementById('dr-cookie-main');
+  var panel = document.getElementById('dr-cookie-prefs-panel');
+  var cbA = document.getElementById('dr-cookie-analytics');
+  var cbM = document.getElementById('dr-cookie-marketing');
+
+  function apply(c) {
+    if (typeof gtag !== 'function') return;
+    gtag('consent', 'update', {
+      analytics_storage: c.analytics ? 'granted' : 'denied',
+      ad_storage: c.marketing ? 'granted' : 'denied',
+      ad_user_data: c.marketing ? 'granted' : 'denied',
+      ad_personalization: c.marketing ? 'granted' : 'denied'
+    });
+  }
+  function save(c) {
+    c.ts = new Date().toISOString();
+    try { localStorage.setItem(KEY, JSON.stringify(c)); } catch (e) {}
+    apply(c);
+    root.hidden = true;
+  }
+  function read() {
+    try { return JSON.parse(localStorage.getItem(KEY)); } catch (e) { return null; }
+  }
+
+  var stored = read();
+  if (stored && typeof stored.analytics === 'boolean') {
+    apply(stored);
+  } else {
+    root.hidden = false;
+  }
+
+  document.getElementById('dr-cookie-accept').addEventListener('click', function () {
+    save({ analytics: true, marketing: true });
+  });
+  document.getElementById('dr-cookie-essential').addEventListener('click', function () {
+    save({ analytics: false, marketing: false });
+  });
+  document.getElementById('dr-cookie-prefs-open').addEventListener('click', function () {
+    main.hidden = true; panel.hidden = false;
+  });
+  document.getElementById('dr-cookie-back').addEventListener('click', function () {
+    panel.hidden = true; main.hidden = false;
+  });
+  document.getElementById('dr-cookie-save').addEventListener('click', function () {
+    save({ analytics: !!cbA.checked, marketing: !!cbM.checked });
+  });
+})();
+</script>
+<script>
+// signup_click: GA4 event on every signup / Start free link (21 Oct 2026)
+document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href*="app.diligenceready.com/signup"]'):null;if(!a||typeof gtag!=='function')return;var s='';try{s=new URL(a.href).searchParams.get('src')||''}catch(x){}gtag('event','signup_click',{src:s,link_text:(a.textContent||'').replace(/\s+/g,' ').trim().slice(0,60),link_url:a.href});});
+</script>
+<div id="dr-preview-flag" style="position:fixed;left:16px;bottom:16px;z-index:9999;padding:8px 12px;border-radius:8px;background:#0F1E3D;color:#fff;font:500 12px/1.3 Inter,system-ui,sans-serif;box-shadow:0 8px 24px -8px rgba(0,0,0,.4);pointer-events:none;">Preview copy · not the live site</div>
+<script>document.addEventListener("submit",function(e){var f=e.target;if(f&&f.tagName==="FORM"){e.preventDefault();var b=f.querySelector("[type=submit]");if(b){b.textContent="Forms are off in this preview";b.disabled=true;}}},true);</script>
+</body>
+</html>

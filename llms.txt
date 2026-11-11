@@ -1,0 +1,56 @@
+# Diligence Ready
+
+> Diligence Ready is cap table, data room, and diligence software that keeps growing companies ready before the deal arrives. Files stay in your own Google Drive or OneDrive.
+
+Key facts:
+- Who it is for: founders, CEOs, and CFOs at growing companies who will face diligence for a round, an acquisition, a loan, or an audit. Also the Trusted Advisors around them: fractional CFOs, accounting firms, law firms, angel groups, and PE firms.
+- Storage: files stay in your own Google Drive or OneDrive. Guests view documents through the app, watermarked with their identity, and never get a link into your Drive.
+- Data room: per-recipient links with a one-time code, identity watermarking, downloads off by default, revocation mid-session, and an access log. Founders includes 1 data room (3 guests). Standard includes up to 5 data rooms (25 guests).
+- Diligence checklist: start from templates you control. Attach documents to each item, and the checklist shows what's matched and what's missing.
+- Pricing (as of Sep 2026): Founders is free (3 users). Standard covers up to 10 users. Growth (25 users) and Scale (100 users) are coming soon. No per-page data room fees on any plan. Current prices: https://diligenceready.com/pricing
+- Assistant: proposes changes and waits for your approval. No data changes without your sign-off.
+
+## Product
+- [Home](https://diligenceready.com/): Cap table management, scenario modeling, financial reporting, board packages, and a diligence data room in one platform. Free for founders.
+- [Pricing](https://diligenceready.com/pricing): Founders is $0 forever with the full cap table. Standard is $99/mo for 10 users. No per-page data room fees, and files stay in your own Drive.
+- [Diligence room](https://diligenceready.com/diligence-room): Diligence room with checklist, documents tied to each transaction, gated access, and full audit trail.
+- [Cap table](https://diligenceready.com/cap-table): Cap table software that stops spreadsheet drift. One reconciled ledger (common, preferred, SAFEs, options, convertibles) with version history and a full audit trail.
+- [Scenario modeling](https://diligenceready.com/scenario-modeling): Price the next round, refresh the option pool, fold in convertibles, and run the liquidation waterfall at any exit value, against your live cap table.
+- [SAFE and round modeling](https://diligenceready.com/safe-cap-table-modeling): Model SAFEs, notes, share issuances, and funding-round assumptions to understand potential ownership outcomes before recording a transaction.
+- [Cap table version history](https://diligenceready.com/cap-table-version-history): Track cap table changes over time with version history that helps founders and finance practitioners understand the record behind ownership.
+- [Google Drive and OneDrive data room](https://diligenceready.com/google-drive-onedrive-data-room): Connect Google Drive or OneDrive and organize a diligence workflow around files that stay under your control.
+- [Startup due diligence](https://diligenceready.com/startup-due-diligence): Organize ownership, financial, governance, legal, IP, and go-to-market evidence into a maintained diligence workflow instead of a one-time file scramble.
+- [Fundraising readiness](https://diligenceready.com/fundraising-readiness): Keep ownership, financial evidence, governance materials, and diligence documents organized before fundraising conversations begin.
+- [AI assistant](https://diligenceready.com/ai-assistant): Answers questions, extracts agreements, and drafts the work, then waits for your sign-off before a single number changes.
+- [Features](https://diligenceready.com/features): The complete set of Diligence Ready capabilities: cap table & equity, scenario modeling, diligence, data rooms, financials, board management, investor relations, files, AI assistant, security, and billing.
+- [For Trusted Advisors](https://diligenceready.com/for-advisors): Cap table and diligence software for anyone who carries more than one company: fractional CFOs, accounting firms, law firms, angel groups, and PE firms.
+- [For founders](https://diligenceready.com/for-founders): Keep your cap table, decision models, company evidence, and investor sharing organized before the next financing or diligence request.
+- [Security](https://diligenceready.com/security): Row-level isolation between companies, an audit log on everything, one-time codes and watermarking on external sharing, files in your own cloud storage, and AI that acts only with your approval.
+- [Why Diligence Ready](https://diligenceready.com/why-diligence-ready): Why a company runs ownership, financials, the board, and the diligence room on one platform.
+
+## Comparisons
+- [Alternatives](https://diligenceready.com/alternatives): How to evaluate cap table software, not a ranking. Provider pages are dated and sourced from public information.
+- [Carta alternative](https://diligenceready.com/carta-alternative): A cautious, fit-based comparison of Diligence Ready and Carta for founders, CFOs, advisors, and accountants evaluating cap table software.
+- [Pulley alternative](https://diligenceready.com/pulley-alternative): Pulley is shutting down on December 8, 2026. Key dates from Pulley's own FAQ, how to export your cap table first, and a dated, sourced comparison with Diligence Ready.
+
+## Guides
+- [What is a data room?](https://diligenceready.com/learn/what-is-a-data-room): What a data room is, why investors ask for one, what goes in an investor data room, and how to keep control of what you share.
+- [How to set up a due diligence data room](https://diligenceready.com/learn/how-to-set-up-a-due-diligence-data-room): Eight setup steps: where files live, a folder structure built on the five diligence categories, file naming, per-person access, and a gap check before reviewers are invited.
+- [Due diligence checklist](https://diligenceready.com/learn/due-diligence-checklist): The documents investors ask for in diligence, by category: corporate and formation, cap table and equity, financials and tax, material contracts, IP assignments, and employees and HR. Also the data room for investors checklist.
+- [How to get diligence-ready](https://diligenceready.com/learn/how-to-get-diligence-ready): A practical checklist to stay diligence-ready before the term sheet ever lands.
+- [Sell-side due diligence](https://diligenceready.com/learn/sell-side-due-diligence): Sell-side due diligence means the seller keeps the room ready before a buyer asks.
+- [Buy-side due diligence](https://diligenceready.com/learn/buy-side-due-diligence): Buy-side due diligence is how a buyer reviews a clean room: organized index, gated access, and documents tied to records.
+- [How to prepare a cap table for due diligence](https://diligenceready.com/learn/prepare-cap-table-for-due-diligence): Six steps to get your cap table ready before investors or buyers start diligence, so every number ties out and every line has its paperwork.
+- [What is a cap table?](https://diligenceready.com/learn/what-is-a-cap-table): A cap table is the record of who owns what in your company. What it includes, authorized vs. issued vs. fully diluted shares, and when a spreadsheet stops being enough.
+- [What is a SAFE?](https://diligenceready.com/learn/what-is-a-safe): A SAFE lets a startup raise money now and convert it to equity later. Valuation caps and discounts, pre- vs. post-money SAFEs, and how a SAFE differs from a convertible note.
+- [Pre-money vs. post-money valuation](https://diligenceready.com/learn/pre-money-vs-post-money): Pre-money is what your company is worth before an investment; post-money is after. The math and a worked example.
+- [Liquidation preferences, explained](https://diligenceready.com/learn/liquidation-preference): How the multiple works, participating vs. non-participating preferred, and why 1x non-participating is the market standard.
+- [What goes in a board package?](https://diligenceready.com/learn/what-goes-in-a-board-package): What to include, how to run the document side of a board meeting, and how to know who has actually read it.
+- [Financial reporting for startups](https://diligenceready.com/learn/financial-reporting-for-startups): The three core statements, the right reporting cadence, and how to keep reporting clean without the quarter-end scramble.
+- [Fractional CFO tools](https://diligenceready.com/learn/fractional-cfo-tools): One workspace across every client (ledger, room, and What-If) with gated, audited access.
+- [Reseller agreement checklist for founders](https://diligenceready.com/learn/reseller-agreement): Reseller agreement checklist: key clauses, customer ownership, and which docs go in the data room before you sign. Start free on Founders ($0).
+
+## Optional
+- [Learn hub](https://diligenceready.com/learn/): Plain-English guides across cap tables, SAFEs, valuation and dilution, data rooms, board packages, financial reporting, and getting diligence-ready.
+- [Privacy](https://diligenceready.com/privacy)
+- [Terms](https://diligenceready.com/terms)

@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) — GA4 + Google Ads -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  // Consent Mode default denied; wait briefly for CMP / stored apply below
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    wait_for_update: 500
+  });
+
+  // Apply stored preference BEFORE config / conversion (same KEY as footer banner)
+  (function () {
+    var KEY = 'dr_cookie_consent';
+    var c = null;
+    try { c = JSON.parse(localStorage.getItem(KEY)); } catch (e) { c = null; }
+    if (c && typeof c.analytics === 'boolean') {
+      gtag('consent', 'update', {
+        analytics_storage: c.analytics ? 'granted' : 'denied',
+        ad_storage: c.marketing ? 'granted' : 'denied',
+        ad_user_data: c.marketing ? 'granted' : 'denied',
+        ad_personalization: c.marketing ? 'granted' : 'denied'
+      });
+    }
+  })();
+
+  gtag('config', 'G-5SE3GQ5GK4');
+  gtag('config', 'AW-18371579900');
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Model SAFEs, notes, share issuances, and funding-round assumptions to understand potential ownership outcomes before recording a transaction." />
+<title>SAFE and Funding Round Cap Table Modeling</title>
+<link rel="canonical" href="https://diligenceready.com/safe-cap-table-modeling" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#0F1E3D" />
+<link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@300;400;450;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Diligence Ready" />
+<meta property="og:title" content="SAFE and Funding Round Cap Table Modeling" />
+<meta property="og:description" content="Model SAFEs, notes, share issuances, and funding-round assumptions to understand potential ownership outcomes before recording a transaction." />
+<meta property="og:url" content="https://diligenceready.com/safe-cap-table-modeling" />
+<meta property="og:image" content="https://diligenceready.com/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="SAFE and Funding Round Cap Table Modeling" />
+<meta name="twitter:description" content="Model SAFEs, notes, share issuances, and funding-round assumptions to understand potential ownership outcomes before recording a transaction." />
+<meta name="twitter:image" content="https://diligenceready.com/og-image.png" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://diligenceready.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "SAFE Modeling",
+      "item": "https://diligenceready.com/safe-cap-table-modeling"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a aria-label='Diligence Ready' class='brand' href='./'>
+      <span class="mono-circle">dr</span>
+      <span class="wordmark">Diligence Ready<span class="dot">.</span></span>
+    </a>
+    <nav class="nav-links">
+      <div class="nav-dd" data-dd>
+        <button type="button" class="nav-dd-btn" aria-expanded="false">Product <span class="caret">▾</span></button>
+        <div class="nav-dd-menu">
+          <a href='./cap-table'><span class="t">Cap Table</span><span class="d">Every security class, reconciled</span></a>
+          <a href='./scenario-modeling'><span class="t">Scenario Modeling</span><span class="d">Rounds, dilution &amp; waterfalls</span></a>
+          <a href='./diligence-room'><span class="t">Diligence Room</span><span class="d">Be ready before they ask</span></a>
+          <a href='./ai-assistant'><span class="t">AI Assistant</span><span class="d">It does the work, you approve</span></a>
+          <div class="dd-sep"></div>
+          <a class='dd-all' href='./features'><span class="t">See all features</span><span class="arr">→</span></a>
+        </div>
+      </div>
+      <a href='./for-advisors'>Trusted Advisors</a>
+      <a href='./learn/'>Learn</a>
+      <a href='./pricing'>Pricing</a>
+    </nav>
+    <div class="nav-cta">
+      <a class='link sales-link' href='./#contact'>Contact us</a>
+      <a class="link" href="https://app.diligenceready.com/login">Customer Login</a>
+      <a class="btn btn-accent" href="https://app.diligenceready.com/signup?src=safe-cap-table-modeling">Sign up <span class="arr">→</span></a>
+    </div>
+    <a class="btn btn-accent nav-cta-m" href="https://app.diligenceready.com/signup?src=safe-cap-table-modeling">Start free</a>
+    <button type="button" class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mm-group">Product</div>
+  <a class='sub' href='./cap-table'>Cap Table</a>
+  <a class='sub' href='./scenario-modeling'>Scenario Modeling</a>
+  <a class='sub' href='./diligence-room'>Diligence Room</a>
+  <a class='sub' href='./ai-assistant'>AI Assistant</a>
+  <a class='sub' href='./features'>All Features</a>
+  <div class="mm-group">Explore</div>
+  <a href='./for-advisors'>Trusted Advisors</a>
+  <a href='./learn/'>Learn</a>
+  <a href='./pricing'>Pricing</a>
+  <a href='./why-diligence-ready'>Why Diligence Ready</a>
+  <div class="mm-cta">
+    <a class='btn btn-ghost btn-lg' href='./#contact'>Contact us</a>
+    <a class="btn btn-ghost btn-lg" href="https://app.diligenceready.com/login">Customer Login</a>
+    <a class="btn btn-accent btn-lg" href="https://app.diligenceready.com/signup?src=safe-cap-table-modeling">Sign up</a>
+  </div>
+</div>
+
+<main>
+
+
+<!-- ============ FEATURE HERO ============ -->
+<section class="feat-hero" data-screen-label="SAFE modeling hero">
+  <div class="wrap">
+    <div class="breadcrumb reveal">
+      <a href='./'>Home</a><span class="sep">/</span><span class="cur">SAFE Modeling</span>
+    </div>
+    <div class="feat-hero-grid">
+      <div>
+        <span class="eyebrow reveal">SAFE &amp; funding round modeling</span>
+        <h1 class="reveal" style="transition-delay:.05s;margin-top:18px;">Model funding terms before they change ownership.</h1>
+        <p class="lead reveal" style="transition-delay:.1s">Enter a SAFE, a note, a share issuance, or a funding round as a set of assumptions, and see a modeled ownership outcome before recording anything. This is workflow and modeling support, not legal, tax, financial, or investment advice.</p>
+        <div class="hero-cta reveal" style="transition-delay:.15s">
+          <a class="btn btn-accent btn-lg" href="https://app.diligenceready.com/signup?src=safe-cap-table-modeling">Start free <span class="arr">→</span></a>
+          <a class='btn btn-ghost btn-lg' href='./scenario-modeling'>Model a financing scenario</a>
+        </div>
+        <div class="hero-note reveal" style="transition-delay:.2s"><span><span class="dot"></span> Dilution in real time</span><span><span class="dot"></span> Board-ready outputs</span></div>
+
+      </div>
+      <div class="showcase-art reveal" style="transition-delay:.18s">
+        <div class="art-frame">
+          <div class="whatif">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+              <h5 style="font-family:var(--serif);font-size:18px;font-weight:600;">Scenario: SAFE conversion</h5>
+              <span style="font-family:var(--mono);font-size:11px;color:var(--faint);">Not yet recorded</span>
+            </div>
+            <div class="scn-grid">
+              <div class="scn-card">
+                <div class="lbl">Assumed terms</div>
+                <div class="big" style="font-size:20px;">$500K at $12M cap</div>
+              </div>
+              <div class="scn-card hl">
+                <div class="lbl">Modeled outcome</div>
+                <div class="big">4.17%</div>
+              </div>
+            </div>
+            <div style="margin-top:14px;border:1px solid var(--line);border-radius:11px;padding:6px 14px;">
+              <div class="scn-row"><span class="nm">Assumed conversion price</span><span class="vl">$1.00 per share</span></div>
+              <div class="scn-row"><span class="nm">Assumed shares at conversion</span><span class="vl num-coral">500,000</span></div>
+              <div class="scn-row"><span class="nm">Assumed triggering round</span><span class="vl">Series A, $16M pre-money</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHEN THIS HELPS ============ -->
+<section class="sec-pad-sm" data-screen-label="When this helps">
+  <div class="wrap-narrow center">
+    <span class="eyebrow center reveal">When scenario modeling helps</span>
+    <h2 class="section-title reveal" style="margin-top:22px;transition-delay:.05s">Before you decide, <span class="accent-line">not after.</span></h2>
+    <p class="lead reveal" style="margin-top:24px;transition-delay:.1s">Founders reviewing an incoming SAFE, note, or term sheet can see the ownership effect before signing anything. CFOs, advisors, and accountants can walk a client through the same modeled outcome, on assumptions the client controls, before anything is recorded.</p>
+  </div>
+</section>
+
+<!-- ============ WHAT YOU CAN MODEL ============ -->
+<section class="sec-pad" id="workflow" data-screen-label="What you can model" style="padding-top:24px;">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">What you can model</span>
+      <h2 class="section-title" style="margin-top:20px;">Assumptions in, <span class="accent-line">an ownership outcome out.</span></h2>
+      <p class="lead" style="margin-top:20px;max-width:680px;">Based on the terms you enter for the instrument you're evaluating, not a legal reading of the agreement itself.</p>
+    </div>
+    <div class="pillars" style="grid-template-columns:repeat(3,minmax(0,1fr));">
+      <div class="pillar reveal">
+        <div class="pic">①</div>
+        <h3>Assumptions</h3>
+        <p>The terms you enter for a SAFE, note, share issuance, or funding round.</p>
+      </div>
+      <div class="pillar reveal" style="transition-delay:.06s">
+        <div class="pic coral">②</div>
+        <h3>Conversion or round scenario</h3>
+        <p>How those terms play out at a modeled priced round or issuance date.</p>
+      </div>
+      <div class="pillar reveal" style="transition-delay:.12s">
+        <div class="pic">③</div>
+        <h3>Ownership effect</h3>
+        <p>The resulting stake for each holder, shown as a modeled outcome.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SCENARIO vs COMMITTED ============ -->
+<section class="sec-pad" style="padding-top:0;" data-screen-label="Scenario vs committed">
+  <div class="wrap">
+    <div class="showcase-row">
+      <div class="showcase-copy reveal">
+        <span class="eyebrow">Scenario, then review, then record</span>
+        <h2>A modeled outcome is not <span class="accent-line">a committed transaction.</span></h2>
+        <p class="lead">The assumptions and the modeled outcome are labeled separately from anything committed to your cap table. Nothing here supports every SAFE or note variant, and none of it is a legal interpretation of your specific agreement. Review the modeled result, then decide separately whether to record a transaction.</p>
+        <ul class="feat-list">
+          <li><span class="ck">✓</span> Assumptions and modeled outcomes labeled separately</li>
+          <li><span class="ck">✓</span> Multiple instruments can be modeled together</li>
+          <li><span class="ck">✓</span> Review happens before anything is recorded</li>
+        </ul>
+      </div>
+      <div class="showcase-art reveal" style="transition-delay:.1s">
+        <div class="art-frame">
+          <div style="padding:20px;font-size:12.5px;">
+            <div class="cap-head">
+              <h5 style="font-family:var(--serif);font-size:18px;font-weight:600;">Assumptions</h5>
+              <span class="badge-live" style="background:var(--faint);"><span class="d" style="background:var(--midnight-3);"></span> Entered by you</span>
+            </div>
+            <table class="tbl" style="margin-bottom:16px;">
+              <thead><tr><th>Holder</th><th class="r">Principal</th><th class="r">Cap</th><th class="r">Discount</th></tr></thead>
+              <tbody>
+                <tr><td>Catalyst Ventures</td><td class="r num">$500,000</td><td class="r num">$12.0M</td><td class="r num">None</td></tr>
+                <tr><td>Angel syndicate</td><td class="r num">$150,000</td><td class="r num">$10.0M</td><td class="r num">20%</td></tr>
+              </tbody>
+            </table>
+            <div class="cap-head">
+              <h5 style="font-family:var(--serif);font-size:18px;font-weight:600;">Modeled outcome</h5>
+              <span class="badge-live"><span class="d"></span> Not yet recorded</span>
+            </div>
+            <div style="margin-top:8px;border:1px solid var(--line);border-radius:11px;padding:6px 14px;">
+              <div class="scn-row"><span class="nm">Catalyst Ventures</span><span class="vl num-coral">4.17%</span></div>
+              <div class="scn-row"><span class="nm">Angel syndicate</span><span class="vl num-coral">1.56%</span></div>
+              <div class="scn-row"><span class="nm">Founders &amp; existing holders</span><span class="vl">94.27%</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TWO AUDIENCES ============ -->
+<section class="sec-pad" data-screen-label="Two audiences" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow center">Built for both sides of the table</span>
+      <h2 class="section-title" style="margin-top:20px;">Founders decide. <span class="accent-line">Advisors model with them.</span></h2>
+    </div>
+    <div class="pillars" style="margin-top:46px;grid-template-columns:repeat(2,minmax(0,1fr));max-width:920px;margin-left:auto;margin-right:auto;">
+      <div class="pillar reveal">
+        <div class="pic">①</div>
+        <h3>Founders</h3>
+        <p>See a modeled outcome for an incoming SAFE or note before you're deep in term sheet talks.</p>
+        <a class='more' href='./for-founders'>For founders →</a>
+      </div>
+      <div class="pillar reveal" style="transition-delay:.06s">
+        <div class="pic coral">②</div>
+        <h3>CFOs, advisors &amp; accountants</h3>
+        <p>Walk a client through a modeled outcome on their assumptions, without recording anything on their behalf.</p>
+        <a class='more' href='./for-advisors'>For practitioners →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CROSS-LINKS ============ -->
+<section class="sec-pad" data-screen-label="Explore">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Related</span>
+      <h2 class="section-title" style="margin-top:18px;">More on modeling and the cap table.</h2>
+    </div>
+    <div class="xlinks">
+      <a class='xlink reveal' href='./scenario-modeling'>
+        <span class="xt">Scenario &amp; dilution modeling</span>
+        <span class="xd">Model priced rounds, pool changes, and exits.</span>
+        <span class="xm">Explore →</span>
+      </a>
+      <a class='xlink reveal' href='./cap-table' style='transition-delay:.04s'>
+        <span class="xt">Cap table</span>
+        <span class="xd">The record a transaction joins once it's recorded.</span>
+        <span class="xm">Explore →</span>
+      </a>
+      <a class='xlink reveal' href='./for-founders' style='transition-delay:.08s'>
+        <span class="xt">For founders</span>
+        <span class="xd">Keep your company continuously ready.</span>
+        <span class="xm">Explore →</span>
+      </a>
+      <a class='xlink reveal' href='./for-advisors' style='transition-delay:.12s'>
+        <span class="xt">For advisors</span>
+        <span class="xd">Model outcomes across every client you support.</span>
+        <span class="xm">Explore →</span>
+      </a>
+      <a class='xlink reveal' href='./fundraising-readiness' style='transition-delay:.16s'>
+        <span class="xt">Fundraising readiness</span>
+        <span class="xd">Be ready with a clean record before you raise.</span>
+        <span class="xm">Explore →</span>
+      </a>
+      <a class='xlink reveal' href='./learn/what-is-a-safe' style='transition-delay:.2s'>
+        <span class="xt">What is a SAFE</span>
+        <span class="xd">A plain explanation of how SAFEs work.</span>
+        <span class="xm">Explore →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="sec-pad" style="padding-top:0;" data-screen-label="Final CTA">
+  <div class="wrap">
+    <div class="final-card reveal">
+      <span class="eyebrow on-dark" style="justify-content:center;display:flex;">SAFE &amp; funding round modeling</span>
+      <h2 class="display" style="margin-top:22px;">Model funding terms before they change ownership.</h2>
+      <p class="lead">Enter the assumptions, review the modeled outcome, then decide separately whether to record it.</p>
+      <div class="hero-cta">
+        <a class="btn btn-accent btn-lg" href="https://app.diligenceready.com/signup?src=safe-cap-table-modeling">Start free <span class="arr">→</span></a>
+        <a class="btn btn-ghost btn-lg" href="./scenario-modeling">Model a financing scenario</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+<div class="mcta" id="mcta"><a class="p" href="https://app.diligenceready.com/signup?src=safe-cap-table-modeling">Start free <span class="arr">→</span></a><a class='s' href='./#contact'>Contact</a></div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a aria-label='Diligence Ready' class='brand on-dark' href='./'>
+          <span class="mono-circle">dr</span>
+          <span class="wordmark">Diligence Ready<span class="dot">.</span></span>
+        </a>
+        <div class="promise">Readiness is the standard.</div>
+      </div>
+      <div class="foot-col">
+        <h6>Product</h6>
+        <a href='./cap-table'>Cap table</a>
+        <a href='./scenario-modeling'>What-if modeling</a>
+        <a href='./diligence-room'>Diligence room</a>
+        <a href='./ai-assistant'>AI assistant</a>
+        <a href='./for-advisors'>For Trusted Advisors</a>
+        <a href='./features'>All features</a>
+      </div>
+      <div class="foot-col">
+        <h6>Company</h6>
+        <a href='./why-diligence-ready'>Why Diligence Ready</a>
+        <a href='./#contact'>Request a demo</a>
+        <a href='./pricing'>Pricing</a>
+        <a href='./#contact'>Become a Trusted Advisor</a>
+        <a href='./#contact'>Contact</a>
+      </div>
+      <div class="foot-col">
+        <h6>Legal</h6>
+        <a href='./privacy'>Privacy</a>
+        <a href='./terms'>Terms</a>
+        <a href='./security'>Security &amp; trust</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Diligence Ready. All rights reserved.</span>
+      <div class="legal"><span>diligenceready.com</span><span>Built for the way modern founders raise.</span></div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ REVEAL JS ============ -->
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+  onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
+  if (!document.hidden) {
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  }
+
+  // Product dropdown — click/keyboard toggle (hover handled in CSS)
+  document.querySelectorAll('[data-dd]').forEach(dd => {
+    const btn = dd.querySelector('.nav-dd-btn');
+    btn.addEventListener('click', (e) => { e.stopPropagation(); const open = dd.classList.toggle('open'); btn.setAttribute('aria-expanded', open); });
+  });
+  document.addEventListener('click', () => document.querySelectorAll('[data-dd].open').forEach(dd => { dd.classList.remove('open'); dd.querySelector('.nav-dd-btn').setAttribute('aria-expanded', 'false'); }));
+
+  // Mobile menu toggle
+  const burger = document.getElementById('navBurger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (burger && mobileMenu) {
+    const closeMenu = () => { burger.classList.remove('open'); mobileMenu.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; document.body.classList.remove('menu-open'); };
+    burger.addEventListener('click', () => {
+      const open = burger.classList.toggle('open');
+      mobileMenu.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.style.overflow = open ? 'hidden' : ''; document.body.classList.toggle('menu-open', open);
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  }
+</script>
+
+<script>
+  (function(){
+    var bar = document.getElementById('mcta'); if(!bar) return;
+    var stop = document.getElementById('contact') || document.querySelector('footer');
+    var tick = function(){
+      var past = window.scrollY > 520;
+      var near = stop && stop.getBoundingClientRect().top < window.innerHeight * 0.75;
+      bar.classList.toggle('up', past && !near);
+    };
+    tick(); window.addEventListener('scroll', tick, { passive: true });
+  })();
+</script>
+
+<!-- ============ COOKIE NOTICE ============ -->
+<!-- ============ COOKIE NOTICE ============ -->
+<div id="dr-cookie-root" hidden role="dialog" aria-modal="true" aria-labelledby="dr-cookie-title">
+  <div id="dr-cookie-card">
+    <div id="dr-cookie-main">
+      <h2 id="dr-cookie-title">diligenceready.com</h2>
+      <p>We use cookies to run the site and improve it.</p>
+      <button type="button" id="dr-cookie-accept">Accept all</button>
+      <button type="button" id="dr-cookie-essential">Essential only</button>
+      <button type="button" id="dr-cookie-prefs-open">Preferences</button>
+      <a class='dr-cookie-legal' href='./privacy'>Privacy Policy</a>
+    </div>
+    <div id="dr-cookie-prefs-panel" hidden>
+      <h2>Cookie Preferences</h2>
+      <p>Choose which cookies we can use. Essential cookies are always on.</p>
+      <label><input type="checkbox" checked disabled /> Essential (required)</label>
+      <label><input type="checkbox" id="dr-cookie-analytics" /> Analytics</label>
+      <label><input type="checkbox" id="dr-cookie-marketing" /> Marketing</label>
+      <button type="button" id="dr-cookie-save">Save Preferences</button>
+      <button type="button" id="dr-cookie-back">Back</button>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var KEY = 'dr_cookie_consent';
+  var root = document.getElementById('dr-cookie-root');
+  if (!root) return;
+  var main = document.getElementById('dr-cookie-main');
+  var panel = document.getElementById('dr-cookie-prefs-panel');
+  var cbA = document.getElementById('dr-cookie-analytics');
+  var cbM = document.getElementById('dr-cookie-marketing');
+
+  function apply(c) {
+    if (typeof gtag !== 'function') return;
+    gtag('consent', 'update', {
+      analytics_storage: c.analytics ? 'granted' : 'denied',
+      ad_storage: c.marketing ? 'granted' : 'denied',
+      ad_user_data: c.marketing ? 'granted' : 'denied',
+      ad_personalization: c.marketing ? 'granted' : 'denied'
+    });
+  }
+  function save(c) {
+    c.ts = new Date().toISOString();
+    try { localStorage.setItem(KEY, JSON.stringify(c)); } catch (e) {}
+    apply(c);
+    root.hidden = true;
+  }
+  function read() {
+    try { return JSON.parse(localStorage.getItem(KEY)); } catch (e) { return null; }
+  }
+
+  var stored = read();
+  if (stored && typeof stored.analytics === 'boolean') {
+    apply(stored);
+  } else {
+    root.hidden = false;
+  }
+
+  document.getElementById('dr-cookie-accept').addEventListener('click', function () {
+    save({ analytics: true, marketing: true });
+  });
+  document.getElementById('dr-cookie-essential').addEventListener('click', function () {
+    save({ analytics: false, marketing: false });
+  });
+  document.getElementById('dr-cookie-prefs-open').addEventListener('click', function () {
+    main.hidden = true; panel.hidden = false;
+  });
+  document.getElementById('dr-cookie-back').addEventListener('click', function () {
+    panel.hidden = true; main.hidden = false;
+  });
+  document.getElementById('dr-cookie-save').addEventListener('click', function () {
+    save({ analytics: !!cbA.checked, marketing: !!cbM.checked });
+  });
+})();
+</script>
+
+
+<script>
+// signup_click: GA4 event on every signup / Start free link (21 Oct 2026)
+document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href*="app.diligenceready.com/signup"]'):null;if(!a||typeof gtag!=='function')return;var s='';try{s=new URL(a.href).searchParams.get('src')||''}catch(x){}gtag('event','signup_click',{src:s,link_text:(a.textContent||'').replace(/\s+/g,' ').trim().slice(0,60),link_url:a.href});});
+</script>
+<div id="dr-preview-flag" style="position:fixed;left:16px;bottom:16px;z-index:9999;padding:8px 12px;border-radius:8px;background:#0F1E3D;color:#fff;font:500 12px/1.3 Inter,system-ui,sans-serif;box-shadow:0 8px 24px -8px rgba(0,0,0,.4);pointer-events:none;">Preview copy · not the live site</div>
+<script>document.addEventListener("submit",function(e){var f=e.target;if(f&&f.tagName==="FORM"){e.preventDefault();var b=f.querySelector("[type=submit]");if(b){b.textContent="Forms are off in this preview";b.disabled=true;}}},true);</script>
+</body>
+</html>

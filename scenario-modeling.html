@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) — GA4 + Google Ads -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  // Consent Mode default denied; wait briefly for CMP / stored apply below
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    wait_for_update: 500
+  });
+
+  // Apply stored preference BEFORE config / conversion (same KEY as footer banner)
+  (function () {
+    var KEY = 'dr_cookie_consent';
+    var c = null;
+    try { c = JSON.parse(localStorage.getItem(KEY)); } catch (e) { c = null; }
+    if (c && typeof c.analytics === 'boolean') {
+      gtag('consent', 'update', {
+        analytics_storage: c.analytics ? 'granted' : 'denied',
+        ad_storage: c.marketing ? 'granted' : 'denied',
+        ad_user_data: c.marketing ? 'granted' : 'denied',
+        ad_personalization: c.marketing ? 'granted' : 'denied'
+      });
+    }
+  })();
+
+  gtag('config', 'G-5SE3GQ5GK4');
+  gtag('config', 'AW-18371579900');
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Scenario modeling for your cap table: price the next round, refresh the option pool, fold in SAFEs and convertibles, and run the liquidation waterfall at any exit value — then compare scenarios side by side and hand the board a PDF." />
+<title>Scenario Modeling &amp; Waterfall Analysis — Diligence Ready</title>
+<link rel="canonical" href="https://diligenceready.com/scenario-modeling" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#0F1E3D" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Diligence Ready" />
+<meta property="og:title" content="Scenario Modeling &amp; Waterfall Analysis — Diligence Ready" />
+<meta property="og:description" content="Model the round before you raise it — dilution, pool refreshes, convertibles, and the liquidation waterfall at any exit value." />
+<meta property="og:url" content="https://diligenceready.com/scenario-modeling" />
+<meta property="og:image" content="https://diligenceready.com/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Scenario Modeling &amp; Waterfall Analysis — Diligence Ready" />
+<meta name="twitter:description" content="Model the round before you raise it — dilution, pool refreshes, convertibles, and exit waterfalls." />
+<meta name="twitter:image" content="https://diligenceready.com/og-image.png" />
+
+<!-- Icons -->
+<link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://diligenceready.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Scenario Modeling", "item": "https://diligenceready.com/scenario-modeling" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is cap table scenario modeling?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Scenario modeling tests a hypothetical change against your live cap table — a new priced round, an option-pool refresh, a convertible conversion, or an exit — and shows the resulting ownership, dilution, and payouts before anything is committed. It lets you answer 'what happens to my ownership if…' with real numbers." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a liquidation waterfall?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A liquidation waterfall shows how exit proceeds are distributed across security classes in priority order — liquidation preferences first, then participation and conversion to common — at any given exit value. It tells each stakeholder what they actually receive in a sale or wind-down." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I model dilution from a new funding round?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Enter the raise amount, pre-money valuation, and any option-pool refresh, and the model recomputes fully diluted ownership for every existing holder against your live cap table — including up-round or down-round detection versus your last priced round." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I model SAFE and convertible note conversion?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. SAFEs and convertible notes convert explicitly in a scenario — applying valuation caps and discounts — so you see exactly how much of the round they consume and how the priced investors and founders are affected." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I compare multiple scenarios side by side?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Build several scenarios — different raise sizes, valuations, or exit values — and compare them side by side, then export a clean, board-ready PDF of the comparison." }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@300;400;450;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a aria-label='Diligence Ready' class='brand' href='./'>
+      <span class="mono-circle">dr</span>
+      <span class="wordmark">Diligence Ready<span class="dot">.</span></span>
+    </a>
+    <nav class="nav-links">
+      <div class="nav-dd" data-dd>
+        <button type="button" class="nav-dd-btn" aria-expanded="false">Product <span class="caret">▾</span></button>
+        <div class="nav-dd-menu">
+          <a href='./cap-table'><span class="t">Cap Table</span><span class="d">Every security class, reconciled</span></a>
+          <a class='on' href='./scenario-modeling'><span class="t">Scenario Modeling</span><span class="d">Rounds, dilution &amp; waterfalls</span></a>
+          <a href='./diligence-room'><span class="t">Diligence Room</span><span class="d">Be ready before they ask</span></a>
+          <a href='./ai-assistant'><span class="t">AI Assistant</span><span class="d">It does the work, you approve</span></a>
+          <div class="dd-sep"></div>
+          <a class='dd-all' href='./features'><span class="t">See all features</span><span class="arr">→</span></a>
+        </div>
+      </div>
+      <a href='./for-advisors'>Trusted Advisors</a>
+      <a href='./learn/'>Learn</a>
+      <a href='./pricing'>Pricing</a>
+    </nav>
+    <div class="nav-cta">
+      <a class='link sales-link' href='./#contact'>Contact us</a>
+      <a class="link" href="https://app.diligenceready.com/login">Customer Login</a>
+      <a class="btn btn-accent" href="https://app.diligenceready.com/signup?src=scenario-modeling">Sign up <span class="arr">→</span></a>
+    </div>
+    <a class="btn btn-accent nav-cta-m" href="https://app.diligenceready.com/signup?src=scenario-modeling">Start free</a>
+    <button type="button" class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mm-group">Product</div>
+  <a class='sub' href='./cap-table'>Cap Table</a>
+  <a class='sub' href='./scenario-modeling'>Scenario Modeling</a>
+  <a class='sub' href='./diligence-room'>Diligence Room</a>
+  <a class='sub' href='./ai-assistant'>AI Assistant</a>
+  <a class='sub' href='./features'>All Features</a>
+  <div class="mm-group">Explore</div>
+  <a href='./for-advisors'>Trusted Advisors</a>
+  <a href='./learn/'>Learn</a>
+  <a href='./pricing'>Pricing</a>
+  <a href='./why-diligence-ready'>Why Diligence Ready</a>
+  <div class="mm-cta">
+    <a class='btn btn-ghost btn-lg' href='./#contact'>Contact us</a>
+    <a class="btn btn-ghost btn-lg" href="https://app.diligenceready.com/login">Customer Login</a>
+    <a class="btn btn-accent btn-lg" href="https://app.diligenceready.com/signup?src=scenario-modeling">Sign up</a>
+  </div>
+</div>
+
+<main>
+
+<!-- ============ FEATURE HERO ============ -->
+<section class="feat-hero" data-screen-label="Scenario hero">
+  <div class="wrap">
+    <div class="breadcrumb reveal">
+      <a href='./'>Home</a><span class="sep">/</span><span class="cur">Scenario Modeling</span>
+    </div>
+    <div class="feat-hero-grid">
+      <div>
+        <span class="eyebrow reveal">Scenario modeling &amp; what-if</span>
+        <h1 class="reveal" style="transition-delay:.05s;margin-top:18px;">Model the round<br /> before <em>you raise it.</em></h1>
+        <p class="lead reveal" style="transition-delay:.1s">Price the next round, refresh the option pool, fold in convertibles, and run the liquidation waterfall at any exit value — against your live cap table, in minutes.</p>
+        <div class="hero-cta reveal" style="transition-delay:.15s">
+          <a class="btn btn-accent btn-lg" href="https://app.diligenceready.com/signup?src=scenario-modeling">Start free <span class="arr">→</span></a>
+          <a class='btn btn-ghost btn-lg' href='./pricing'>See pricing</a>
+        </div>
+        <div class="hero-note reveal" style="transition-delay:.2s">
+          <span><span class="dot"></span> Dilution in real time</span>
+          <span><span class="dot"></span> Board-ready PDF</span>
+        </div>
+      </div>
+      <div class="showcase-art reveal" style="transition-delay:.18s">
+        <div class="art-frame">
+          <div class="whatif">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+              <h5 style="font-family:var(--serif);font-size:18px;font-weight:600;">What-if · $4M priced round</h5>
+              <span style="font-family:var(--mono);font-size:11px;color:#1f9d57;">▲ Up round</span>
+            </div>
+            <div class="scn-tabs">
+              <span class="scn-tab on">$4M @ $16M pre</span>
+              <span class="scn-tab">$6M @ $20M pre</span>
+              <span class="scn-tab">Exit · $120M</span>
+            </div>
+            <div class="scn-grid">
+              <div class="scn-card">
+                <div class="lbl">New post-money</div>
+                <div class="big">$20.0M</div>
+                <div class="delta up">▲ from $11.8M</div>
+              </div>
+              <div class="scn-card hl">
+                <div class="lbl">Founder ownership</div>
+                <div class="big">39.2%</div>
+                <div class="delta down">−9.4 pts dilution</div>
+              </div>
+            </div>
+            <div style="margin-top:14px;border:1px solid var(--line);border-radius:11px;padding:6px 14px;">
+              <div class="scn-row"><span class="nm">New investor (Series B)</span><span class="vl num-coral">20.00%</span></div>
+              <div class="scn-row"><span class="nm">Option pool (refreshed to 12%)</span><span class="vl">12.00%</span></div>
+              <div class="scn-row"><span class="nm">Existing preferred</span><span class="vl">28.80%</span></div>
+              <div class="scn-row"><span class="nm">Founders &amp; common</span><span class="vl">39.20%</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROBLEM ============ -->
+<section class="sec-pad-sm" data-screen-label="The problem">
+  <div class="wrap-narrow center">
+    <span class="eyebrow center reveal">Why founders fly blind</span>
+    <h2 class="section-title reveal" style="margin-top:22px;transition-delay:.05s">A term sheet doesn't wait <span class="accent-line">for the math.</span></h2>
+    <p class="lead reveal" style="margin-top:24px;transition-delay:.1s">An investor names a number on a call, and you need to know — right then — what it does to your ownership, your pool, and your team's equity. Rebuilding the spreadsheet under pressure is how mistakes get signed.</p>
+    <p class="lead reveal" style="margin-top:18px;transition-delay:.15s"><strong style="color:var(--ink);font-weight:600;">Model it against the live cap table</strong> — so you negotiate from the real numbers, not a guess.</p>
+  </div>
+</section>
+
+<!-- ============ CAPABILITIES ============ -->
+<section class="sec-pad" data-screen-label="Capabilities" style="padding-top:24px;">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">What you can model</span>
+      <h2 class="section-title" style="margin-top:20px;">From the next round to the final waterfall.</h2>
+    </div>
+    <div class="feat-cards">
+      <div class="pillar reveal">
+        <div class="pic coral">↗</div>
+        <h3>Priced rounds</h3>
+        <p>Set the raise and pre-money, and watch fully diluted ownership recompute for every holder — with up-round or down-round detection against your last priced round.</p>
+      </div>
+      <div class="pillar reveal" style="transition-delay:.05s">
+        <div class="pic">◱</div>
+        <h3>Option-pool refresh</h3>
+        <p>Size a new pool pre- or post-money and see exactly who absorbs the dilution before you commit to a number in the term sheet.</p>
+      </div>
+      <div class="pillar reveal" style="transition-delay:.1s">
+        <div class="pic">⇌</div>
+        <h3>SAFE &amp; note conversion</h3>
+        <p>Convert SAFEs and convertible notes explicitly — applying caps and discounts — so you see how much of the round they consume.</p>
+      </div>
+      <div class="pillar reveal" style="transition-delay:.15s">
+        <div class="pic coral">▼</div>
+        <h3>Liquidation waterfall</h3>
+        <p>Run the full waterfall at any exit value, in priority order — preferences, participation, and conversion to common — to see what each stakeholder actually receives.</p>
+      </div>
+      <div class="pillar reveal" style="transition-delay:.2s">
+        <div class="pic">⊞</div>
+        <h3>Side-by-side compare</h3>
+        <p>Line up several scenarios — different raises, valuations, or exits — and compare the outcomes at a glance.</p>
+      </div>
+      <div class="pillar reveal" style="transition-delay:.25s">
+        <div class="pic">⤓</div>
+        <h3>Board-ready export</h3>
+        <p>Turn any scenario or comparison into a clean PDF the board can read without a finance degree — generated straight from the model.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SHOWCASE: WATERFALL ============ -->
+<section class="sec-pad" style="padding-top:0;" data-screen-label="Waterfall showcase">
+  <div class="wrap">
+    <div class="showcase-row flip">
+      <div class="showcase-copy reveal">
+        <span class="eyebrow">Exit waterfall</span>
+        <h2>See who gets what <span class="accent-line">at any exit.</span></h2>
+        <p class="lead">Drag the exit value and the waterfall recomputes in priority order — liquidation preferences first, then participation and conversion to common. No more guessing what a sale actually means for the founders and the team.</p>
+        <ul class="feat-list">
+          <li><span class="ck">✓</span> Full preference stack honored, in priority order</li>
+          <li><span class="ck">✓</span> Participating vs. non-participating preferred</li>
+          <li><span class="ck">✓</span> Per-stakeholder payouts at any exit value</li>
+          <li><span class="ck">✓</span> Compare a sale against a recap or wind-down</li>
+        </ul>
+      </div>
+      <div class="showcase-art reveal" style="transition-delay:.1s">
+        <div class="art-frame" style="padding:30px 28px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+            <h5 style="font-family:var(--serif);font-size:18px;font-weight:600;">Exit waterfall</h5>
+            <span class="badge-live"><span class="d"></span> $120M exit</span>
+          </div>
+          <div style="font-family:var(--mono);font-size:11px;color:var(--faint);margin-bottom:18px;">Proceeds distributed by priority</div>
+          <div style="display:flex;height:18px;border-radius:6px;overflow:hidden;margin-bottom:22px;">
+            <span style="flex:28.8;background:#2f4d86"></span>
+            <span style="flex:11.7;background:var(--coral)"></span>
+            <span style="flex:10.5;background:#9fb4d8"></span>
+            <span style="flex:49.0;background:var(--midnight)"></span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:13px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;font-size:13.5px;"><span style="display:flex;align-items:center;gap:10px;"><span style="width:11px;height:11px;border-radius:3px;background:#2f4d86"></span>Series A preferred</span><span style="font-family:var(--mono);color:var(--ink-2)">$34.6M</span></div>
+            <div style="display:flex;align-items:center;justify-content:space-between;font-size:13.5px;"><span style="display:flex;align-items:center;gap:10px;"><span style="width:11px;height:11px;border-radius:3px;background:var(--coral)"></span>Seed SAFEs (converted)</span><span style="font-family:var(--mono);color:var(--ink-2)">$14.0M</span></div>
+            <div style="display:flex;align-items:center;justify-content:space-between;font-size:13.5px;"><span style="display:flex;align-items:center;gap:10px;"><span style="width:11px;height:11px;border-radius:3px;background:#9fb4d8"></span>Option pool</span><span style="font-family:var(--mono);color:var(--ink-2)">$12.6M</span></div>
+            <div style="display:flex;align-items:center;justify-content:space-between;font-size:13.5px;"><span style="display:flex;align-items:center;gap:10px;"><span style="width:11px;height:11px;border-radius:3px;background:var(--midnight)"></span>Founders &amp; common</span><span style="font-family:var(--mono);color:var(--ink-2)">$58.8M</span></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;margin-top:20px;padding-top:14px;border-top:1px solid var(--line);font-size:12.5px;font-family:var(--mono);color:var(--faint);">
+            <span>Total proceeds</span><span style="color:var(--ink);">$120,000,000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPARE BAND ============ -->
+<section class="strip sec-pad" data-screen-label="Compare">
+  <div class="wrap">
+    <div class="sec-head reveal" style="max-width:680px;">
+      <span class="eyebrow on-dark">Decide with confidence</span>
+      <h2 class="section-title" style="color:var(--cream);margin-top:18px;">Compare the offers <span style="font-style:italic;color:var(--coral);font-family:var(--serif)">before you sign.</span></h2>
+      <p class="lead" style="color:var(--ice);margin-top:22px;">Put the $4M and the $6M side by side. See the dilution, the post-money, and the founder ownership for each — then export the comparison and walk into the board meeting with the math already done.</p>
+      <a class="btn btn-accent" href="https://app.diligenceready.com/signup?src=scenario-modeling" style="margin-top:30px;">Model a scenario <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec-pad" data-screen-label="FAQ">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow center">Questions, answered</span>
+      <h2 class="section-title" style="margin-top:20px;">Scenario modeling basics.</h2>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-item reveal">
+        <h3>What is cap table scenario modeling?</h3>
+        <p>Scenario modeling tests a hypothetical change against your live cap table — a new priced round, an option-pool refresh, a convertible conversion, or an exit — and shows the resulting ownership, dilution, and payouts before anything is committed. It answers "what happens to my ownership if…" with real numbers.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>What is a liquidation waterfall?</h3>
+        <p>A liquidation waterfall shows how exit proceeds are distributed across security classes in priority order — liquidation preferences first, then participation and conversion to common — at any given exit value. It tells each stakeholder what they actually receive in a sale or wind-down.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>How do I model dilution from a new funding round?</h3>
+        <p>Enter the raise amount, pre-money valuation, and any option-pool refresh, and the model recomputes fully diluted ownership for every existing holder against your live cap table — including up-round or down-round detection versus your last priced round.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>Can I model SAFE and convertible note conversion?</h3>
+        <p>Yes. SAFEs and convertible notes convert explicitly in a scenario — applying valuation caps and discounts — so you see exactly how much of the round they consume and how the priced investors and founders are affected.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>Can I compare multiple scenarios side by side?</h3>
+        <p>Yes. Build several scenarios — different raise sizes, valuations, or exit values — and compare them side by side, then export a clean, board-ready PDF of the comparison.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CROSS-LINKS ============ -->
+<section class="sec-pad" style="padding-top:0;" data-screen-label="Explore">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Explore the platform</span>
+      <h2 class="section-title" style="margin-top:18px;">Modeling runs on a ledger you trust.</h2>
+    </div>
+    <div class="xlinks">
+      <a class='xlink reveal' href='./cap-table'>
+        <span class="xt">Cap table</span>
+        <span class="xd">Every security class on one reconciled ledger — the foundation every scenario runs against.</span>
+        <span class="xm">Explore →</span>
+      </a>
+      <a class='xlink reveal' href='./#product' style='transition-delay:.06s'>
+        <span class="xt">AI assistant</span>
+        <span class="xd">Ask the assistant to model a round or draft the board update that explains it.</span>
+        <span class="xm">Explore →</span>
+      </a>
+      <a class='xlink reveal' href='./for-advisors' style='transition-delay:.12s'>
+        <span class="xt">For Trusted Advisors</span>
+        <span class="xd">Run scenarios for every client company from one workspace.</span>
+        <span class="xm">Explore →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="sec-pad" style="padding-top:0;" data-screen-label="Final CTA">
+  <div class="wrap">
+    <div class="final-card reveal">
+      <span class="eyebrow on-dark" style="justify-content:center;display:flex;">Scenario modeling</span>
+      <h2 class="display" style="margin-top:22px;">Know the number first.</h2>
+      <p class="lead">Start free and model your next round against the cap table you enter.</p>
+      <div class="hero-cta">
+        <a class="btn btn-accent btn-lg" href="https://app.diligenceready.com/signup?src=scenario-modeling">Start free <span class="arr">→</span></a>
+        <a class='btn btn-ghost btn-lg' href='./#contact'>Contact us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<div class="mcta" id="mcta"><a class="p" href="https://app.diligenceready.com/signup?src=scenario-modeling">Start free <span class="arr">→</span></a><a class='s' href='./#contact'>Contact</a></div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a aria-label='Diligence Ready' class='brand on-dark' href='./'>
+          <span class="mono-circle">dr</span>
+          <span class="wordmark">Diligence Ready<span class="dot">.</span></span>
+        </a>
+        <div class="promise">Readiness is the standard.</div>
+      </div>
+      <div class="foot-col">
+        <h6>Product</h6>
+        <a href='./cap-table'>Cap table</a>
+        <a href='./scenario-modeling'>What-if modeling</a>
+        <a href='./diligence-room'>Diligence room</a>
+        <a href='./ai-assistant'>AI assistant</a>
+        <a href='./for-advisors'>For Trusted Advisors</a>
+        <a href='./features'>All features</a>
+      </div>
+      <div class="foot-col">
+        <h6>Company</h6>
+        <a href='./why-diligence-ready'>Why Diligence Ready</a>
+        <a href='./#contact'>Request a demo</a>
+        <a href='./pricing'>Pricing</a>
+        <a href='./#contact'>Become a Trusted Advisor</a>
+        <a href='./#contact'>Contact</a>
+      </div>
+      <div class="foot-col">
+        <h6>Legal</h6>
+        <a href='./privacy'>Privacy</a>
+        <a href='./terms'>Terms</a>
+        <a href='./security'>Security &amp; trust</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Diligence Ready. All rights reserved.</span>
+      <div class="legal"><span>diligenceready.com</span><span>Built for the way modern founders raise.</span></div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ REVEAL JS ============ -->
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+  onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
+  if (!document.hidden) {
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  }
+
+  // Product dropdown — click/keyboard toggle (hover handled in CSS)
+  document.querySelectorAll('[data-dd]').forEach(dd => {
+    const btn = dd.querySelector('.nav-dd-btn');
+    btn.addEventListener('click', (e) => { e.stopPropagation(); const open = dd.classList.toggle('open'); btn.setAttribute('aria-expanded', open); });
+  });
+  document.addEventListener('click', () => document.querySelectorAll('[data-dd].open').forEach(dd => { dd.classList.remove('open'); dd.querySelector('.nav-dd-btn').setAttribute('aria-expanded', 'false'); }));
+
+  // Mobile menu toggle
+  const burger = document.getElementById('navBurger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (burger && mobileMenu) {
+    const closeMenu = () => { burger.classList.remove('open'); mobileMenu.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; document.body.classList.remove('menu-open'); };
+    burger.addEventListener('click', () => {
+      const open = burger.classList.toggle('open');
+      mobileMenu.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.style.overflow = open ? 'hidden' : ''; document.body.classList.toggle('menu-open', open);
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  }
+</script>
+
+<script>
+  (function(){
+    var bar = document.getElementById('mcta'); if(!bar) return;
+    var stop = document.getElementById('contact') || document.querySelector('footer');
+    var tick = function(){
+      var past = window.scrollY > 520;
+      var near = stop && stop.getBoundingClientRect().top < window.innerHeight * 0.75;
+      bar.classList.toggle('up', past && !near);
+    };
+    tick(); window.addEventListener('scroll', tick, { passive: true });
+  })();
+</script>
+
+<!-- ============ COOKIE NOTICE ============ -->
+<div id="dr-cookie-root" hidden role="dialog" aria-modal="true" aria-labelledby="dr-cookie-title">
+  <div id="dr-cookie-card">
+    <div id="dr-cookie-main">
+      <h2 id="dr-cookie-title">diligenceready.com</h2>
+      <p>We use cookies to run the site and improve it.</p>
+      <button type="button" id="dr-cookie-accept">Accept all</button>
+      <button type="button" id="dr-cookie-essential">Essential only</button>
+      <button type="button" id="dr-cookie-prefs-open">Preferences</button>
+      <a class='dr-cookie-legal' href='./privacy'>Privacy Policy</a>
+    </div>
+    <div id="dr-cookie-prefs-panel" hidden>
+      <h2>Cookie Preferences</h2>
+      <p>Choose which cookies we can use. Essential cookies are always on.</p>
+      <label><input type="checkbox" checked disabled /> Essential (required)</label>
+      <label><input type="checkbox" id="dr-cookie-analytics" /> Analytics</label>
+      <label><input type="checkbox" id="dr-cookie-marketing" /> Marketing</label>
+      <button type="button" id="dr-cookie-save">Save Preferences</button>
+      <button type="button" id="dr-cookie-back">Back</button>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var KEY = 'dr_cookie_consent';
+  var root = document.getElementById('dr-cookie-root');
+  if (!root) return;
+  var main = document.getElementById('dr-cookie-main');
+  var panel = document.getElementById('dr-cookie-prefs-panel');
+  var cbA = document.getElementById('dr-cookie-analytics');
+  var cbM = document.getElementById('dr-cookie-marketing');
+
+  function apply(c) {
+    if (typeof gtag !== 'function') return;
+    gtag('consent', 'update', {
+      analytics_storage: c.analytics ? 'granted' : 'denied',
+      ad_storage: c.marketing ? 'granted' : 'denied',
+      ad_user_data: c.marketing ? 'granted' : 'denied',
+      ad_personalization: c.marketing ? 'granted' : 'denied'
+    });
+  }
+  function save(c) {
+    c.ts = new Date().toISOString();
+    try { localStorage.setItem(KEY, JSON.stringify(c)); } catch (e) {}
+    apply(c);
+    root.hidden = true;
+  }
+  function read() {
+    try { return JSON.parse(localStorage.getItem(KEY)); } catch (e) { return null; }
+  }
+
+  var stored = read();
+  if (stored && typeof stored.analytics === 'boolean') {
+    apply(stored);
+  } else {
+    root.hidden = false;
+  }
+
+  document.getElementById('dr-cookie-accept').addEventListener('click', function () {
+    save({ analytics: true, marketing: true });
+  });
+  document.getElementById('dr-cookie-essential').addEventListener('click', function () {
+    save({ analytics: false, marketing: false });
+  });
+  document.getElementById('dr-cookie-prefs-open').addEventListener('click', function () {
+    main.hidden = true; panel.hidden = false;
+  });
+  document.getElementById('dr-cookie-back').addEventListener('click', function () {
+    panel.hidden = true; main.hidden = false;
+  });
+  document.getElementById('dr-cookie-save').addEventListener('click', function () {
+    save({ analytics: !!cbA.checked, marketing: !!cbM.checked });
+  });
+})();
+</script>
+<script>
+// signup_click: GA4 event on every signup / Start free link (21 Oct 2026)
+document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href*="app.diligenceready.com/signup"]'):null;if(!a||typeof gtag!=='function')return;var s='';try{s=new URL(a.href).searchParams.get('src')||''}catch(x){}gtag('event','signup_click',{src:s,link_text:(a.textContent||'').replace(/\s+/g,' ').trim().slice(0,60),link_url:a.href});});
+</script>
+<div id="dr-preview-flag" style="position:fixed;left:16px;bottom:16px;z-index:9999;padding:8px 12px;border-radius:8px;background:#0F1E3D;color:#fff;font:500 12px/1.3 Inter,system-ui,sans-serif;box-shadow:0 8px 24px -8px rgba(0,0,0,.4);pointer-events:none;">Preview copy · not the live site</div>
+<script>document.addEventListener("submit",function(e){var f=e.target;if(f&&f.tagName==="FORM"){e.preventDefault();var b=f.querySelector("[type=submit]");if(b){b.textContent="Forms are off in this preview";b.disabled=true;}}},true);</script>
+</body>
+</html>

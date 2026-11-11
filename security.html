@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) — GA4 + Google Ads -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  // Consent Mode default denied; wait briefly for CMP / stored apply below
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    wait_for_update: 500
+  });
+
+  // Apply stored preference BEFORE config / conversion (same KEY as footer banner)
+  (function () {
+    var KEY = 'dr_cookie_consent';
+    var c = null;
+    try { c = JSON.parse(localStorage.getItem(KEY)); } catch (e) { c = null; }
+    if (c && typeof c.analytics === 'boolean') {
+      gtag('consent', 'update', {
+        analytics_storage: c.analytics ? 'granted' : 'denied',
+        ad_storage: c.marketing ? 'granted' : 'denied',
+        ad_user_data: c.marketing ? 'granted' : 'denied',
+        ad_personalization: c.marketing ? 'granted' : 'denied'
+      });
+    }
+  })();
+
+  gtag('config', 'G-5SE3GQ5GK4');
+  gtag('config', 'AW-18371579900');
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="How Diligence Ready protects your data: row-level isolation between companies, an audit log on everything, one-time codes and watermarking on external sharing, files in your own cloud storage, and AI that acts only with your approval." />
+<title>Security &amp; Trust — Diligence Ready</title>
+<link rel="canonical" href="https://diligenceready.com/security" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#0F1E3D" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Diligence Ready" />
+<meta property="og:title" content="Security &amp; Trust — Diligence Ready" />
+<meta property="og:description" content="Specific controls rather than reassuring language — exactly what protects your data, so you can judge it." />
+<meta property="og:url" content="https://diligenceready.com/security" />
+<meta property="og:image" content="https://diligenceready.com/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Security &amp; Trust — Diligence Ready" />
+<meta name="twitter:description" content="Row-level isolation, audit logs, watermarking, your own cloud storage, and AI with human approval." />
+<meta name="twitter:image" content="https://diligenceready.com/og-image.png" />
+<link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@300;400;450;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a aria-label='Diligence Ready' class='brand' href='./#top'>
+      <span class="mono-circle">dr</span>
+      <span class="wordmark">Diligence Ready<span class="dot">.</span></span>
+    </a>
+    <nav class="nav-links">
+      <div class="nav-dd" data-dd>
+        <button type="button" class="nav-dd-btn" aria-expanded="false">Product <span class="caret">▾</span></button>
+        <div class="nav-dd-menu">
+          <a href='./cap-table'><span class="t">Cap Table</span><span class="d">Every security class, reconciled</span></a>
+          <a href='./scenario-modeling'><span class="t">Scenario Modeling</span><span class="d">Rounds, dilution &amp; waterfalls</span></a>
+          <a href='./diligence-room'><span class="t">Diligence Room</span><span class="d">Be ready before they ask</span></a>
+          <a href='./ai-assistant'><span class="t">AI Assistant</span><span class="d">It does the work, you approve</span></a>
+          <div class="dd-sep"></div>
+          <a class='dd-all' href='./features'><span class="t">See all features</span><span class="arr">→</span></a>
+        </div>
+      </div>
+      <a href='./for-advisors'>Trusted Advisors</a>
+      <a href='./learn/'>Learn</a>
+      <a href='./pricing'>Pricing</a>
+    </nav>
+    <div class="nav-cta">
+      <a class='link sales-link' href='./#contact'>Contact us</a>
+      <a class="link" href="https://app.diligenceready.com/login">Customer Login</a>
+      <a class="btn btn-accent" href="https://app.diligenceready.com/signup?src=security">Sign up <span class="arr">→</span></a>
+    </div>
+    <a class="btn btn-accent nav-cta-m" href="https://app.diligenceready.com/signup?src=security">Start free</a>
+    <button type="button" class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mm-group">Product</div>
+  <a class='sub' href='./cap-table'>Cap Table</a>
+  <a class='sub' href='./scenario-modeling'>Scenario Modeling</a>
+  <a class='sub' href='./diligence-room'>Diligence Room</a>
+  <a class='sub' href='./ai-assistant'>AI Assistant</a>
+  <a class='sub' href='./features'>All Features</a>
+  <div class="mm-group">Explore</div>
+  <a href='./for-advisors'>Trusted Advisors</a>
+  <a href='./learn/'>Learn</a>
+  <a href='./pricing'>Pricing</a>
+  <a href='./why-diligence-ready'>Why Diligence Ready</a>
+  <div class="mm-cta">
+    <a class='btn btn-ghost btn-lg' href='./#contact'>Contact us</a>
+    <a class="btn btn-ghost btn-lg" href="https://app.diligenceready.com/login">Customer Login</a>
+    <a class="btn btn-accent btn-lg" href="https://app.diligenceready.com/signup?src=security">Sign up</a>
+  </div>
+</div>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="feat-hero" data-screen-label="Security hero">
+  <div class="wrap">
+    <div class="breadcrumb reveal">
+      <a href='./'>Home</a><span class="sep">/</span><span class="cur">Security &amp; trust</span>
+    </div>
+    <div style="max-width:780px;">
+      <span class="eyebrow reveal">Security &amp; trust</span>
+      <h1 class="reveal" style="transition-delay:.05s;margin-top:18px;">Built to be trusted with your <em>most sensitive numbers.</em></h1>
+      <p class="lead reveal" style="transition-delay:.1s">Specific controls rather than reassuring language. Here is exactly what's in place, so you can judge it for yourself.</p>
+      <div class="hero-cta reveal" style="transition-delay:.15s;justify-content:flex-start;">
+        <a class="btn btn-accent btn-lg" href="https://app.diligenceready.com/signup?src=security">Start free <span class="arr">→</span></a>
+        <a class='btn btn-ghost btn-lg' href='./#contact'>Contact us</a>
+      </div>
+      <div class="hero-note reveal" style="transition-delay:.2s;justify-content:flex-start;">
+        <span><span class="dot"></span> Files stay in your own cloud storage</span>
+        <span><span class="dot"></span> Every action audited</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTROLS ============ -->
+<section class="sec-pad" data-screen-label="Controls">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">What's in place</span>
+      <h2 class="section-title" style="margin-top:20px;">The controls, <span class="accent-line">named.</span></h2>
+    </div>
+    <div class="feat-cards">
+      <div class="pillar reveal">
+        <div class="pic coral">⛂</div>
+        <h3>Walled off by construction</h3>
+        <p>Companies are isolated from each other with row-level security enforced at the database, not just in the app. Every login is locked to a single tier — a customer account can't reach platform admin, even if compromised. Roles are fixed by design (admin, editor, investor view, counsel): a permissions model you can't misconfigure won't leak.</p>
+      </div>
+      <div class="pillar reveal">
+        <div class="pic">▤</div>
+        <h3>Everything on the record</h3>
+        <p>Every change is attributed and timestamped in an audit log you can see in your own settings. Trusted Advisor and support access is scoped and audited like anyone else's, and read-only sessions let someone look without touching. Records archive instead of deleting, so an accidental delete can't break history.</p>
+      </div>
+      <div class="pillar reveal">
+        <div class="pic">⏲</div>
+        <h3>Sharing you can take back</h3>
+        <p>Everything shared externally goes out by personal link with a one-time code — valid 15 minutes, five attempts, then a temporary lock — so a forwarded link is useless. Every page is watermarked server-side with the viewer's name and email. Downloads are off by default, and revocation takes effect on the next document opened, mid-session if it has to.</p>
+      </div>
+      <div class="pillar reveal">
+        <div class="pic coral">◫</div>
+        <h3>Your files, your cloud</h3>
+        <p>Documents live in your own Google Drive or OneDrive — your security policies, your backups, your permissions. We hold an encrypted connection, not your files.</p>
+      </div>
+      <div class="pillar reveal">
+        <div class="pic">◷</div>
+        <h3>Sign-in security</h3>
+        <p>Multi-factor authentication with an authenticator app and backup codes. Sign in with email, Google, or Microsoft. Credentials encrypted at rest with key rotation, and sign-up abuse protection at the door.</p>
+      </div>
+      <div class="pillar reveal">
+        <div class="pic coral">◎</div>
+        <h3>AI and your data</h3>
+        <p>AI is built in and does the busywork — and nothing changes without your approval. Every proposal is shown in full before you commit it, and every AI action lands in the same audit trail. Your data is used to answer your questions and do your work — not to train public models.</p>
+      </div>
+      <div class="pillar reveal">
+        <div class="pic">◱</div>
+        <h3>Your data is yours</h3>
+        <p>Export your records. Delete your account, with safeguards against removing a company's last administrator. SOC 2 is on the roadmap — and we'll say "in progress," never "certified," until it's true.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING BAND ============ -->
+<section class="strip sec-pad" data-screen-label="Trust band">
+  <div class="wrap">
+    <div class="sec-head reveal" style="max-width:680px;">
+      <span class="eyebrow on-dark">Readiness is the standard</span>
+      <h2 class="section-title" style="color:var(--cream);margin-top:18px;">Trust, <span style="font-style:italic;color:var(--coral);font-family:var(--serif)">by construction.</span></h2>
+      <p class="lead" style="color:var(--ice);margin-top:22px;">Start free and see every one of these controls working in your own account.</p>
+      <a class="btn btn-accent" href="https://app.diligenceready.com/signup?src=security" style="margin-top:30px;">Start free <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+<div class="mcta" id="mcta"><a class="p" href="https://app.diligenceready.com/signup?src=security">Start free <span class="arr">→</span></a><a class='s' href='./#contact'>Contact</a></div>
+
+<footer data-screen-label="Footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class='brand' href='./#top'>
+          <span class="mono-circle">dr</span>
+          <span class="wordmark">Diligence Ready<span class="dot">.</span></span>
+        </a>
+        <p>The equity platform that keeps growing companies continuously ready for fundraising, M&amp;A, and capital events.</p>
+        <div class="promise">Readiness is the standard.</div>
+      </div>
+      <div class="foot-col">
+        <h6>Product</h6>
+        <a href='./cap-table'>Cap table</a>
+        <a href='./scenario-modeling'>What-if modeling</a>
+        <a href='./diligence-room'>Diligence room</a>
+        <a href='./ai-assistant'>AI assistant</a>
+        <a href='./for-advisors'>For Trusted Advisors</a>
+        <a href='./features'>All features</a>
+      </div>
+      <div class="foot-col">
+        <h6>Company</h6>
+        <a href='./why-diligence-ready'>Why Diligence Ready</a>
+        <a href='./#contact'>Request a demo</a>
+        <a href='./pricing'>Pricing</a>
+        <a href='./#contact'>Become a Trusted Advisor</a>
+        <a href='./#contact'>Contact</a>
+      </div>
+      <div class="foot-col">
+        <h6>Legal</h6>
+        <a href='./privacy'>Privacy</a>
+        <a href='./terms'>Terms</a>
+        <a href='./security'>Security &amp; trust</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Diligence Ready. All rights reserved.</span>
+      <div class="legal"><span>diligenceready.com</span><span>Built for the way modern founders raise.</span></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+  onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Decorative entrance only — content is visible by default in CSS, so nothing
+  // can get stuck hidden. We add `.in` (which fires the keyframe) only while the
+  // page is actually being rendered; if backgrounded we simply skip the animation.
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
+  if (!document.hidden) {
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  }
+
+  // Product dropdown — click/keyboard toggle (hover handled in CSS)
+  document.querySelectorAll('[data-dd]').forEach(dd => {
+    const btn = dd.querySelector('.nav-dd-btn');
+    btn.addEventListener('click', (e) => { e.stopPropagation(); const open = dd.classList.toggle('open'); btn.setAttribute('aria-expanded', open); });
+  });
+  document.addEventListener('click', () => document.querySelectorAll('[data-dd].open').forEach(dd => { dd.classList.remove('open'); dd.querySelector('.nav-dd-btn').setAttribute('aria-expanded', 'false'); }));
+
+  // Mobile menu toggle
+  const burger = document.getElementById('navBurger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (burger && mobileMenu) {
+    const closeMenu = () => { burger.classList.remove('open'); mobileMenu.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; document.body.classList.remove('menu-open'); };
+    burger.addEventListener('click', () => {
+      const open = burger.classList.toggle('open');
+      mobileMenu.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.style.overflow = open ? 'hidden' : ''; document.body.classList.toggle('menu-open', open);
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  }
+
+  // Pricing billing toggle (Monthly / Annual — 2 months free)
+  const billBtns = document.querySelectorAll('.bill-toggle .bt');
+  const billPrices = document.querySelectorAll('[data-m]');
+  billBtns.forEach(b => b.addEventListener('click', () => {
+    const mode = b.dataset.bill;
+    billBtns.forEach(x => x.classList.toggle('on', x === b));
+    billPrices.forEach(p => { p.innerHTML = mode === 'annual' ? p.dataset.a : p.dataset.m; });
+  }));
+
+  // Contact form — composes the team address at runtime (split to deter scrapers)
+  var _drTo = ['info', 'diligenceready.com'].join('@');
+  var _drEmail = document.getElementById('contactEmail');
+  if (_drEmail) { _drEmail.href = 'mailto:' + _drTo; }
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    const note = document.getElementById('cf-note');
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const v = (id) => (document.getElementById(id).value || '').trim();
+      const name = v('cf-name'), email = v('cf-email'), company = v('cf-company'), message = v('cf-message');
+      const subject = encodeURIComponent('Diligence Ready inquiry' + (company ? ' — ' + company : ''));
+      const body = encodeURIComponent(
+        'Name: ' + name + '\n' +
+        'Email: ' + email + '\n' +
+        'Company: ' + (company || '—') + '\n\n' +
+        message + '\n'
+      );
+      window.location.href = 'mailto:' + _drTo + '?subject=' + subject + '&body=' + body;
+      if (note) note.textContent = 'Opening your email app… if nothing happens, please try again in a moment.';
+    });
+  }
+</script>
+<script>
+  (function(){
+    const links=[...document.querySelectorAll('.legal-toc a')];
+    const map=new Map(links.map(a=>[a.getAttribute('href').slice(1),a]));
+    const spy=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.remove('active'));const a=map.get(e.target.id);if(a)a.classList.add('active');}});},{rootMargin:'-80px 0px -70% 0px',threshold:0});
+    document.querySelectorAll('.legal-body h2').forEach(h=>spy.observe(h));
+  })();
+</script>
+
+<style id="__om-edit-overrides"></style>
+
+<script>
+  (function(){
+    var bar = document.getElementById('mcta'); if(!bar) return;
+    var stop = document.getElementById('contact') || document.querySelector('footer');
+    var tick = function(){
+      var past = window.scrollY > 520;
+      var near = stop && stop.getBoundingClientRect().top < window.innerHeight * 0.75;
+      bar.classList.toggle('up', past && !near);
+    };
+    tick(); window.addEventListener('scroll', tick, { passive: true });
+  })();
+</script>
+
+<!-- ============ COOKIE NOTICE ============ -->
+<div id="dr-cookie-root" hidden role="dialog" aria-modal="true" aria-labelledby="dr-cookie-title">
+  <div id="dr-cookie-card">
+    <div id="dr-cookie-main">
+      <h2 id="dr-cookie-title">diligenceready.com</h2>
+      <p>We use cookies to run the site and improve it.</p>
+      <button type="button" id="dr-cookie-accept">Accept all</button>
+      <button type="button" id="dr-cookie-essential">Essential only</button>
+      <button type="button" id="dr-cookie-prefs-open">Preferences</button>
+      <a class='dr-cookie-legal' href='./privacy'>Privacy Policy</a>
+    </div>
+    <div id="dr-cookie-prefs-panel" hidden>
+      <h2>Cookie Preferences</h2>
+      <p>Choose which cookies we can use. Essential cookies are always on.</p>
+      <label><input type="checkbox" checked disabled /> Essential (required)</label>
+      <label><input type="checkbox" id="dr-cookie-analytics" /> Analytics</label>
+      <label><input type="checkbox" id="dr-cookie-marketing" /> Marketing</label>
+      <button type="button" id="dr-cookie-save">Save Preferences</button>
+      <button type="button" id="dr-cookie-back">Back</button>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var KEY = 'dr_cookie_consent';
+  var root = document.getElementById('dr-cookie-root');
+  if (!root) return;
+  var main = document.getElementById('dr-cookie-main');
+  var panel = document.getElementById('dr-cookie-prefs-panel');
+  var cbA = document.getElementById('dr-cookie-analytics');
+  var cbM = document.getElementById('dr-cookie-marketing');
+
+  function apply(c) {
+    if (typeof gtag !== 'function') return;
+    gtag('consent', 'update', {
+      analytics_storage: c.analytics ? 'granted' : 'denied',
+      ad_storage: c.marketing ? 'granted' : 'denied',
+      ad_user_data: c.marketing ? 'granted' : 'denied',
+      ad_personalization: c.marketing ? 'granted' : 'denied'
+    });
+  }
+  function save(c) {
+    c.ts = new Date().toISOString();
+    try { localStorage.setItem(KEY, JSON.stringify(c)); } catch (e) {}
+    apply(c);
+    root.hidden = true;
+  }
+  function read() {
+    try { return JSON.parse(localStorage.getItem(KEY)); } catch (e) { return null; }
+  }
+
+  var stored = read();
+  if (stored && typeof stored.analytics === 'boolean') {
+    apply(stored);
+  } else {
+    root.hidden = false;
+  }
+
+  document.getElementById('dr-cookie-accept').addEventListener('click', function () {
+    save({ analytics: true, marketing: true });
+  });
+  document.getElementById('dr-cookie-essential').addEventListener('click', function () {
+    save({ analytics: false, marketing: false });
+  });
+  document.getElementById('dr-cookie-prefs-open').addEventListener('click', function () {
+    main.hidden = true; panel.hidden = false;
+  });
+  document.getElementById('dr-cookie-back').addEventListener('click', function () {
+    panel.hidden = true; main.hidden = false;
+  });
+  document.getElementById('dr-cookie-save').addEventListener('click', function () {
+    save({ analytics: !!cbA.checked, marketing: !!cbM.checked });
+  });
+})();
+</script>
+<script>
+// signup_click: GA4 event on every signup / Start free link (21 Oct 2026)
+document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href*="app.diligenceready.com/signup"]'):null;if(!a||typeof gtag!=='function')return;var s='';try{s=new URL(a.href).searchParams.get('src')||''}catch(x){}gtag('event','signup_click',{src:s,link_text:(a.textContent||'').replace(/\s+/g,' ').trim().slice(0,60),link_url:a.href});});
+</script>
+<div id="dr-preview-flag" style="position:fixed;left:16px;bottom:16px;z-index:9999;padding:8px 12px;border-radius:8px;background:#0F1E3D;color:#fff;font:500 12px/1.3 Inter,system-ui,sans-serif;box-shadow:0 8px 24px -8px rgba(0,0,0,.4);pointer-events:none;">Preview copy · not the live site</div>
+<script>document.addEventListener("submit",function(e){var f=e.target;if(f&&f.tagName==="FORM"){e.preventDefault();var b=f.querySelector("[type=submit]");if(b){b.textContent="Forms are off in this preview";b.disabled=true;}}},true);</script>
+</body>
+</html>

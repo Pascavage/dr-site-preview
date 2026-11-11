@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) — GA4 + Google Ads -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  // Consent Mode default denied; wait briefly for CMP / stored apply below
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    wait_for_update: 500
+  });
+
+  // Apply stored preference BEFORE config / conversion (same KEY as footer banner)
+  (function () {
+    var KEY = 'dr_cookie_consent';
+    var c = null;
+    try { c = JSON.parse(localStorage.getItem(KEY)); } catch (e) { c = null; }
+    if (c && typeof c.analytics === 'boolean') {
+      gtag('consent', 'update', {
+        analytics_storage: c.analytics ? 'granted' : 'denied',
+        ad_storage: c.marketing ? 'granted' : 'denied',
+        ad_user_data: c.marketing ? 'granted' : 'denied',
+        ad_personalization: c.marketing ? 'granted' : 'denied'
+      });
+    }
+  })();
+
+  gtag('config', 'G-5SE3GQ5GK4');
+  gtag('config', 'AW-18371579900');
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="How Diligence Ready collects, uses, discloses, and secures personal information across our website and platform." />
+<title>Privacy Policy — Diligence Ready</title>
+<link rel="canonical" href="https://diligenceready.com/privacy" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#0F1E3D" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Diligence Ready" />
+<meta property="og:title" content="Privacy Policy — Diligence Ready" />
+<meta property="og:description" content="How Diligence Ready collects, uses, discloses, and secures personal information across our website and platform." />
+<meta property="og:url" content="https://diligenceready.com/privacy" />
+<link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@300;400;450;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a aria-label='Diligence Ready' class='brand' href='./#top'>
+      <span class="mono-circle">dr</span>
+      <span class="wordmark">Diligence Ready<span class="dot">.</span></span>
+    </a>
+    <nav class="nav-links">
+      <div class="nav-dd" data-dd>
+        <button type="button" class="nav-dd-btn" aria-expanded="false">Product <span class="caret">▾</span></button>
+        <div class="nav-dd-menu">
+          <a href='./cap-table'><span class="t">Cap Table</span><span class="d">Every security class, reconciled</span></a>
+          <a href='./scenario-modeling'><span class="t">Scenario Modeling</span><span class="d">Rounds, dilution &amp; waterfalls</span></a>
+          <a href='./diligence-room'><span class="t">Diligence Room</span><span class="d">Be ready before they ask</span></a>
+          <a href='./ai-assistant'><span class="t">AI Assistant</span><span class="d">It does the work, you approve</span></a>
+          <div class="dd-sep"></div>
+          <a class='dd-all' href='./features'><span class="t">See all features</span><span class="arr">→</span></a>
+        </div>
+      </div>
+      <a href='./for-advisors'>Trusted Advisors</a>
+      <a href='./learn/'>Learn</a>
+      <a href='./pricing'>Pricing</a>
+    </nav>
+    <div class="nav-cta">
+      <a class='link sales-link' href='./#contact'>Contact us</a>
+      <a class="link" href="https://app.diligenceready.com/login">Customer Login</a>
+      <a class="btn btn-accent" href="https://app.diligenceready.com/signup?src=privacy">Sign up <span class="arr">→</span></a>
+    </div>
+    <a class="btn btn-accent nav-cta-m" href="https://app.diligenceready.com/signup?src=privacy">Start free</a>
+    <button type="button" class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mm-group">Product</div>
+  <a class='sub' href='./cap-table'>Cap Table</a>
+  <a class='sub' href='./scenario-modeling'>Scenario Modeling</a>
+  <a class='sub' href='./diligence-room'>Diligence Room</a>
+  <a class='sub' href='./ai-assistant'>AI Assistant</a>
+  <a class='sub' href='./features'>All Features</a>
+  <div class="mm-group">Explore</div>
+  <a href='./for-advisors'>Trusted Advisors</a>
+  <a href='./learn/'>Learn</a>
+  <a href='./pricing'>Pricing</a>
+  <a href='./why-diligence-ready'>Why Diligence Ready</a>
+  <div class="mm-cta">
+    <a class='btn btn-ghost btn-lg' href='./#contact'>Contact us</a>
+    <a class="btn btn-ghost btn-lg" href="https://app.diligenceready.com/login">Customer Login</a>
+    <a class="btn btn-accent btn-lg" href="https://app.diligenceready.com/signup?src=privacy">Sign up</a>
+  </div>
+</div>
+
+<main id="top">
+
+<section class="legal-hero" data-screen-label="Legal hero">
+  <div class="wrap">
+    <span class="eyebrow">Legal</span>
+    <h1>Privacy Policy</h1>
+    <div class="legal-meta">
+      <span class="updated"><span style="width:6px;height:6px;border-radius:50%;background:currentColor;display:inline-block;"></span> Last updated June 1, 2026</span>
+      <span class="sep">·</span>
+      <span>Entrevest, LLC dba Diligence Ready</span>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Legal">
+  <div class="wrap legal-wrap">
+    <nav class="legal-toc" aria-label="On this page">
+      <div class="toc-label">On this page</div>
+        <a href="#s1">Important Notice: Our Role as Controller vs. Processor</a>
+        <a href="#s2">Information We Collect</a>
+        <a href="#s3">How We Use Your Information</a>
+        <a href="#s4">How We Share and Disclose Information</a>
+        <a href="#s5">Cookies and Online Tracking Technologies</a>
+        <a href="#s6">Data Security and Retention</a>
+        <a href="#s7">Your Regional Privacy Rights (CCPA/CPRA & GDPR)</a>
+        <a href="#s8">International Data Transfers</a>
+        <a href="#s9">Changes to this Privacy Policy</a>
+        <a href="#s10">Contact Us</a>
+    </nav>
+    <article class="legal-body">
+      <div class="legal-lead"><p>Entrevest, LLC dba Diligence Ready ("Diligence Ready," "we," "us," or "our") respects your privacy and is committed to protecting the personal information of our website visitors, platform users, and corporate stakeholders. This Privacy Policy ("Policy") explains how we collect, use, disclose, and secure personal information when you visit diligenceready.com (the "Site") or use our equity tracking, cap table management, and data room services (the "Services").</p></div>
+      <h2 id="s1">1. Important Notice: Our Role as Controller vs. Processor</h2><p>To understand your privacy rights, it is critical to note how Diligence Ready handles data across two distinct roles:</p><ul class="legal-list"><li><b>Diligence Ready as a Data Processor:</b> When a company utilizes our platform to manage its cap table, issue equity, or store documents in a due diligence data room, that corporate entity (our Customer) determines the purpose and means of processing. In these instances, Diligence Ready acts strictly as a Data Processor (or "Service Provider") operating under the instructions of the Customer. If you are an employee, investor, or stakeholder of a company using Diligence Ready, that company's privacy policy governs your information.</li><li><b>Diligence Ready as a Data Controller:</b> When you visit our website, register a corporate account as an administrator, contact sales, or subscribe to our newsletters, we act as the Data Controller for that account and operational data.</li></ul><h2 id="s2">2. Information We Collect</h2><p>Depending on how you interact with our platform, we may collect various categories of information.</p><h3>Summary of Data Collection</h3><div class="legal-table-wrap"><table class="legal-table"><thead><tr><th>Category of Personal Information</th><th>Specific Examples Collected</th><th>Source of Collection</th></tr></thead><tbody><tr><td>Identifiers &amp; Contact Info</td><td>Full name, business email address, physical address, phone number, and unique account usernames.</td><td>Directly from you (account creation) or from your employer/issuer.</td></tr><tr><td>Corporate &amp; Financial Data</td><td>Tax Identification Numbers (SSN/EIN), equity holdings, stock option grant details, transaction history, and linked bank account information (via secure third-party processors like Plaid).</td><td>Provided by the Customer Administrator or entered directly by the stakeholder.</td></tr><tr><td>Verification &amp; Compliance Data</td><td>Government-issued IDs, passports, or company entity documentation required for institutional onboarding or anti-money laundering (AML) checks.</td><td>Directly from you or third-party verification partners.</td></tr><tr><td>Technical &amp; Usage Details</td><td>IP address, browser type, operating system, access timestamps, and interactions with specific platform pages.</td><td>Automatically via tracking technologies, cookies, and server logs.</td></tr></tbody></table></div><h2 id="s3">3. How We Use Your Information</h2><p>We use the personal information we collect for the following operational and commercial purposes:</p><ul class="legal-list"><li><b>To Provide the Services:</b> Setting up user profiles, computing cap table metrics, hosting secure data rooms, and facilitating stakeholder access.</li><li><b>To Ensure Security &amp; Auditability:</b> Maintaining exact internal logs of system access to track which users view or modify sensitive legal and financial data rooms.</li><li><b>Billing &amp; Payments:</b> Processing subscription fees and managing financial transfers.</li><li><b>Customer Support:</b> Responding to help inquiries, diagnosing technical bugs, and optimizing platform performance.</li><li><b>Compliance &amp; Legal Obligations:</b> Verifying identities for regulatory compliance (e.g., KYC/AML requirements) and enforcing our Terms of Service.</li></ul><h2 id="s4">4. How We Share and Disclose Information</h2><div class="legal-flag">OUR CORE COMMITMENT</div><p class="legal-callout">We do not sell your personal information or corporate financial data to data brokers or third parties for monetary consideration.</p><p>We only share information in the limited scenarios outlined below:</p><ul class="legal-list"><li><b>With the Authorizing Customer:</b> Stakeholder data (such as option grants or equity metrics) is shared directly with the corporate employer or issuing company that established the account workspace.</li><li><b>To Third-Party Service Providers:</b> We share data with verified vendors who perform specialized operational services on our behalf (e.g., cloud hosting via Vercel, Supabase, and services such as Amazon Web Services, identity verification, payment processing, and customer support CRM software). These providers are contractually bound to process data only under our strict instructions.</li><li><b>Corporate Transactions:</b> If Diligence Ready undergoes a merger, acquisition, restructuring, or asset sale, user data may be transferred to the acquiring entity as part of standard business assets.</li><li><b>Legal Compliance and Protection:</b> We may disclose information if required to do so by law, court order, subpoena, or to protect the safety, rights, and security of Diligence Ready, our users, or the public.</li></ul><h2 id="s5">5. Cookies and Online Tracking Technologies</h2><p>We and our third-party analytics vendors use cookies, web beacons, and tracking pixels to analyze traffic patterns on our public Site and to remember your login preferences inside the secure platform.</p><h3>Managing Tracking Choices</h3><ul class="legal-list"><li><b>Browser Settings:</b> You can configure your browser to reject cookies, though doing so may disable vital security features and break basic platform functionality.</li><li><b>Do Not Track:</b> Our public Site is not currently configured to respond to browser-initiated "Do Not Track" signals.</li></ul><h2 id="s6">6. Data Security and Retention</h2><h3>6.1 Security Measures</h3><p>Because we manage critical corporate infrastructure, security is embedded in our architectural design. We implement industry-standard administrative, physical, and logical security controls, including:</p><ul class="legal-list"><li>Encryption of data both at rest (AES-256) and in transit (TLS 1.2+).</li><li>Strict adherence to the principle of least privilege, restricting internal employee data access to authorized roles.</li><li>Comprehensive, immutable access logging to ensure all modifications to corporate cap tables and data rooms are fully auditable.</li></ul><h3>6.2 Data Retention</h3><p>We retain personal information for as long as your account is active or as necessary to fulfill the operational purposes for which it was collected. Please note that legal, financial, and tax obligations (such as tracking corporate stock issuances) frequently require us to retain historical records even after a specific user deactivates their individual login.</p><h2 id="s7">7. Your Regional Privacy Rights (CCPA/CPRA &amp; GDPR)</h2><p>Depending on your jurisdiction (such as California or the European Economic Area), you may possess specific rights regarding your personal data.</p><h3>Summary of Rights</h3><ul class="legal-list"><li><b>Right to Know/Access:</b> The right to request a breakdown of what personal data we have collected, used, and disclosed about you.</li><li><b>Right to Rectification:</b> The right to correct inaccurate or incomplete data in our records.</li><li><b>Right to Erasure (Deletion):</b> The right to request deletion of your information, subject to statutory exemptions (e.g., maintaining corporate equity ledgers required by law).</li><li><b>Right to Portability:</b> The right to obtain a digital copy of your personal data in a structured, machine-readable format.</li></ul><p class="legal-callout">Exercising Your Rights: To submit a data request, please contact us at <a href="mailto:privacy@diligenceready.com">privacy@diligenceready.com</a>. If your request relates to data managed by Diligence Ready in our capacity as a Data Processor for your employer or an issuing company, we will redirect your inquiry to that Customer for handling.</p><h2 id="s8">8. International Data Transfers</h2><p>Diligence Ready is headquartered in the United States. Information collected via the Site and platform will be transferred to and processed within servers located in the US. By using our platform, you acknowledge that US data protection frameworks may differ from those of your home country. For transfers involving EEA or UK residents, we utilize standard contractual clauses (SCCs) to ensure equivalent data protection assurances.</p><h2 id="s9">9. Changes to this Privacy Policy</h2><p>We may periodically update this Policy to reflect adjustments to our technical workflows, product features, or global regulatory updates. If we make material modifications, we will update the "Last Updated" date at the top of this page and notify primary corporate administrators via platform notification or email.</p><h2 id="s10">10. Contact Us</h2><p>For privacy questions, data access requests, or inquiries regarding our data handling procedures, please contact us at:</p><p class="legal-callout">Entrevest, LLC dba Diligence Ready<br>Attn: Privacy &amp; Compliance Officer<br>Email: <a href="mailto:privacy@diligenceready.com">privacy@diligenceready.com</a></p>
+    </article>
+  </div>
+</section>
+
+</main>
+<div class="mcta" id="mcta"><a class="p" href="https://app.diligenceready.com/signup?src=privacy">Start free <span class="arr">→</span></a><a class='s' href='./#contact'>Contact</a></div>
+
+<footer data-screen-label="Footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class='brand' href='./#top'>
+          <span class="mono-circle">dr</span>
+          <span class="wordmark">Diligence Ready<span class="dot">.</span></span>
+        </a>
+        <p>The equity platform that keeps growing companies continuously ready for fundraising, M&amp;A, and capital events.</p>
+        <div class="promise">Readiness is the standard.</div>
+      </div>
+      <div class="foot-col">
+        <h6>Product</h6>
+        <a href='./cap-table'>Cap table</a>
+        <a href='./scenario-modeling'>What-if modeling</a>
+        <a href='./diligence-room'>Diligence room</a>
+        <a href='./ai-assistant'>AI assistant</a>
+        <a href='./for-advisors'>For Trusted Advisors</a>
+        <a href='./features'>All features</a>
+      </div>
+      <div class="foot-col">
+        <h6>Company</h6>
+        <a href='./why-diligence-ready'>Why Diligence Ready</a>
+        <a href='./#contact'>Request a demo</a>
+        <a href='./pricing'>Pricing</a>
+        <a href='./#contact'>Become a Trusted Advisor</a>
+        <a href='./#contact'>Contact</a>
+      </div>
+      <div class="foot-col">
+        <h6>Legal</h6>
+        <a href='./privacy'>Privacy</a>
+        <a href='./terms'>Terms</a>
+        <a href='./security'>Security &amp; trust</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Diligence Ready. All rights reserved.</span>
+      <div class="legal"><span>diligenceready.com</span><span>Built for the way modern founders raise.</span></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+  onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Decorative entrance only — content is visible by default in CSS, so nothing
+  // can get stuck hidden. We add `.in` (which fires the keyframe) only while the
+  // page is actually being rendered; if backgrounded we simply skip the animation.
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
+  if (!document.hidden) {
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  }
+
+  // Product dropdown — click/keyboard toggle (hover handled in CSS)
+  document.querySelectorAll('[data-dd]').forEach(dd => {
+    const btn = dd.querySelector('.nav-dd-btn');
+    btn.addEventListener('click', (e) => { e.stopPropagation(); const open = dd.classList.toggle('open'); btn.setAttribute('aria-expanded', open); });
+  });
+  document.addEventListener('click', () => document.querySelectorAll('[data-dd].open').forEach(dd => { dd.classList.remove('open'); dd.querySelector('.nav-dd-btn').setAttribute('aria-expanded', 'false'); }));
+
+  // Mobile menu toggle
+  const burger = document.getElementById('navBurger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (burger && mobileMenu) {
+    const closeMenu = () => { burger.classList.remove('open'); mobileMenu.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; document.body.classList.remove('menu-open'); };
+    burger.addEventListener('click', () => {
+      const open = burger.classList.toggle('open');
+      mobileMenu.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.style.overflow = open ? 'hidden' : ''; document.body.classList.toggle('menu-open', open);
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  }
+
+  // Pricing billing toggle (Monthly / Annual — 2 months free)
+  const billBtns = document.querySelectorAll('.bill-toggle .bt');
+  const billPrices = document.querySelectorAll('[data-m]');
+  billBtns.forEach(b => b.addEventListener('click', () => {
+    const mode = b.dataset.bill;
+    billBtns.forEach(x => x.classList.toggle('on', x === b));
+    billPrices.forEach(p => { p.innerHTML = mode === 'annual' ? p.dataset.a : p.dataset.m; });
+  }));
+
+  // Contact form — composes the team address at runtime (split to deter scrapers)
+  var _drTo = ['info', 'diligenceready.com'].join('@');
+  var _drEmail = document.getElementById('contactEmail');
+  if (_drEmail) { _drEmail.href = 'mailto:' + _drTo; }
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    const note = document.getElementById('cf-note');
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const v = (id) => (document.getElementById(id).value || '').trim();
+      const name = v('cf-name'), email = v('cf-email'), company = v('cf-company'), message = v('cf-message');
+      const subject = encodeURIComponent('Diligence Ready inquiry' + (company ? ' — ' + company : ''));
+      const body = encodeURIComponent(
+        'Name: ' + name + '\n' +
+        'Email: ' + email + '\n' +
+        'Company: ' + (company || '—') + '\n\n' +
+        message + '\n'
+      );
+      window.location.href = 'mailto:' + _drTo + '?subject=' + subject + '&body=' + body;
+      if (note) note.textContent = 'Opening your email app… if nothing happens, please try again in a moment.';
+    });
+  }
+</script>
+<script>
+  (function(){
+    const links=[...document.querySelectorAll('.legal-toc a')];
+    const map=new Map(links.map(a=>[a.getAttribute('href').slice(1),a]));
+    const spy=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.remove('active'));const a=map.get(e.target.id);if(a)a.classList.add('active');}});},{rootMargin:'-80px 0px -70% 0px',threshold:0});
+    document.querySelectorAll('.legal-body h2').forEach(h=>spy.observe(h));
+  })();
+</script>
+
+<style id="__om-edit-overrides"></style>
+
+<script>
+  (function(){
+    var bar = document.getElementById('mcta'); if(!bar) return;
+    var stop = document.getElementById('contact') || document.querySelector('footer');
+    var tick = function(){
+      var past = window.scrollY > 520;
+      var near = stop && stop.getBoundingClientRect().top < window.innerHeight * 0.75;
+      bar.classList.toggle('up', past && !near);
+    };
+    tick(); window.addEventListener('scroll', tick, { passive: true });
+  })();
+</script>
+
+<!-- ============ COOKIE NOTICE ============ -->
+<div id="dr-cookie-root" hidden role="dialog" aria-modal="true" aria-labelledby="dr-cookie-title">
+  <div id="dr-cookie-card">
+    <div id="dr-cookie-main">
+      <h2 id="dr-cookie-title">diligenceready.com</h2>
+      <p>We use cookies to run the site and improve it.</p>
+      <button type="button" id="dr-cookie-accept">Accept all</button>
+      <button type="button" id="dr-cookie-essential">Essential only</button>
+      <button type="button" id="dr-cookie-prefs-open">Preferences</button>
+      <a class='dr-cookie-legal' href='./privacy'>Privacy Policy</a>
+    </div>
+    <div id="dr-cookie-prefs-panel" hidden>
+      <h2>Cookie Preferences</h2>
+      <p>Choose which cookies we can use. Essential cookies are always on.</p>
+      <label><input type="checkbox" checked disabled /> Essential (required)</label>
+      <label><input type="checkbox" id="dr-cookie-analytics" /> Analytics</label>
+      <label><input type="checkbox" id="dr-cookie-marketing" /> Marketing</label>
+      <button type="button" id="dr-cookie-save">Save Preferences</button>
+      <button type="button" id="dr-cookie-back">Back</button>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var KEY = 'dr_cookie_consent';
+  var root = document.getElementById('dr-cookie-root');
+  if (!root) return;
+  var main = document.getElementById('dr-cookie-main');
+  var panel = document.getElementById('dr-cookie-prefs-panel');
+  var cbA = document.getElementById('dr-cookie-analytics');
+  var cbM = document.getElementById('dr-cookie-marketing');
+
+  function apply(c) {
+    if (typeof gtag !== 'function') return;
+    gtag('consent', 'update', {
+      analytics_storage: c.analytics ? 'granted' : 'denied',
+      ad_storage: c.marketing ? 'granted' : 'denied',
+      ad_user_data: c.marketing ? 'granted' : 'denied',
+      ad_personalization: c.marketing ? 'granted' : 'denied'
+    });
+  }
+  function save(c) {
+    c.ts = new Date().toISOString();
+    try { localStorage.setItem(KEY, JSON.stringify(c)); } catch (e) {}
+    apply(c);
+    root.hidden = true;
+  }
+  function read() {
+    try { return JSON.parse(localStorage.getItem(KEY)); } catch (e) { return null; }
+  }
+
+  var stored = read();
+  if (stored && typeof stored.analytics === 'boolean') {
+    apply(stored);
+  } else {
+    root.hidden = false;
+  }
+
+  document.getElementById('dr-cookie-accept').addEventListener('click', function () {
+    save({ analytics: true, marketing: true });
+  });
+  document.getElementById('dr-cookie-essential').addEventListener('click', function () {
+    save({ analytics: false, marketing: false });
+  });
+  document.getElementById('dr-cookie-prefs-open').addEventListener('click', function () {
+    main.hidden = true; panel.hidden = false;
+  });
+  document.getElementById('dr-cookie-back').addEventListener('click', function () {
+    panel.hidden = true; main.hidden = false;
+  });
+  document.getElementById('dr-cookie-save').addEventListener('click', function () {
+    save({ analytics: !!cbA.checked, marketing: !!cbM.checked });
+  });
+})();
+</script>
+<script>
+// signup_click: GA4 event on every signup / Start free link (21 Oct 2026)
+document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href*="app.diligenceready.com/signup"]'):null;if(!a||typeof gtag!=='function')return;var s='';try{s=new URL(a.href).searchParams.get('src')||''}catch(x){}gtag('event','signup_click',{src:s,link_text:(a.textContent||'').replace(/\s+/g,' ').trim().slice(0,60),link_url:a.href});});
+</script>
+<div id="dr-preview-flag" style="position:fixed;left:16px;bottom:16px;z-index:9999;padding:8px 12px;border-radius:8px;background:#0F1E3D;color:#fff;font:500 12px/1.3 Inter,system-ui,sans-serif;box-shadow:0 8px 24px -8px rgba(0,0,0,.4);pointer-events:none;">Preview copy · not the live site</div>
+<script>document.addEventListener("submit",function(e){var f=e.target;if(f&&f.tagName==="FORM"){e.preventDefault();var b=f.querySelector("[type=submit]");if(b){b.textContent="Forms are off in this preview";b.disabled=true;}}},true);</script>
+</body>
+</html>

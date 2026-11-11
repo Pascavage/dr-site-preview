@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) — GA4 + Google Ads -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  // Consent Mode default denied; wait briefly for CMP / stored apply below
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    wait_for_update: 500
+  });
+
+  // Apply stored preference BEFORE config / conversion (same KEY as footer banner)
+  (function () {
+    var KEY = 'dr_cookie_consent';
+    var c = null;
+    try { c = JSON.parse(localStorage.getItem(KEY)); } catch (e) { c = null; }
+    if (c && typeof c.analytics === 'boolean') {
+      gtag('consent', 'update', {
+        analytics_storage: c.analytics ? 'granted' : 'denied',
+        ad_storage: c.marketing ? 'granted' : 'denied',
+        ad_user_data: c.marketing ? 'granted' : 'denied',
+        ad_personalization: c.marketing ? 'granted' : 'denied'
+      });
+    }
+  })();
+
+  gtag('config', 'G-5SE3GQ5GK4');
+  gtag('config', 'AW-18371579900');
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Pulley is shutting down on December 8, 2026. Key dates from Pulley's own FAQ, how to export your cap table first, and how Diligence Ready compares." />
+<title>Pulley Alternative as Pulley Shuts Down | Diligence Ready</title>
+<link rel="canonical" href="https://diligenceready.com/pulley-alternative" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#0F1E3D" />
+<link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@300;400;450;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Diligence Ready" />
+<meta property="og:title" content="Pulley Alternative as Pulley Shuts Down | Diligence Ready" />
+<meta property="og:description" content="Pulley is shutting down on December 8, 2026. Key dates from Pulley's own FAQ, how to export your cap table first, and how Diligence Ready compares." />
+<meta property="og:url" content="https://diligenceready.com/pulley-alternative" />
+<meta property="og:image" content="https://diligenceready.com/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Pulley Alternative as Pulley Shuts Down | Diligence Ready" />
+<meta name="twitter:description" content="Pulley is shutting down on December 8, 2026. Key dates from Pulley's own FAQ, how to export your cap table first, and how Diligence Ready compares." />
+<meta name="twitter:image" content="https://diligenceready.com/og-image.png" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://diligenceready.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Pulley Alternative",
+      "item": "https://diligenceready.com/pulley-alternative"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a aria-label='Diligence Ready' class='brand' href='./'>
+      <span class="mono-circle">dr</span>
+      <span class="wordmark">Diligence Ready<span class="dot">.</span></span>
+    </a>
+    <nav class="nav-links">
+      <div class="nav-dd" data-dd>
+        <button type="button" class="nav-dd-btn" aria-expanded="false">Product <span class="caret">▾</span></button>
+        <div class="nav-dd-menu">
+          <a href='./cap-table'><span class="t">Cap Table</span><span class="d">Every security class, reconciled</span></a>
+          <a href='./scenario-modeling'><span class="t">Scenario Modeling</span><span class="d">Rounds, dilution &amp; waterfalls</span></a>
+          <a href='./diligence-room'><span class="t">Diligence Room</span><span class="d">Be ready before they ask</span></a>
+          <a href='./ai-assistant'><span class="t">AI Assistant</span><span class="d">It does the work, you approve</span></a>
+          <div class="dd-sep"></div>
+          <a class='dd-all' href='./features'><span class="t">See all features</span><span class="arr">→</span></a>
+        </div>
+      </div>
+      <a href='./for-advisors'>Trusted Advisors</a>
+      <a href='./learn/'>Learn</a>
+      <a href='./pricing'>Pricing</a>
+    </nav>
+    <div class="nav-cta">
+      <a class='link sales-link' href='./#contact'>Contact us</a>
+      <a class="link" href="https://app.diligenceready.com/login">Customer Login</a>
+      <a class="btn btn-accent" href="https://app.diligenceready.com/signup?src=pulley-alternative">Sign up <span class="arr">→</span></a>
+    </div>
+    <a class="btn btn-accent nav-cta-m" href="https://app.diligenceready.com/signup?src=pulley-alternative">Start free</a>
+    <button type="button" class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mm-group">Product</div>
+  <a class='sub' href='./cap-table'>Cap Table</a>
+  <a class='sub' href='./scenario-modeling'>Scenario Modeling</a>
+  <a class='sub' href='./diligence-room'>Diligence Room</a>
+  <a class='sub' href='./ai-assistant'>AI Assistant</a>
+  <a class='sub' href='./features'>All Features</a>
+  <div class="mm-group">Explore</div>
+  <a href='./for-advisors'>Trusted Advisors</a>
+  <a href='./learn/'>Learn</a>
+  <a href='./pricing'>Pricing</a>
+  <a href='./why-diligence-ready'>Why Diligence Ready</a>
+  <div class="mm-cta">
+    <a class='btn btn-ghost btn-lg' href='./#contact'>Contact us</a>
+    <a class="btn btn-ghost btn-lg" href="https://app.diligenceready.com/login">Customer Login</a>
+    <a class="btn btn-accent btn-lg" href="https://app.diligenceready.com/signup?src=pulley-alternative">Sign up</a>
+  </div>
+</div>
+
+<main>
+
+
+<!-- ============ FEATURE HERO ============ -->
+<section class="feat-hero" data-screen-label="Pulley alternative hero">
+  <div class="wrap">
+    <div class="breadcrumb reveal">
+      <a href='./'>Home</a><span class="sep">/</span><a href='./alternatives'>Alternatives</a><span class="sep">/</span><span class="cur">Pulley Alternative</span>
+    </div>
+    <div class="feat-hero-grid">
+      <div>
+        <span class="eyebrow reveal">Cap table software comparison</span>
+        <h1 class="reveal" style="transition-delay:.05s;margin-top:18px;">Considering an alternative to Pulley?</h1>
+        <p class="lead reveal" style="transition-delay:.1s">Pulley and Diligence Ready are both cap table software, built for different priorities. This page compares them on stated facts, not superiority, with sources and an as-of date for anything said about Pulley. Diligence Ready is not affiliated with, endorsed by, or a replacement for Pulley (Prolific Labs Incorporated).</p>
+        <div class="hero-cta reveal" style="transition-delay:.15s">
+          <a class="btn btn-accent btn-lg" href="https://app.diligenceready.com/signup?src=pulley-alternative">Start free <span class="arr">→</span></a>
+          <a class='btn btn-ghost btn-lg' href='#workflow'>Compare the workflow</a>
+        </div>
+        <div class="hero-note reveal" style="transition-delay:.2s"><span><span class="dot"></span> Honest comparison</span><span><span class="dot"></span> Dated &amp; sourced</span></div>
+
+        <p style="margin-top:16px;font-size:12.5px;color:var(--faint);font-family:var(--mono);">Pulley comparison facts as of September 19, 2026. Shutdown dates as of October 9, 2026. Sources linked below. Verify current details on Pulley's own site before deciding.</p>
+      </div>
+      <div class="showcase-art reveal" style="transition-delay:.18s">
+        <div class="art-frame">
+          <div style="padding:18px;font-size:12.5px;">
+            <div class="cap-head">
+              <h5 style="font-family:var(--serif);font-size:18px;font-weight:600;">A note on this comparison</h5>
+            </div>
+            <p style="margin:0;color:var(--ink);">Facts about Diligence Ready reflect what's on this site. Facts about Pulley are sourced from pulley.com, or marked Unknown, verify current details where we don't have a source.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PULLEY SHUTDOWN (as of October 9, 2026) ============ -->
+<section class="sec-pad" id="pulley-shutdown" data-screen-label="Pulley shutdown" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+  <div class="wrap-narrow center">
+    <span class="eyebrow center reveal">Pulley shutdown, as of October 9, 2026</span>
+    <h2 class="section-title reveal" style="margin-top:20px;">Pulley is shutting down <span class="accent-line">on December 8, 2026.</span></h2>
+    <p class="lead reveal" style="margin-top:22px;">Pulley's own notice says it will cease all operations and services on December 8, 2026.<sup style="font-size:10px;">A</sup> The dates below come from Pulley's shutdown FAQ, dated September 15, 2026.<sup style="font-size:10px;">B</sup> Confirm the details that apply to your account with Pulley directly.</p>
+    <ul class="feat-list" style="margin-top:30px;font-size:16px;text-align:left;max-width:560px;margin-left:auto;margin-right:auto;">
+      <li><span class="ck">✓</span><span><strong>November 30, 2026:</strong> the date in Pulley's FAQ for opting in to the assisted migration to Carta that Pulley arranged.<sup style="font-size:10px;">B</sup></span></li>
+      <li><span class="ck">✓</span><span><strong>December 8, 2026:</strong> Pulley says the Pulley app experience will no longer be accessible, and its team will no longer be available to support your organization.<sup style="font-size:10px;">B</sup></span></li>
+      <li><span class="ck">✓</span><span><strong>January 31, 2027:</strong> Pulley says your data stays available in a limited format through the Pulley app until this date.<sup style="font-size:10px;">B</sup></span></li>
+    </ul>
+    <h3 class="reveal" style="margin-top:34px;">What Pulley users can do now</h3>
+    <p class="lead reveal" style="margin-top:14px;">Export your records first, whichever provider you choose next. Pulley's help center lists these exports:<sup style="font-size:10px;">C</sup></p>
+    <ul class="feat-list" style="margin-top:18px;font-size:16px;text-align:left;max-width:560px;margin-left:auto;margin-right:auto;">
+      <li><span class="ck">✓</span><span><strong>Cap table:</strong> Download Cap Table, with All Time checked, gives the full history as an Excel file.</span></li>
+      <li><span class="ck">✓</span><span><strong>Documents:</strong> Download All in Pulley's Data Room gives one ZIP file, with your folders kept.</span></li>
+      <li><span class="ck">✓</span><span><strong>Share certificates:</strong> Download All Certificates, if you issued them through Pulley.</span></li>
+      <li><span class="ck">✓</span><span><strong>Reports:</strong> under Company, then Reports, such as Granted Securities, Vesting Details, Exercised Options and Cancelled Securities.</span></li>
+    </ul>
+    <p class="lead reveal" style="margin-top:20px;">Pulley says it can't assist a migration to any provider other than Carta, so a move anywhere else starts from these exports.<sup style="font-size:10px;">B</sup> Check the rebuilt cap table against your signed documents before you rely on it.</p>
+    <h3 class="reveal" style="margin-top:34px;">Where Diligence Ready fits</h3>
+    <p class="lead reveal" style="margin-top:14px;">You can import an existing cap table from a spreadsheet (CSV imports show a preview step before anything commits) and keep your documents in your own Google Drive or OneDrive. Founders is free for up to 3 users, and Standard is $99/mo for up to 10 users. We don't promise a one-step move from Pulley's export, so plan a review step. Diligence Ready is not affiliated with Pulley or Carta.</p>
+    <div class="hero-cta reveal" style="margin-top:22px;justify-content:center;">
+      <a class="btn btn-accent btn-lg" href="https://app.diligenceready.com/signup?src=pulley-alternative">Start free <span class="arr">→</span></a>
+      <a class='btn btn-ghost btn-lg' href='./cap-table'>See the cap table</a>
+    </div>
+    <div style="margin-top:18px;font-size:11.5px;color:var(--faint);font-family:var(--mono);line-height:1.7;">
+      A. <a href="https://pulley.com/" target="_blank" rel="noopener">Pulley, shutdown notice on pulley.com</a> · B. <a href="https://pulley.com/guides/faq-what-is-happening-with-pulleys-shutdown" target="_blank" rel="noopener">Pulley, "FAQ: What is happening with Pulley's shutdown," September 15, 2026</a> · C. <a href="https://help.pulley.com/en/articles/17154936-exporting-your-data-from-pulley" target="_blank" rel="noopener">Pulley Help Center, "Exporting your Data from Pulley," updated September 24, 2026</a>. All three retrieved October 9, 2026.
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPARISON METHODOLOGY ============ -->
+<section class="sec-pad-sm" data-screen-label="Methodology">
+  <div class="wrap-narrow center">
+    <span class="eyebrow center reveal">Sourced comparison criteria</span>
+    <h2 class="section-title reveal" style="margin-top:22px;transition-delay:.05s">How this comparison <span class="accent-line">was put together.</span></h2>
+    <p class="lead reveal" style="margin-top:24px;transition-delay:.1s">Statements about Diligence Ready come from this website. Statements about Pulley are drawn from Pulley's own public pages, cited on this page, as of September 19, 2026, or October 9, 2026 where marked. Where a detail couldn't be confirmed from a public primary source, it's marked Unknown, verify current details rather than guessed at. Terms, pricing, and features on either platform can change after this date.</p>
+  </div>
+</section>
+
+<!-- ============ INTENDED USERS ============ -->
+<section class="sec-pad" id="workflow" data-screen-label="Intended users" style="padding-top:24px;">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Intended users</span>
+      <h2 class="section-title" style="margin-top:20px;">Both describe themselves as <span class="accent-line">built for founders, differently.</span></h2>
+    </div>
+    <div class="pillars" style="grid-template-columns:repeat(2,minmax(0,1fr));max-width:920px;margin-left:auto;margin-right:auto;">
+      <div class="pillar reveal">
+        <div class="pic">①</div>
+        <h3>Pulley describes itself as</h3>
+        <p>Cap table management for founders and finance leaders, from first issuance through later-stage equity needs.<sup style="font-size:10px;">1</sup></p>
+      </div>
+      <div class="pillar reveal" style="transition-delay:.06s">
+        <div class="pic coral">②</div>
+        <h3>Diligence Ready is built for</h3>
+        <p>Founders and company leaders, plus CFOs, advisors, and accountants managing more than one client's readiness at once.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OWNERSHIP / CAP TABLE & SCENARIO MODELING ============ -->
+<section class="sec-pad" style="padding-top:0;" data-screen-label="Ownership and scenario modeling">
+  <div class="wrap">
+    <div class="showcase-row">
+      <div class="showcase-copy reveal">
+        <span class="eyebrow">Ownership &amp; cap table workflow</span>
+        <h2>Both maintain a live cap table <span class="accent-line">as the core record.</span></h2>
+        <p class="lead">Pulley describes a single source of truth for issuances, grants, and vesting, with a fixed price per stakeholder.<sup style="font-size:10px;">2</sup> Diligence Ready maintains the same kind of transaction-backed cap table, detailed on our cap table page, connected to financial evidence and diligence documents in the same workflow.</p>
+        <a class='more' href='./cap-table' style='margin-top:10px;display:inline-block;'>The cap table →</a>
+      </div>
+      <div class="showcase-art reveal" style="transition-delay:.1s">
+        <div class="art-frame">
+          <div class="cap">
+            <div class="cap-head">
+              <h5>Capitalization &#8211; fully diluted</h5>
+              <span class="badge-live"><span class="d"></span> Live · v41</span>
+            </div>
+            <table class="tbl">
+              <thead><tr><th>Stakeholder</th><th>Class</th><th class="r">Ownership</th></tr></thead>
+              <tbody>
+                <tr><td>Founders (2)</td><td>Common</td><td class="r num">48.6%</td></tr>
+                <tr><td>Catalyst Ventures</td><td>Series A</td><td class="r num">20.1%</td></tr>
+                <tr><td>Option pool</td><td>Reserved</td><td class="r num">14.0%</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="showcase-row flip">
+      <div class="showcase-copy reveal">
+        <span class="eyebrow">Scenario modeling</span>
+        <h2>Dilution modeling is common ground <span class="accent-line">worth trying directly on each.</span></h2>
+        <p class="lead">Pulley states its tools let users visualize dilution and ownership percentages across fundraising or hiring scenarios.<sup style="font-size:10px;">2</sup> Diligence Ready models priced rounds, SAFEs, pool refreshes, and exit waterfalls on your live cap table, detailed on our scenario modeling page. Depth and workflow differ enough that a direct trial is more useful than either description alone.</p>
+        <a class='more' href='./scenario-modeling' style='margin-top:10px;display:inline-block;'>Scenario modeling →</a>
+      </div>
+      <div class="showcase-art reveal" style="transition-delay:.1s">
+        <div class="art-frame">
+          <div class="whatif">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+              <h5 style="font-family:var(--serif);font-size:18px;font-weight:600;">Scenario: $4M priced round</h5>
+              <span style="font-family:var(--mono);font-size:11px;color:var(--faint);">Not yet committed</span>
+            </div>
+            <div class="scn-grid">
+              <div class="scn-card"><div class="lbl">New post-money</div><div class="big">$20.0M</div></div>
+              <div class="scn-card hl"><div class="lbl">Founder ownership</div><div class="big">39.2%</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPARISON TABLE ============ -->
+<section class="sec-pad" data-screen-label="Comparison table" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Side by side</span>
+      <h2 class="section-title" style="margin-top:18px;">A transparent comparison table.</h2>
+    </div>
+    <div class="art-frame" style="margin-top:30px;">
+      <table class="tbl" style="width:100%;">
+        <thead><tr><th>Category</th><th>Diligence Ready</th><th>Pulley</th></tr></thead>
+        <tbody>
+          <tr><td>Target users</td><td>Founders and company leaders; CFOs, advisors, and accountants managing multiple clients</td><td>Founders and finance leaders, per pulley.com<sup style="font-size:10px;">1</sup></td></tr>
+          <tr><td>Free plan</td><td>Founders plan, free, for up to 3 users, per this site's pricing page</td><td>Unknown, verify current details on pulley.com/pricing</td></tr>
+          <tr><td>Starting paid plan</td><td>$99/month for up to 10 users, per this site's pricing page</td><td>Startup plan, $1,200/year for up to 25 stakeholders, per pulley.com as of September 19, 2026<sup style="font-size:10px;">3</sup>. Pulley's shutdown notice urges prospective customers to visit Carta.<sup style="font-size:10px;">A</sup></td></tr>
+          <tr><td>Cap table &amp; scenario modeling</td><td>Included, covered on this site's cap table and scenario modeling pages</td><td>Included, per Pulley's product page<sup style="font-size:10px;">2</sup></td></tr>
+          <tr><td>Security certification stated</td><td>Not published on this site</td><td>Pulley states a SOC 2 Type II audit performed by Insight Assurance<sup style="font-size:10px;">4</sup></td></tr>
+          <tr><td>Diligence room / data room</td><td>Included, built from records kept current in the same workflow, with no per-page fees. See <a href='./learn/data-room-pricing'>data room pricing</a>.</td><td>Pulley's help center describes a Data Room under Company that holds company documents and downloads as one ZIP file<sup style="font-size:10px;">C</sup></td></tr>
+          <tr><td>Pricing structure</td><td>Flat monthly tiers, published on this site's pricing page</td><td>Fixed price per stakeholder, per pulley.com<sup style="font-size:10px;">3</sup></td></tr>
+        </tbody>
+      </table>
+      <div style="margin-top:14px;font-size:11.5px;color:var(--faint);font-family:var(--mono);line-height:1.7;">
+        1, 2. <a href="https://pulley.com/products/cap-table-management" target="_blank" rel="noopener">pulley.com/products/cap-table-management</a> · 3. <a href="https://pulley.com/pricing" target="_blank" rel="noopener">pulley.com/pricing</a> · 4. <a href="https://pulley.com/pricing" target="_blank" rel="noopener">pulley.com/pricing</a>. Sources 1 to 4 retrieved September 19, 2026. Sources A and C are listed in the shutdown section above, retrieved October 9, 2026.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONNECTED DILIGENCE ============ -->
+<section class="sec-pad" data-screen-label="Connected diligence">
+  <div class="wrap-narrow center">
+    <span class="eyebrow center reveal">Connected diligence</span>
+    <h2 class="section-title reveal" style="margin-top:20px;">Where Diligence Ready's approach <span class="accent-line">differs, and where it has limits.</span></h2>
+    <p class="lead reveal" style="margin-top:22px;">Diligence Ready connects the cap table to an ongoing diligence checklist and a shareable data room, built from documents kept current in your own Google Drive or OneDrive. Pulley's help center describes a Pulley Data Room for company documents.<sup style="font-size:10px;">C</sup> We could not confirm from Pulley's public pages whether it connects to an ongoing diligence checklist, so we don't assume either way. Diligence Ready is a newer, narrower platform overall, and doesn't publish independent security certifications the way Pulley states it does. Whether either tradeoff matters depends on what your company needs.</p>
+  </div>
+</section>
+
+<!-- ============ MIGRATION QUESTIONS ============ -->
+<section class="sec-pad" data-screen-label="Migration questions" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+  <div class="wrap-narrow center">
+    <span class="eyebrow center reveal">Migration questions</span>
+    <h2 class="section-title reveal" style="margin-top:20px;">Ask these <span class="accent-line">before moving a cap table off Pulley or anywhere else.</span></h2>
+    <ul class="feat-list" style="margin-top:30px;font-size:16px;text-align:left;max-width:560px;margin-left:auto;margin-right:auto;">
+      <li><span class="ck">✓</span> How will historical transactions and prior versions transfer?</li>
+      <li><span class="ck">✓</span> Do you rely on Pulley features, like managed services or specific integrations, that aren't part of Diligence Ready?</li>
+      <li><span class="ck">✓</span> Who needs to review the migrated cap table before you rely on it?</li>
+    </ul>
+    <p class="lead reveal" style="margin-top:20px;">We don't claim migration between any two providers goes smoothly by default. Plan for a review step regardless of which platform you choose.</p>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="sec-pad" data-screen-label="Pricing">
+  <div class="wrap-narrow center">
+    <span class="eyebrow center reveal">Pricing</span>
+    <h2 class="section-title reveal" style="margin-top:20px;">See current pricing <span class="accent-line">for yourself.</span></h2>
+    <p class="lead reveal" style="margin-top:22px;">Diligence Ready's current pricing is on our pricing page. Pulley states a fixed price per stakeholder, with its Startup plan listed at $1,200 per year for up to 25 stakeholders on Pulley's own pricing page as of September 19, 2026.<sup style="font-size:10px;">3</sup> Pulley is shutting down on December 8, 2026, and its notice urges prospective customers to visit Carta.<sup style="font-size:10px;">A</sup> Confirm current numbers directly with each provider before deciding.</p>
+    <a class='more' href='./pricing' style='margin-top:14px;display:inline-block;'>Diligence Ready pricing →</a>
+  </div>
+</section>
+
+<!-- ============ CROSS-LINKS ============ -->
+<section class="sec-pad" data-screen-label="Explore">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Related</span>
+      <h2 class="section-title" style="margin-top:18px;">More on the workflow.</h2>
+    </div>
+    <div class="xlinks">
+      <a class='xlink reveal' href='./alternatives'>
+        <span class="xt">All alternatives</span>
+        <span class="xd">The general criteria this comparison is built on.</span>
+        <span class="xm">Explore →</span>
+      </a>
+      <a class='xlink reveal' href='./cap-table' style='transition-delay:.04s'>
+        <span class="xt">Cap table</span>
+        <span class="xd">See the workflow being compared.</span>
+        <span class="xm">Explore →</span>
+      </a>
+      <a class='xlink reveal' href='./for-founders' style='transition-delay:.08s'>
+        <span class="xt">For founders</span>
+        <span class="xd">Keep your company continuously ready.</span>
+        <span class="xm">Explore →</span>
+      </a>
+      <a class='xlink reveal' href='./for-advisors' style='transition-delay:.12s'>
+        <span class="xt">For advisors</span>
+        <span class="xd">One workspace across every client you support.</span>
+        <span class="xm">Explore →</span>
+      </a>
+      <a class='xlink reveal' href='./pricing' style='transition-delay:.16s'>
+        <span class="xt">Pricing</span>
+        <span class="xd">Start free, see what's in each tier.</span>
+        <span class="xm">Explore →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="sec-pad" style="padding-top:0;" data-screen-label="Final CTA">
+  <div class="wrap">
+    <div class="final-card reveal">
+      <span class="eyebrow on-dark" style="justify-content:center;display:flex;">Pulley alternative</span>
+      <h2 class="display" style="margin-top:22px;">Considering an alternative to Pulley?</h2>
+      <p class="lead">Compare the fit for your situation, then decide for yourself. Diligence Ready is not affiliated with Pulley.</p>
+      <div class="hero-cta">
+        <a class="btn btn-accent btn-lg" href="https://app.diligenceready.com/signup?src=pulley-alternative">Start free <span class="arr">→</span></a>
+        <a class="btn btn-ghost btn-lg" href="#workflow">Compare the workflow</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+<div class="mcta" id="mcta"><a class="p" href="https://app.diligenceready.com/signup?src=pulley-alternative">Start free <span class="arr">→</span></a><a class='s' href='./#contact'>Contact</a></div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a aria-label='Diligence Ready' class='brand on-dark' href='./'>
+          <span class="mono-circle">dr</span>
+          <span class="wordmark">Diligence Ready<span class="dot">.</span></span>
+        </a>
+        <div class="promise">Readiness is the standard.</div>
+      </div>
+      <div class="foot-col">
+        <h6>Product</h6>
+        <a href='./cap-table'>Cap table</a>
+        <a href='./scenario-modeling'>What-if modeling</a>
+        <a href='./diligence-room'>Diligence room</a>
+        <a href='./ai-assistant'>AI assistant</a>
+        <a href='./for-advisors'>For Trusted Advisors</a>
+        <a href='./features'>All features</a>
+      </div>
+      <div class="foot-col">
+        <h6>Company</h6>
+        <a href='./why-diligence-ready'>Why Diligence Ready</a>
+        <a href='./#contact'>Request a demo</a>
+        <a href='./pricing'>Pricing</a>
+        <a href='./#contact'>Become a Trusted Advisor</a>
+        <a href='./#contact'>Contact</a>
+      </div>
+      <div class="foot-col">
+        <h6>Legal</h6>
+        <a href='./privacy'>Privacy</a>
+        <a href='./terms'>Terms</a>
+        <a href='./security'>Security &amp; trust</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Diligence Ready. All rights reserved.</span>
+      <div class="legal"><span>diligenceready.com</span><span>Built for the way modern founders raise.</span></div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ REVEAL JS ============ -->
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+  onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
+  if (!document.hidden) {
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  }
+
+  // Product dropdown — click/keyboard toggle (hover handled in CSS)
+  document.querySelectorAll('[data-dd]').forEach(dd => {
+    const btn = dd.querySelector('.nav-dd-btn');
+    btn.addEventListener('click', (e) => { e.stopPropagation(); const open = dd.classList.toggle('open'); btn.setAttribute('aria-expanded', open); });
+  });
+  document.addEventListener('click', () => document.querySelectorAll('[data-dd].open').forEach(dd => { dd.classList.remove('open'); dd.querySelector('.nav-dd-btn').setAttribute('aria-expanded', 'false'); }));
+
+  // Mobile menu toggle
+  const burger = document.getElementById('navBurger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (burger && mobileMenu) {
+    const closeMenu = () => { burger.classList.remove('open'); mobileMenu.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; document.body.classList.remove('menu-open'); };
+    burger.addEventListener('click', () => {
+      const open = burger.classList.toggle('open');
+      mobileMenu.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.style.overflow = open ? 'hidden' : ''; document.body.classList.toggle('menu-open', open);
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  }
+</script>
+
+<script>
+  (function(){
+    var bar = document.getElementById('mcta'); if(!bar) return;
+    var stop = document.getElementById('contact') || document.querySelector('footer');
+    var tick = function(){
+      var past = window.scrollY > 520;
+      var near = stop && stop.getBoundingClientRect().top < window.innerHeight * 0.75;
+      bar.classList.toggle('up', past && !near);
+    };
+    tick(); window.addEventListener('scroll', tick, { passive: true });
+  })();
+</script>
+
+<!-- ============ COOKIE NOTICE ============ -->
+<!-- ============ COOKIE NOTICE ============ -->
+<div id="dr-cookie-root" hidden role="dialog" aria-modal="true" aria-labelledby="dr-cookie-title">
+  <div id="dr-cookie-card">
+    <div id="dr-cookie-main">
+      <h2 id="dr-cookie-title">diligenceready.com</h2>
+      <p>We use cookies to run the site and improve it.</p>
+      <button type="button" id="dr-cookie-accept">Accept all</button>
+      <button type="button" id="dr-cookie-essential">Essential only</button>
+      <button type="button" id="dr-cookie-prefs-open">Preferences</button>
+      <a class='dr-cookie-legal' href='./privacy'>Privacy Policy</a>
+    </div>
+    <div id="dr-cookie-prefs-panel" hidden>
+      <h2>Cookie Preferences</h2>
+      <p>Choose which cookies we can use. Essential cookies are always on.</p>
+      <label><input type="checkbox" checked disabled /> Essential (required)</label>
+      <label><input type="checkbox" id="dr-cookie-analytics" /> Analytics</label>
+      <label><input type="checkbox" id="dr-cookie-marketing" /> Marketing</label>
+      <button type="button" id="dr-cookie-save">Save Preferences</button>
+      <button type="button" id="dr-cookie-back">Back</button>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var KEY = 'dr_cookie_consent';
+  var root = document.getElementById('dr-cookie-root');
+  if (!root) return;
+  var main = document.getElementById('dr-cookie-main');
+  var panel = document.getElementById('dr-cookie-prefs-panel');
+  var cbA = document.getElementById('dr-cookie-analytics');
+  var cbM = document.getElementById('dr-cookie-marketing');
+
+  function apply(c) {
+    if (typeof gtag !== 'function') return;
+    gtag('consent', 'update', {
+      analytics_storage: c.analytics ? 'granted' : 'denied',
+      ad_storage: c.marketing ? 'granted' : 'denied',
+      ad_user_data: c.marketing ? 'granted' : 'denied',
+      ad_personalization: c.marketing ? 'granted' : 'denied'
+    });
+  }
+  function save(c) {
+    c.ts = new Date().toISOString();
+    try { localStorage.setItem(KEY, JSON.stringify(c)); } catch (e) {}
+    apply(c);
+    root.hidden = true;
+  }
+  function read() {
+    try { return JSON.parse(localStorage.getItem(KEY)); } catch (e) { return null; }
+  }
+
+  var stored = read();
+  if (stored && typeof stored.analytics === 'boolean') {
+    apply(stored);
+  } else {
+    root.hidden = false;
+  }
+
+  document.getElementById('dr-cookie-accept').addEventListener('click', function () {
+    save({ analytics: true, marketing: true });
+  });
+  document.getElementById('dr-cookie-essential').addEventListener('click', function () {
+    save({ analytics: false, marketing: false });
+  });
+  document.getElementById('dr-cookie-prefs-open').addEventListener('click', function () {
+    main.hidden = true; panel.hidden = false;
+  });
+  document.getElementById('dr-cookie-back').addEventListener('click', function () {
+    panel.hidden = true; main.hidden = false;
+  });
+  document.getElementById('dr-cookie-save').addEventListener('click', function () {
+    save({ analytics: !!cbA.checked, marketing: !!cbM.checked });
+  });
+})();
+</script>
+
+
+<script>
+// signup_click: GA4 event on every signup / Start free link (21 Oct 2026)
+document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href*="app.diligenceready.com/signup"]'):null;if(!a||typeof gtag!=='function')return;var s='';try{s=new URL(a.href).searchParams.get('src')||''}catch(x){}gtag('event','signup_click',{src:s,link_text:(a.textContent||'').replace(/\s+/g,' ').trim().slice(0,60),link_url:a.href});});
+</script>
+<div id="dr-preview-flag" style="position:fixed;left:16px;bottom:16px;z-index:9999;padding:8px 12px;border-radius:8px;background:#0F1E3D;color:#fff;font:500 12px/1.3 Inter,system-ui,sans-serif;box-shadow:0 8px 24px -8px rgba(0,0,0,.4);pointer-events:none;">Preview copy · not the live site</div>
+<script>document.addEventListener("submit",function(e){var f=e.target;if(f&&f.tagName==="FORM"){e.preventDefault();var b=f.querySelector("[type=submit]");if(b){b.textContent="Forms are off in this preview";b.disabled=true;}}},true);</script>
+</body>
+</html>

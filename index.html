@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) — GA4 + Google Ads -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  // Consent Mode default denied; wait briefly for CMP / stored apply below
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    wait_for_update: 500
+  });
+
+  // Apply stored preference BEFORE config / conversion (same KEY as footer banner)
+  (function () {
+    var KEY = 'dr_cookie_consent';
+    var c = null;
+    try { c = JSON.parse(localStorage.getItem(KEY)); } catch (e) { c = null; }
+    if (c && typeof c.analytics === 'boolean') {
+      gtag('consent', 'update', {
+        analytics_storage: c.analytics ? 'granted' : 'denied',
+        ad_storage: c.marketing ? 'granted' : 'denied',
+        ad_user_data: c.marketing ? 'granted' : 'denied',
+        ad_personalization: c.marketing ? 'granted' : 'denied'
+      });
+    }
+  })();
+
+  if (window.DR_HERO_VERSION) gtag('set', 'user_properties', { hero_version: window.DR_HERO_VERSION });
+
+  gtag('config', 'G-5SE3GQ5GK4');
+  gtag('config', 'AW-18371579900');
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Cap table management, scenario modeling, financial reporting, board packages and a diligence data room in one platform. Free for founders." />
+<title>Cap Table, Data Room &amp; Diligence Software | Diligence Ready</title>
+<link rel="canonical" href="https://diligenceready.com/" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#0F1E3D" />
+<meta name="author" content="Diligence Ready" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Diligence Ready" />
+<meta property="og:title" content="Cap Table, Data Room &amp; Diligence Software | Diligence Ready" />
+<meta property="og:description" content="Cap table management, scenario modeling, financial reporting, board packages and a diligence data room in one platform. Free for founders." />
+<meta property="og:url" content="https://diligenceready.com/" />
+<meta property="og:image" content="https://diligenceready.com/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Cap Table, Data Room &amp; Diligence Software | Diligence Ready" />
+<meta name="twitter:description" content="Cap table management, scenario modeling, financial reporting, board packages and a diligence data room in one platform. Free for founders." />
+<meta name="twitter:image" content="https://diligenceready.com/og-image.png" />
+
+<!-- Icons -->
+<link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+
+<!-- <meta name="google-site-verification" content="PASTE_SEARCH_CONSOLE_TOKEN" /> -->
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://diligenceready.com/#organization",
+  "name": "Diligence Ready",
+  "url": "https://diligenceready.com/",
+  "logo": "https://diligenceready.com/apple-touch-icon.png",
+  "description": "Diligence Ready is cap table, data room, and diligence software that keeps growing companies ready before the deal arrives. Files stay in your own Google Drive or OneDrive.",
+  "sameAs": [
+    "https://www.saashub.com/diligence-ready"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Diligence Ready",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "Cap Table & Equity Management",
+  "operatingSystem": "Web",
+  "url": "https://diligenceready.com/",
+  "description": "Cap table, scenario modeling, reporting and a diligence data room in one place, with an assistant that proposes changes and waits for your approval.",
+  "offers": [
+    { "@type": "Offer", "name": "Founders", "price": "0", "priceCurrency": "USD", "description": "Free forever for founders." },
+    { "@type": "Offer", "name": "Standard", "price": "99", "priceCurrency": "USD", "description": "Up to 10 users, billed monthly." }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Diligence Ready",
+  "url": "https://diligenceready.com/",
+  "publisher": { "@type": "Organization", "name": "Diligence Ready" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Diligence Ready?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Diligence Ready is cap table, data room, and diligence software that keeps growing companies ready before the deal arrives. It brings cap table management, scenario modeling, financial reporting, board packages, and a diligence data room into one platform. Files stay in your own Google Drive or OneDrive. See all features or why Diligence Ready."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does Diligence Ready cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Founders is free forever for up to 3 users. Standard is $99/month for up to 10 users. Growth ($250/month) and Scale ($500/month) are coming soon. Annual billing is two months free. See full pricing for what’s in each tier."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I model a priced round before I commit to it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Scenario modeling runs on your live cap table, a priced round, an option pool refresh, convertible conversions, or an exit waterfall, and shows exactly who is diluted and who gets paid, to four decimals. Nothing is written to the ledger until you decide to commit it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where are my documents stored?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In your own Google Drive or OneDrive. Diligence Ready links and organizes the files where the room can find them, but your security policies, backups, and permissions stay yours. Row-level security is enforced at the database, and every change is attributed and timestamped in an audit log."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..700,0..100,0..1;1,9..144,400..600,0..100,0..1&family=Inter:wght@300;400;450;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="home.css?v=1110" />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+
+</head>
+<body class="home-page">
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Diligence Ready">
+      <span class="mono-circle">dr</span>
+      <span class="wordmark">Diligence Ready<span class="dot">.</span></span>
+    </a>
+    <nav class="nav-links">
+      <div class="nav-dd" data-dd>
+        <button type="button" class="nav-dd-btn" aria-expanded="false">Product <span class="caret">▾</span></button>
+        <div class="nav-dd-menu">
+          <a href='./cap-table'><span class="t">Cap Table</span><span class="d">Every security class, reconciled</span></a>
+          <a href='./scenario-modeling'><span class="t">Scenario Modeling</span><span class="d">Rounds, dilution &amp; waterfalls</span></a>
+          <a href='./diligence-room'><span class="t">Diligence Room</span><span class="d">Be ready before they ask</span></a>
+          <a href='./ai-assistant'><span class="t">AI Assistant</span><span class="d">It does the work, you approve</span></a>
+          <div class="dd-sep"></div>
+          <a class='dd-all' href='./features'><span class="t">See all features</span><span class="arr">→</span></a>
+        </div>
+      </div>
+      <a href='./for-advisors'>Trusted Advisors</a>
+      <a href='./tour'>Tour</a>
+      <a href='./learn/'>Learn</a>
+      <a href='./pricing'>Pricing</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="link sales-link" href="#contact">Contact us</a>
+      <a class="link" href="https://app.diligenceready.com/login">Customer Login</a>
+      <a class="btn btn-accent" href="https://app.diligenceready.com/signup?src=home">Sign up <span class="arr">→</span></a>
+    </div>
+    <a class="btn btn-accent nav-cta-m" href="https://app.diligenceready.com/signup?src=home">Start free</a>
+    <button type="button" class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mm-group">Product</div>
+  <a class='sub' href='./cap-table'>Cap Table</a>
+  <a class='sub' href='./scenario-modeling'>Scenario Modeling</a>
+  <a class='sub' href='./diligence-room'>Diligence Room</a>
+  <a class='sub' href='./ai-assistant'>AI Assistant</a>
+  <a class='sub' href='./features'>All Features</a>
+  <div class="mm-group">Explore</div>
+  <a href='./for-advisors'>Trusted Advisors</a>
+  <a href='./tour'>Product tour</a>
+  <a href='./learn/'>Learn</a>
+  <a href='./pricing'>Pricing</a>
+  <a href='./why-diligence-ready'>Why Diligence Ready</a>
+  <div class="mm-cta">
+    <a class='btn btn-ghost btn-lg' href='./#contact'>Contact us</a>
+    <a class="btn btn-ghost btn-lg" href="https://app.diligenceready.com/login">Customer Login</a>
+    <a class="btn btn-accent btn-lg" href="https://app.diligenceready.com/signup?src=home">Sign up</a>
+  </div>
+</div>
+
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hm-hero" id="hero" data-aud="founders" data-loc="hero" data-screen-label="Hero">
+  <div class="hm-dots hm-drift" style="--dx:8px;--dy:8px;--s:1;--t:22s" aria-hidden="true"></div>
+  <div class="hm-wrap hm-hero-grid">
+    <div class="hm-copy-col">
+      <div class="hm-aud-row">
+        <div class="hm-aud" role="group" aria-label="Show this page for">
+          <span class="hm-aud-pill" aria-hidden="true"></span>
+          <button type="button" class="hm-aud-btn" data-aud="founders" aria-pressed="true"><svg viewBox="0 0 17 17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.0238 11.2554C14.5731 12.3211 13.8683 13.2602 12.9709 13.9905C12.0735 14.7209 11.0109 15.2203 9.87589 15.4451C8.74091 15.6698 7.56813 15.6132 6.4601 15.28C5.35207 14.9469 4.34253 14.3473 3.51972 13.5339C2.69692 12.7204 2.08591 11.7178 1.74012 10.6136C1.39432 9.50948 1.32427 8.33743 1.53609 7.19995C1.74791 6.06247 2.23514 4.99419 2.9552 4.08852C3.67526 3.18285 4.60621 2.46735 5.66667 2.00458"/><path d="M15.5833 8.5C15.5833 7.5698 15.4001 6.64872 15.0441 5.78933C14.6882 4.92994 14.1664 4.14908 13.5087 3.49133C12.8509 2.83358 12.0701 2.31182 11.2107 1.95585C10.3513 1.59988 9.4302 1.41667 8.5 1.41667V8.5H15.5833Z"/></svg>Founders &amp; CFOs</button>
+          <button type="button" class="hm-aud-btn" data-aud="advisors" aria-pressed="false"><svg viewBox="0 0 17 17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.0417 14.875V13.4583C12.0417 12.7069 11.7432 11.9862 11.2118 11.4549C10.6804 10.9235 9.95978 10.625 9.20833 10.625H3.54167C2.79022 10.625 2.06955 10.9235 1.5382 11.4549C1.00684 11.9862 0.708333 12.7069 0.708333 13.4583V14.875"/><path d="M9.20833 4.95833C9.20833 6.52314 7.93981 7.79167 6.375 7.79167C4.81019 7.79167 3.54167 6.52314 3.54167 4.95833C3.54167 3.39353 4.81019 2.125 6.375 2.125C7.93981 2.125 9.20833 3.39353 9.20833 4.95833Z"/><path d="M16.2917 14.875V13.4583C16.2912 12.8306 16.0823 12.2207 15.6976 11.7246C15.313 11.2284 14.7745 10.874 14.1667 10.7171"/><path d="M11.3333 2.21708C11.9428 2.37313 12.483 2.72758 12.8687 3.22455C13.2545 3.72153 13.4639 4.33275 13.4639 4.96188C13.4639 5.591 13.2545 6.20222 12.8687 6.6992C12.483 7.19617 11.9428 7.55062 11.3333 7.70667"/></svg>Trusted Advisors</button>
+        </div>
+      </div>
+      <div class="hm-rot">
+        <div class="hm-rot-item" data-aud="founders">
+          <h1 class="hm-h1">Your cap table.<br> Your data room.<br> <em>Ready for diligence.</em></h1>
+          <p class="hm-lead">Keep ownership records, financials and <br class="hm-br">signed documents together. Stay ready for <br class="hm-br">investor questions without rebuilding <br class="hm-br">everything when a deal starts.</p>
+        </div>
+        <div class="hm-rot-item" data-aud="advisors" aria-hidden="true" inert>
+          <p class="hm-h1">One workspace.<br> Every client.<br> <em>Ready for diligence.</em></p>
+          <p class="hm-lead">Keep each client’s cap table, financials <br class="hm-br">and diligence documents organized in one <br class="hm-br">workspace. Spend less time chasing files <br class="hm-br">and more time advising.</p>
+        </div>
+      </div>
+      <div class="hm-cta">
+        <a class="hm-btn hm-btn-coral" href="https://app.diligenceready.com/signup?src=home" data-cta="start_free" data-loc="hero">Start free <svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.33333 8H12.6667"/><path d="M8 3.33333L12.6667 8L8 12.6667"/></svg></a>
+        <button type="button" class="hm-btn hm-btn-outline" data-video-open="founder" hidden><svg viewBox="0 0 16 16" fill="none" stroke="#C5D6F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.6667 8C14.6667 11.6819 11.6819 14.6667 8 14.6667C4.3181 14.6667 1.33333 11.6819 1.33333 8C1.33333 4.3181 4.3181 1.33333 8 1.33333C11.6819 1.33333 14.6667 4.3181 14.6667 8Z"/><path d="M6.66667 5.33333L10.6667 8L6.66667 10.6667V5.33333Z" fill="#C5D6F2" stroke-width=".5"/></svg>Why we built this</button>
+        <a class="hm-btn hm-btn-outline" href="#contact" data-cta="contact" data-loc="hero" data-video-stand-in>Talk to us</a>
+      </div>
+      <div class="hm-trust">
+        <span><svg viewBox="0 0 15 15" fill="none" stroke="#FF6B5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.5 7.5V13.75H2.5V7.5"/><path d="M1.25 4.375H13.75V7.5H1.25V4.375Z"/><path d="M7.5 13.75V4.375"/><path d="M7.5 4.375H4.6875C4.2731 4.375 3.87567 4.21038 3.58265 3.91735C3.28962 3.62433 3.125 3.2269 3.125 2.8125C3.125 2.3981 3.28962 2.00067 3.58265 1.70765C3.87567 1.41462 4.2731 1.25 4.6875 1.25C6.875 1.25 7.5 4.375 7.5 4.375Z"/><path d="M7.5 4.375H10.3125C10.7269 4.375 11.1243 4.21038 11.4174 3.91735C11.7104 3.62433 11.875 3.2269 11.875 2.8125C11.875 2.3981 11.7104 2.00067 11.4174 1.70765C11.1243 1.41462 10.7269 1.25 10.3125 1.25C8.125 1.25 7.5 4.375 7.5 4.375Z"/></svg>Free forever for founders</span>
+        <i aria-hidden="true"></i>
+        <span><svg viewBox="0 0 15 15" fill="none" stroke="#FF6B5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1.875 1.875H6.25V6.25H1.875V1.875Z"/><path d="M8.75 1.875H13.125V6.25H8.75V1.875Z"/><path d="M8.75 8.75H13.125V13.125H8.75V8.75Z"/><path d="M1.875 8.75H6.25V13.125H1.875V8.75Z"/></svg>Import from a spreadsheet</span>
+      </div>
+    </div>
+
+    <!-- product animation: screens load from assets/home/screens.js (home.js) -->
+    <div class="hm-mock" aria-hidden="true">
+      <div class="hm-stage">
+        <img class="hm-deco hm-drift" src="assets/home/hero/shot-glow.svg" alt="" style="left:-34px;top:-119px;width:880px;height:689px;--dx:22px;--dy:14px;--s:1.1;--t:18s">
+        <img class="hm-deco hm-drift" src="assets/home/hero/glow.svg" alt="" style="left:-45.84px;top:-46.7px;width:903.68px;height:654.84px;--dx:22px;--dy:16px;--s:1.12;--t:16s;--d:-4s">
+        <img class="hm-deco hm-drift" src="assets/home/hero/glow2.svg" alt="" style="left:69.49px;top:35.58px;width:729.83px;height:449.1px;--dx:-20px;--dy:12px;--s:1.1;--t:14s;--d:-7s">
+        <img class="hm-deco hm-drift" src="assets/home/hero/deco5.svg" alt="" style="left:738.92px;top:69.73px;width:3.51px;height:3.51px;--dx:-8px;--dy:6px;--t:11s;--d:-3s">
+        <img class="hm-deco hm-drift" src="assets/home/hero/deco6.svg" alt="" style="left:735.37px;top:60.91px;width:3.95px;height:3.95px;--dx:6px;--dy:-8px;--t:10s;--d:-6s">
+        <img class="hm-deco hm-drift" src="assets/home/hero/deco4.svg" alt="" style="left:726.66px;top:9.56px;width:5.85px;height:5.85px;--dx:8px;--dy:8px;--t:9s">
+        <img class="hm-deco hm-drift" src="assets/home/hero/deco1.svg" alt="" style="left:-7.48px;top:155.59px;width:142.17px;height:142.17px;--dx:-18px;--dy:14px;--s:1.1;--t:15s;--d:-6s">
+        <img class="hm-deco hm-drift" src="assets/home/hero/deco9.svg" alt="" style="left:817.84px;top:122.5px;width:106.05px;height:106.05px;--dx:-18px;--dy:16px;--s:1.12;--t:16s;--d:-8s">
+        <img class="hm-deco hm-drift" src="assets/home/hero/deco7.svg" alt="" style="left:780.79px;top:370.93px;width:166.35px;height:166.35px;--dx:-30px;--dy:22px;--s:1.12;--t:21s;--d:-2s">
+        <img class="hm-deco hm-drift" src="assets/home/hero/deco8.svg" alt="" style="left:807.36px;top:110.5px;width:52.52px;height:52.52px;--dx:18px;--dy:12px;--s:1.1;--t:13s;--d:-5s">
+        <img class="hm-deco hm-drift" src="assets/home/hero/deco2.svg" alt="" style="left:59.98px;top:393.56px;width:124.41px;height:124.41px;--dx:30px;--dy:-20px;--s:1.14;--t:19s;--d:-9s">
+        <img class="hm-deco hm-drift" src="assets/home/hero/deco3.svg" alt="" style="left:33.76px;top:25.09px;width:96.29px;height:96.29px;--dx:24px;--dy:18px;--s:1.12;--t:17s;--d:-3s">
+        <img class="hm-deco hm-drift" src="assets/home/hero/deco0.svg" alt="" style="left:-3.21px;top:-9.58px;width:148.78px;height:148.78px;--dx:30px;--dy:20px;--s:1.12;--t:20s">
+        <div class="hm-pop">
+          <div class="hm-window"><div class="hm-cam"></div></div>
+          <div class="hm-cursor"><img src="assets/home/hero/cursor.svg" alt="" width="67" height="75"></div>
+        </div>
+      </div>
+    </div>
+    <!-- hero product animation steps, read by home.js (edit timings/targets here) -->
+    <script type="application/json" id="hm-steps">
+{
+  "_about": "Hero product animation, read by home.js. Points are native screen px (1200x760). Each step is entered with the previous step's 'next' transition, then held for 'dwell' seconds. zoom 1 = full view; 'focus' is the zoom target. 'dropdown' opens on arrival, 'hover' highlights a dropdown row, 'click' presses the cursor, 'type' types the room name, 'exit' shrinks and fades the window before the loop restarts.",
+  "steps": [
+    { "id": "1",   "screen": "cap",  "zoom": 1,    "cursor": [210, 262],  "dwell": 1.0,  "next": [0.75, "ease-in-out"] },
+    { "id": "2",   "screen": "cap",  "zoom": 1.8,  "focus": [210, 262],   "cursor": [210, 262],  "dwell": 1.1, "next": [0.75, "ease-in-out"] },
+    { "id": "3",   "screen": "cap",  "zoom": 1,    "cursor": [190, 78],   "dropdown": "equity",    "dwell": 0.6,  "next": [0.35, "ease-out"] },
+    { "id": "3b",  "screen": "cap",  "zoom": 1,    "cursor": [275, 164],  "dropdown": "equity",    "hover": "Transactions", "click": true, "dwell": 0.45, "next": [0.5, "ease-in-out"] },
+    { "id": "4",   "screen": "tx",   "zoom": 1,    "cursor": [480, 320],  "dwell": 1.0,  "next": [0.75, "ease-in-out"] },
+    { "id": "5",   "screen": "tx",   "zoom": 1.8,  "focus": [480, 320],   "cursor": [480, 320],  "dwell": 1.1, "next": [0.75, "ease-in-out"] },
+    { "id": "6",   "screen": "tx",   "zoom": 1,    "cursor": [820, 78],   "dropdown": "diligence", "dwell": 0.6,  "next": [0.35, "ease-out"] },
+    { "id": "6b",  "screen": "tx",   "zoom": 1,    "cursor": [901, 128],  "dropdown": "diligence", "hover": "Data", "click": true, "dwell": 0.45, "next": [0.5, "ease-in-out"] },
+    { "id": "7",   "screen": "dil",  "zoom": 1,    "cursor": [330, 481],  "dwell": 1.0,  "next": [0.75, "ease-in-out"] },
+    { "id": "8",   "screen": "dil",  "zoom": 1.8,  "focus": [330, 481],   "cursor": [330, 481],  "dwell": 1.1, "next": [0.75, "ease-in-out"] },
+    { "id": "9",   "screen": "dil",  "zoom": 1,    "cursor": [900, 174],  "click": true, "dwell": 0.7, "next": [0.5, "ease-in-out"] },
+    { "id": "10",  "screen": "room", "zoom": 1,    "cursor": [1093, 662], "type": true,  "dwell": 1.0, "next": [0.75, "ease-in-out"] },
+    { "id": "11",  "screen": "room", "zoom": 1.45, "focus": [1093, 662],  "cursor": [1093, 662], "dwell": 1.1, "next": [0.75, "ease-in-out"] },
+    { "id": "12",  "screen": "room", "zoom": 1,    "cursor": [190, 78],   "dropdown": "equity",    "dwell": 0.6,  "next": [0.35, "ease-out"] },
+    { "id": "12b", "screen": "room", "zoom": 1,    "cursor": [275, 128],  "dropdown": "equity",    "hover": "Cap Table", "click": true, "dwell": 0.45, "next": [0.35, "ease-in"] },
+    { "id": "13",  "screen": "room", "zoom": 1,    "cursor": [275, 128],  "exit": true, "dwell": 0.1, "next": [0.55, "cubic-bezier(.34,1.56,.64,1)"] }
+  ]
+}
+    </script>
+  </div>
+</section>
+
+<!-- ============ WHO IT'S FOR ============ -->
+<section class="hm-who hm-uni-host" id="who" data-loc="who" data-screen-label="Who it's for">
+  <div class="hm-wrap">
+    <span class="hm-eyebrow">Who it’s for</span>
+    <h2 class="hm-h2">This is for you <em>if…</em></h2>
+    <p class="hm-sub">Founders have to answer. Advisors make sure they can.</p>
+
+    <div class="hm-cards">
+      <article class="hm-card hm-card-founder" data-role-card="founder">
+        <div class="hm-card-art" aria-hidden="true">
+          <svg class="hm-rings" viewBox="0 0 580 400" fill="none" stroke="#fff" stroke-width="1.2"><circle cx="510" cy="20" r="89.4"/><circle cx="510" cy="20" r="149.4"/><circle cx="510" cy="20" r="209.4"/><circle cx="510" cy="20" r="269.4"/></svg>
+          <i class="hm-speck" style="left:460px;top:90px;width:4px;height:4px;--sx:14px;--sy:-22px"></i>
+          <i class="hm-speck" style="left:380px;top:40px;width:3px;height:3px;--sx:-12px;--sy:-18px"></i>
+          <i class="hm-speck" style="left:520px;top:170px;width:3px;height:3px;--sx:18px;--sy:-14px"></i>
+          <i class="hm-speck" style="left:330px;top:120px;width:2px;height:2px;--sx:-16px;--sy:-20px"></i>
+        </div>
+        <span class="hm-card-icon"><svg viewBox="0 0 20 20" fill="none" stroke="#D44A3B" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.6667 13.25C17.1359 14.5086 16.3039 15.6174 15.2439 16.4788C14.1839 17.3403 12.9283 17.9279 11.5878 18.1901C10.2473 18.4523 8.8629 18.381 7.55644 17.9824C6.24998 17.5838 5.06153 16.8702 4.09568 15.9043C3.12984 14.9385 2.41621 13.75 2.01762 12.4436C1.61902 11.1371 1.54768 9.75269 1.80987 8.41217C2.07206 7.07166 2.65974 5.81615 3.52118 4.75613C4.38263 3.69612 5.49143 2.86411 6.75 2.33333"/><path d="M18.3333 10C18.3333 8.90565 18.1178 7.82202 17.699 6.81097C17.2802 5.79992 16.6664 4.88127 15.8926 4.10744C15.1187 3.33362 14.2001 2.71979 13.189 2.301C12.178 1.88221 11.0943 1.66667 10 1.66667V10H18.3333Z"/></svg></span>
+        <div class="hm-card-body">
+          <h3>You’re the founder, CEO or CFO.</h3>
+          <p>Investors will ask for the cap table first, then everything behind it. Keep one live record of ownership, financials and every signed document, so the answer is always “here it is,” never “give me a week.”</p>
+          <a class="hm-card-link" href="https://app.diligenceready.com/signup?src=home">Get diligence-ready <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.28333" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.91667 7H11.0833"/><path d="M7 2.91667L11.0833 7L7 11.0833"/></svg></a>
+        </div>
+      </article>
+
+      <article class="hm-card hm-card-advisor" data-role-card="advisor">
+        <div class="hm-card-art" aria-hidden="true"><i class="hm-dotgrid"></i></div>
+        <span class="hm-card-icon"><svg viewBox="0 0 20 20" fill="none" stroke="#fff" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.1667 17.5V15.8333C14.1667 14.9493 13.8155 14.1014 13.1904 13.4763C12.5652 12.8512 11.7174 12.5 10.8333 12.5H5C4.11595 12.5 3.2681 12.8512 2.64298 13.4763C2.01786 14.1014 1.66667 14.9493 1.66667 15.8333V17.5"/><path d="M11.25 5.83333C11.25 7.67428 9.75762 9.16667 7.91667 9.16667C6.07572 9.16667 4.58333 7.67428 4.58333 5.83333C4.58333 3.99238 6.07572 2.5 7.91667 2.5C9.75762 2.5 11.25 3.99238 11.25 5.83333Z"/><path d="M18.3333 17.5V15.8333C18.3383 15.0905 18.0951 14.3673 17.6422 13.7785C17.1892 13.1897 16.5526 12.769 15.8333 12.5833"/></svg></span>
+        <div class="hm-card-body">
+          <h3>You’re the trusted advisor.</h3>
+          <p>The accountant, fractional CFO, lawyer, M&amp;A pro or angel group doing the diligence work on a founder’s behalf. Carry every client in one workspace, keep each one current, and send a complete data room the moment someone asks.</p>
+          <ul class="hm-chips"><li>Deeper client relationships</li><li>Organized, strategic clients</li><li>Less busywork</li></ul>
+          <a class="hm-card-link" href="https://app.diligenceready.com/signup?src=for-advisors">Join for free as an advisor <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.28333" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.91667 7H11.0833"/><path d="M7 2.91667L11.0833 7L7 11.0833"/></svg></a>
+        </div>
+      </article>
+    </div>
+
+    <div class="hm-who-foot">
+      <p><strong>Not sure which you are? Start anyway.</strong> It’s free, and whoever you need can join later.</p>
+      <a class="hm-btn hm-btn-coral" href="https://app.diligenceready.com/signup?src=home" data-cta="start_free" data-loc="who">Start free <svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.33333 8H12.6667"/><path d="M8 3.33333L12.6667 8L8 12.6667"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BEFORE / AFTER ============ -->
+<section class="sec-pad hm-uni-host" id="why" data-screen-label="Before and after" style="padding-top:24px;">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The cost of not being ready</span>
+      <h2 class="section-title" style="margin-top:20px;">When the term sheet lands, <span class="accent-line">which company are you?</span></h2>
+    </div>
+    <div class="ba reveal" style="transition-delay:.08s">
+      <div class="ba-row ba-head"><div class="ba-h">When the term sheet lands</div><div class="ba-h">Without a system</div><div class="ba-h us">With Diligence Ready</div></div>
+      <div class="ba-row"><div class="ba-c">Opening the data room</div><div class="ba-c no">Assembling files from inboxes and drives under a deadline</div><div class="ba-c us">Already underway. The checklist shows what’s matched and what’s missing</div></div>
+      <div class="ba-row"><div class="ba-c">The cap table</div><div class="ba-c no">Counsel rebuilds it from the spreadsheet, on the clock</div><div class="ba-c us">Reconciled, version-controlled, every entry linked to its agreement</div></div>
+      <div class="ba-row"><div class="ba-c">“What does this round do to us?”</div><div class="ba-c no">A late-night spreadsheet and a best guess</div><div class="ba-c us">Modeled on the live cap table to four decimals, in minutes</div></div>
+      <div class="ba-row"><div class="ba-c">Board and investor record</div><div class="ba-c no">Hunting for board decks, minutes and the last three updates</div><div class="ba-c us">Every board package and reporting period already filed and tracked</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="sec-pad hm-uni-host" id="how" data-screen-label="How it works" style="padding-top:0;">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">How it works</span>
+      <h2 class="section-title" style="margin-top:20px;">Ready in three moves. <span class="accent-line">Then it stays that way.</span></h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <span class="sn">01 · Day one</span>
+        <h3>Bring the cap table in.</h3>
+        <p>Upload your spreadsheet or your signed agreements. The assistant reads SAFEs and notes into the ledger; you approve each entry before it lands.</p>
+        <span class="st">Free · 3 users · full cap table</span>
+      </div>
+      <div class="step reveal" style="transition-delay:.06s">
+        <span class="sn">02 · Every quarter</span>
+        <h3>Let the routine run.</h3>
+        <p>Reporting periods open on your fiscal calendar and remind you what’s due. Board packages go out watermarked. Every change is attributed, versioned, and linked to its document.</p>
+        <span class="st">Reminders do the chasing</span>
+      </div>
+      <div class="step reveal" style="transition-delay:.12s">
+        <span class="sn">03 · When they ask</span>
+        <h3>Open the room when they ask.</h3>
+        <p>The diligence checklist already shows what’s matched and what’s missing. Invite the investor or acquirer to a room with a full audit trail on every file.</p>
+        <span class="st">Full audit trail on every file</span>
+      </div>
+    </div>
+    <div class="hm-who-foot hm-cta-foot reveal">
+      <p><strong>Free forever for founders.</strong> Import your cap table from a spreadsheet.</p>
+      <a class="hm-btn hm-btn-coral" href="https://app.diligenceready.com/signup?src=home" data-cta="start_free" data-loc="how">Start free <svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.33333 8H12.6667"/><path d="M8 3.33333L12.6667 8L8 12.6667"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SHOWCASE: CAP TABLE ============ -->
+<section class="sec-pad hm-uni-host" id="product" data-screen-label="Product">
+  <div class="wrap">
+    <div class="showcase-row">
+      <div class="showcase-copy reveal">
+        <span class="eyebrow">Cap table &amp; equity</span>
+        <h2>Cap table management where <span class="accent-line">the numbers add up.</span></h2>
+        <p class="lead">Issuances, transfers, conversions, option grants. Every class and every convertible on one live ledger. Each entry is linked to its agreement and every version is kept, so the cap table you hand over is the one you can defend.</p>
+        <ul class="feat-list">
+          <li><span class="ck">✓</span> Real-time ownership across all security classes</li>
+          <li><span class="ck">✓</span> As-of-date snapshots with full version history</li>
+          <li><span class="ck">✓</span> Every issuance linked to its underlying agreement</li>
+          <li><span class="ck">✓</span> One click to an investor-ready PDF</li>
+        </ul>
+      </div>
+      <div class="showcase-art reveal" style="transition-delay:.1s">
+        <div class="art-frame">
+          <div class="cap">
+            <div class="cap-head">
+              <h5>Capitalization (fully diluted)</h5>
+              <span class="badge-live"><span class="d"></span> Live · v41</span>
+            </div>
+            <table class="tbl">
+              <thead><tr><th>Stakeholder</th><th>Class</th><th class="r">Units</th><th class="r">Ownership</th></tr></thead>
+              <tbody>
+                <tr><td><span class="who"><span class="sw" style="background:var(--midnight)"></span>Founders (2)</span></td><td>Common</td><td class="r num">6,000,000</td><td class="r num">48.6%</td></tr>
+                <tr><td><span class="who"><span class="sw" style="background:var(--coral)"></span>Catalyst Ventures</span></td><td>Series A</td><td class="r num">2,480,000</td><td class="r num">20.1%</td></tr>
+                <tr><td><span class="who"><span class="sw" style="background:var(--ice)"></span>Greenfield Capital</span></td><td>Seed</td><td class="r num">1,640,000</td><td class="r num">13.3%</td></tr>
+                <tr><td><span class="who"><span class="sw" style="background:#9fb0cc"></span>Option pool</span></td><td>Reserved</td><td class="r num">1,730,000</td><td class="r num">14.0%</td></tr>
+                <tr><td><span class="who"><span class="sw" style="background:#cdd6e6"></span>Angels (5)</span></td><td>SAFE</td><td class="r num">500,000</td><td class="r num">4.0%</td></tr>
+              </tbody>
+            </table>
+            <div style="margin-top:16px;display:flex;gap:3px;height:8px;border-radius:5px;overflow:hidden;">
+              <span style="flex:48.6;background:var(--midnight)"></span>
+              <span style="flex:20.1;background:var(--coral)"></span>
+              <span style="flex:13.3;background:var(--ice)"></span>
+              <span style="flex:14;background:#9fb0cc"></span>
+              <span style="flex:4;background:#cdd6e6"></span>
+            </div>
+            <div style="display:flex;justify-content:space-between;margin-top:12px;font-size:11.5px;color:var(--faint);font-family:var(--mono)">
+              <span>12,350,000 fully diluted</span><span>v41 · full audit trail</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHOWCASE: WHAT-IF -->
+    <div class="showcase-row flip" id="scenarios">
+      <div class="showcase-copy reveal">
+        <span class="eyebrow">Scenario modeling</span>
+        <h2>Know your dilution <span class="accent-line">before you sign.</span></h2>
+        <p class="lead">An inbound term sheet. A pool refresh. A possible exit. Model it on your live cap table in minutes and see exactly who is diluted and who gets paid, to four decimals, before you commit to anything.</p>
+        <ul class="feat-list">
+          <li><span class="ck">✓</span> <span>Investment scenarios: <a href='./learn/pre-money-vs-post-money' style="text-decoration:underline;text-underline-offset:2px;">pre-money</a>, raise, new class, pool, convertibles</span></li>
+          <li><span class="ck">✓</span> <span>Exit scenarios: full <a href='./learn/liquidation-preference' style="text-decoration:underline;text-underline-offset:2px;">liquidation waterfall</a> at any value</span></li>
+          <li><span class="ck">✓</span> Up-round / down-round detection vs. your last priced round</li>
+          <li><span class="ck">✓</span> Compare multiple scenarios, then print for the board</li>
+        </ul>
+      </div>
+      <div class="showcase-art reveal" style="transition-delay:.1s">
+        <div class="art-frame">
+          <div class="whatif">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+              <h5 style="font-family:var(--serif);font-size:18px;font-weight:600;">What-if · $4M priced round</h5>
+              <span style="font-family:var(--mono);font-size:11px;color:#1f9d57;">▲ Up round</span>
+            </div>
+            <div class="scn-tabs">
+              <span class="scn-tab on">$4M @ $16M pre</span>
+              <span class="scn-tab">$6M @ $20M pre</span>
+              <span class="scn-tab">Exit · $120M</span>
+            </div>
+            <div class="scn-grid">
+              <div class="scn-card">
+                <div class="lbl">New post-money</div>
+                <div class="big">$20.0M</div>
+                <div class="delta up">▲ from $11.8M</div>
+              </div>
+              <div class="scn-card hl">
+                <div class="lbl">Founder ownership</div>
+                <div class="big">39.2%</div>
+                <div class="delta down">−9.4 pts dilution</div>
+              </div>
+            </div>
+            <div style="margin-top:14px;border:1px solid var(--line);border-radius:11px;padding:6px 14px;">
+              <div class="scn-row"><span class="nm">New investor (Series B)</span><span class="vl num-coral">20.00%</span></div>
+              <div class="scn-row"><span class="nm">Option pool (refreshed to 12%)</span><span class="vl">12.00%</span></div>
+              <div class="scn-row"><span class="nm">Existing preferred</span><span class="vl">28.80%</span></div>
+              <div class="scn-row"><span class="nm">Founders &amp; common</span><span class="vl">39.20%</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHOWCASE: AI ASSISTANT -->
+    <div class="showcase-row">
+      <div class="showcase-copy reveal">
+        <span class="eyebrow">AI assistant</span>
+        <h2>It does the work. <span class="accent-line">You approve it.</span></h2>
+        <p class="lead">Add an investor, draft a transaction, read a signed SAFE and extract its terms. The assistant does the work in plain language. Every change is staged as a draft for your sign-off before a single number moves.</p>
+        <ul class="feat-list">
+          <li><span class="ck">✓</span> Natural-language chat across your cap table and transactions</li>
+          <li><span class="ck">✓</span> SAFE &amp; convertible-note extraction with side-by-side review</li>
+          <li><span class="ck">✓</span> Action proposals with human approval, no surprise mutations</li>
+        </ul>
+      </div>
+      <div class="showcase-art reveal" style="transition-delay:.1s">
+        <div class="art-frame">
+          <div style="padding:20px;font-size:13px;">
+            <div style="display:flex;gap:11px;margin-bottom:16px;">
+              <div style="width:28px;height:28px;border-radius:8px;background:var(--bg-3);flex:0 0 auto;"></div>
+              <div style="background:var(--bg-3);border-radius:12px;padding:11px 14px;color:var(--ink-2);">Add the Catalyst Ventures SAFE: $500k, $8M cap, 20% discount.</div>
+            </div>
+            <div style="display:flex;gap:11px;">
+              <div class="ai-mark" style="width:28px;height:28px;border-radius:8px;flex:0 0 auto;font-size:13px;">✦</div>
+              <div style="flex:1;">
+                <div style="color:var(--ink-2);line-height:1.6;">I parsed the agreement and drafted the transaction. Review before I commit:</div>
+                <div style="margin-top:12px;border:1px solid var(--coral-line);border-radius:11px;overflow:hidden;">
+                  <div style="background:var(--coral-wash);padding:9px 14px;font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--coral-ink-s);display:flex;justify-content:space-between;"><span>Proposed · SAFE issuance</span><span>needs approval</span></div>
+                  <div style="padding:6px 14px;">
+                    <div class="scn-row"><span class="nm">Stakeholder</span><span class="vl">Catalyst Ventures</span></div>
+                    <div class="scn-row"><span class="nm">Amount</span><span class="vl">$500,000</span></div>
+                    <div class="scn-row"><span class="nm">Valuation cap</span><span class="vl">$8,000,000</span></div>
+                    <div class="scn-row"><span class="nm">Discount</span><span class="vl">20%</span></div>
+                  </div>
+                  <div style="display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--line-2);">
+                    <span class="btn btn-accent" style="padding:7px 16px;font-size:13px;">Approve &amp; commit</span>
+                    <span class="btn btn-ghost" style="padding:7px 16px;font-size:13px;">Edit</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHOWCASE: FINANCIAL REPORTING -->
+
+
+    <!-- SHOWCASE: INVESTOR PORTAL -->
+
+
+    <!-- SHOWCASE: BOARD MANAGEMENT -->
+    <div class="hm-more reveal"><a class="btn btn-outline-dark" href="./features" data-cta="all_features" data-loc="product">See every feature <span class="arr">→</span></a></div>
+
+  </div>
+</section>
+
+
+<!-- ============ RELATED GUIDES (internal links to Learn) ============ -->
+
+<!-- ============ FOR TRUSTED ADVISORS ============ -->
+
+<!-- ============ SECURITY ============ -->
+<section class="sec-pad hm-uni-host" id="security" data-screen-label="Security" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow center">Trust at the architecture level</span>
+      <h2 class="section-title" style="margin-top:20px;">Built so investors can trust the numbers <span class="accent-line">and you can sleep.</span></h2>
+    </div>
+    <div class="trust-grid">
+
+
+      <div class="trust-card reveal" style="transition-delay:.12s"><div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg></div><h3>Audit log on everything</h3><p>Every change attributed and timestamped. Read-only support sessions let advisors look without touching. Soft-archive means an accidental delete can’t break history.</p></div>
+      <div class="trust-card reveal"><div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/><path d="M6 16h.01"/><path d="M10 16h.01"/></svg></div><h3>Bring your own storage</h3><p>Files live in <a href='./google-drive-onedrive-data-room' style="text-decoration:underline;text-underline-offset:2px;">your Google Drive or OneDrive</a>, your security policies, your backups, your permissions. We don’t lock your documents in our cloud.</p></div>
+      <div class="trust-card reveal" style="transition-delay:.06s"><div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg></div><h3>AI with a human in the loop</h3><p>The assistant proposes; you approve. No data is mutated without your sign-off, and every AI action lands in the same audit trail.</p></div>
+
+    </div>
+    <div class="hm-more reveal"><a class="btn btn-outline-dark" href="./security" data-cta="security" data-loc="security">How we keep your data safe <span class="arr">→</span></a></div>
+  </div>
+</section>
+
+<!-- ============ BUILT BY OPERATORS ============ -->
+<section class="sec-pad hm-uni-host" id="why-us" data-screen-label="Built by operators">
+  <div class="wrap-narrow center hm-module-wrap">
+    <div class="hm-module">
+      <span class="eyebrow center reveal">Why we built it</span>
+      <h2 class="section-title reveal" style="margin-top:20px;transition-delay:.05s">Operators who’ve been on the other side of the table.</h2>
+      <p class="lead reveal" style="margin-top:24px;transition-delay:.1s">Built by entrepreneurs with <strong style="color:var(--ink);font-weight:600;">30+ years growing, financing, and selling companies.</strong> We’ve lived the last-minute scramble, the spreadsheet that wouldn’t reconcile, the data room thrown together over a weekend, the deal that wobbled because the numbers didn’t line up. So we built the tool we wish we’d had.</p>
+      <p class="lead reveal" style="margin-top:18px;transition-delay:.15s">AI now does a lot of the work that used to take a team, and we pass that through in the price. Founders is free forever. Standard is $99 a month.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec-pad hm-uni-host" id="faq" data-screen-label="FAQ">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow center">FAQ</span>
+      <h2 class="section-title" style="margin-top:20px;">Questions we get <span class="accent-line">asked.</span></h2>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-item reveal">
+        <h3>What is Diligence Ready?</h3>
+        <p>Diligence Ready is cap table, data room, and diligence software that keeps growing companies ready before the deal arrives. It brings cap table management, scenario modeling, financial reporting, board packages, and a diligence data room into one platform. Files stay in your own Google Drive or OneDrive. See <a href='./features'>all features</a> or <a href='./why-diligence-ready'>why Diligence Ready</a>.</p>
+      </div>
+
+
+      <div class="faq-item reveal">
+        <h3>How much does Diligence Ready cost?</h3>
+        <p>Founders is free forever for up to 3 users. Standard is $99/month for up to 10 users. Growth ($250/month) and Scale ($500/month) are coming soon. Annual billing is two months free. See <a href='./pricing'>full pricing</a> for what’s in each tier.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>Can I model a priced round before I commit to it?</h3>
+        <p>Yes. Scenario modeling runs on your live cap table, a priced round, an option pool refresh, convertible conversions, or an exit waterfall, and shows exactly who is diluted and who gets paid, to four decimals. Nothing is written to the ledger until you decide to commit it.</p>
+      </div>
+      <div class="faq-item reveal">
+        <h3>Where are my documents stored?</h3>
+        <p>In your own Google Drive or OneDrive. Diligence Ready links and organizes the files where the room can find them, but your security policies, backups, and permissions stay yours. Row-level security is enforced at the database, and every change is attributed and timestamped in an audit log.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="sec-pad hm-uni-host" id="contact" data-screen-label="Contact" style="background:var(--bg-2);border-top:1px solid var(--line);">
+  <div class="wrap contact-grid">
+    <div class="contact-intro reveal">
+      <span class="eyebrow">Contact us</span>
+      <h2 class="section-title" style="margin-top:20px;">Let’s talk about getting you <span class="accent-line">diligence ready.</span></h2>
+      <p class="lead" style="margin-top:22px;">Questions about the platform, pricing, or becoming a Trusted Advisor? Fill out the form, or email us directly if that’s easier.</p>
+      <div class="contact-alt">
+        <span class="contact-alt-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
+        <span class="contact-alt-txt">
+          <span class="contact-alt-k">Prefer email?</span>
+          <a class="contact-alt-addr" id="contactEmail" href="#contact">Email our team</a>
+        </span>
+        <button type="button" class="contact-copy" id="contactCopy" hidden>Copy</button>
+      </div>
+    </div>
+    <form action='./thank-you' class='contact-form reveal' id='contactForm' method='POST' name='contact' style='transition-delay:.1s'>
+      <input type="hidden" name="form-name" value="contact" />
+      <p hidden><label>Don’t fill this out if you’re human: <input name="bot-field" /></label></p>
+      <div class="field-row">
+        <div class="field">
+          <label for="cf-name">Name</label>
+          <input id="cf-name" name="name" type="text" autocomplete="name" required placeholder="Jane Founder" />
+        </div>
+        <div class="field">
+          <label for="cf-email">Work email</label>
+          <input id="cf-email" name="email" type="email" autocomplete="email" required placeholder="jane@company.com" />
+        </div>
+      </div>
+      <div class="field">
+        <label for="cf-company">Company</label>
+        <input id="cf-company" name="company" type="text" autocomplete="organization" placeholder="Acme Corp" />
+      </div>
+      <div class="field">
+        <label for="cf-message">How can we help?</label>
+        <textarea id="cf-message" name="message" rows="3" required placeholder="Tell us a bit about what you’re looking for…"></textarea>
+      </div>
+      <button class="btn btn-accent btn-lg" type="submit">Send message <span class="arr">→</span></button>
+      <p class="contact-note" id="cf-note">A real person on our team gets your message and replies, usually within one business day.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="sec-pad hm-uni-host" id="demo" data-screen-label="Final CTA">
+  <div class="wrap">
+    <div class="final-card reveal">
+      <span class="lp-pill lp-pill-final"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg> Free for founders</span>
+      <h2 class="display" style="margin-top:22px;">Be ready before the deal arrives.</h2>
+      <p class="lead">Start free today. Import the cap table, let the routine run, and when the term sheet lands, you’re not preparing, you’re already prepared.</p>
+      <div class="hero-cta">
+        <a class="btn btn-accent btn-lg" href="https://app.diligenceready.com/signup?src=home">Start free <span class="arr">→</span></a>
+        <a class="btn btn-ghost btn-lg" href="#contact">Talk to us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- background "universe": one continuous decoration layer behind the cream sections (home.js) -->
+<div class="hm-uni" id="hmUniverse" aria-hidden="true"></div>
+</main>
+<div class="mcta" id="mcta"><a class="p" href="https://app.diligenceready.com/signup?src=home">Start free <span class="arr">→</span></a><a class="s" href="#contact">Contact</a></div>
+
+<!-- ============ FOOTER ============ -->
+<footer data-screen-label="Footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="#top">
+          <span class="mono-circle">dr</span>
+          <span class="wordmark">Diligence Ready<span class="dot">.</span></span>
+        </a>
+        <p class="dk-only">The equity platform that keeps growing companies continuously ready for fundraising, M&amp;A, and capital events.</p>
+        <div class="promise">Readiness is the standard.</div>
+      </div>
+      <div class="foot-col">
+        <h6>Product</h6>
+        <a href='./cap-table'>Cap table</a>
+        <a href='./scenario-modeling'>What-if modeling</a>
+        <a href='./diligence-room'>Diligence room</a>
+        <a href='./ai-assistant'>AI assistant</a>
+        <a href='./for-advisors'>For Trusted Advisors</a>
+        <a href='./features'>All features</a>
+      </div>
+      <div class="foot-col">
+        <h6>Company</h6>
+        <a href='./why-diligence-ready'>Why Diligence Ready</a>
+        <a href="#contact">Request a demo</a>
+        <a href='./pricing'>Pricing</a>
+        <a href="#contact">Become a Trusted Advisor</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h6>Legal</h6>
+        <a href='./privacy'>Privacy</a>
+        <a href='./terms'>Terms</a>
+        <a href='./security'>Security &amp; trust</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Diligence Ready. All rights reserved.</span>
+      <div class="legal"><span>diligenceready.com</span>Built for the way modern founders raise.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ SCROLL / NAV JS ============ -->
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+  onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Decorative entrance only — content is visible by default in CSS, so nothing
+  // can get stuck hidden. We add `.in` (which fires the keyframe) only while the
+  // page is actually being rendered; if backgrounded we simply skip the animation.
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
+  if (!document.hidden) {
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  }
+
+  // Product dropdown — click/keyboard toggle (hover handled in CSS)
+  document.querySelectorAll('[data-dd]').forEach(dd => {
+    const btn = dd.querySelector('.nav-dd-btn');
+    btn.addEventListener('click', (e) => { e.stopPropagation(); const open = dd.classList.toggle('open'); btn.setAttribute('aria-expanded', open); });
+  });
+  document.addEventListener('click', () => document.querySelectorAll('[data-dd].open').forEach(dd => { dd.classList.remove('open'); dd.querySelector('.nav-dd-btn').setAttribute('aria-expanded', 'false'); }));
+
+  // Mobile menu toggle
+  const burger = document.getElementById('navBurger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (burger && mobileMenu) {
+    const closeMenu = () => { burger.classList.remove('open'); mobileMenu.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; document.body.classList.remove('menu-open'); };
+    burger.addEventListener('click', () => {
+      const open = burger.classList.toggle('open');
+      mobileMenu.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.style.overflow = open ? 'hidden' : '';
+      document.body.classList.toggle('menu-open', open);
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  }
+
+  // Contact "Email our team" link — address assembled at runtime to deter scrapers.
+  // The contact form is a native Netlify form (POST) — no JS submit handler — so
+  // Netlify captures the submission and emails it to the team.
+
+  var _drTo = ['info', 'diligenceready.com'].join('@');
+  var _drEmail = document.getElementById('contactEmail');
+  if (_drEmail) { _drEmail.href = 'mailto:' + _drTo; _drEmail.textContent = _drTo; }
+  var _drCopy = document.getElementById('contactCopy');
+  if (_drCopy && navigator.clipboard) {
+    _drCopy.hidden = false;
+    _drCopy.addEventListener('click', function () {
+      navigator.clipboard.writeText(_drTo).then(function () {
+        _drCopy.textContent = 'Copied'; _drCopy.classList.add('is-done');
+        setTimeout(function () { _drCopy.textContent = 'Copy'; _drCopy.classList.remove('is-done'); }, 1800);
+      });
+    });
+  }
+</script>
+
+<script>
+  (function(){
+    var bar = document.getElementById('mcta'); if(!bar) return;
+    var stop = document.getElementById('contact') || document.querySelector('footer');
+    var tick = function(){
+      var past = window.scrollY > 520;
+      var near = stop && stop.getBoundingClientRect().top < window.innerHeight * 0.75;
+      bar.classList.toggle('up', past && !near);
+    };
+    tick(); window.addEventListener('scroll', tick, { passive: true });
+  })();
+</script>
+
+<!-- ============ "WHY WE BUILT THIS" VIDEO (lightbox + floating chip) ============
+     Shown only when SHOW_FOUNDER_VIDEO is true in home.js. Sources are attached by home.js on first use,
+     so nothing downloads until the chip appears or someone opens the video. -->
+<div class="hm-lb" id="hmVideoBox" role="dialog" aria-modal="true" aria-labelledby="hmVideoTitle" hidden>
+  <div class="hm-lb-backdrop" data-lb-close></div>
+  <div class="hm-lb-card">
+    <div class="hm-lb-media">
+      <video controls playsinline preload="none" data-poster="media/why-we-built-this-poster.jpg" data-video-src="media/why-we-built-this"></video>
+      <button type="button" class="hm-lb-close" data-lb-close aria-label="Close video"><svg viewBox="0 0 24 24" fill="none" stroke="#0B162D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+    </div>
+    <div class="hm-lb-caption">
+      <h2 id="hmVideoTitle">Why we built Diligence Ready</h2>
+      <p><strong>Alan Rihm</strong> · CEO &amp; Co-founder, Diligence Ready · <span class="hm-lb-dur">1:49</span></p>
+    </div>
+  </div>
+</div>
+
+<div class="hm-chip" id="hmChip" hidden>
+  <button type="button" class="hm-chip-open" aria-label="Play “Why we built this”, a 1 minute 49 second video from Alan Rihm">
+    <video muted loop playsinline preload="none" data-poster="media/why-we-built-this-poster-sm.jpg" data-video-src="media/why-we-built-this" aria-hidden="true"></video>
+    <span class="hm-chip-scrim" aria-hidden="true"></span>
+    <span class="hm-chip-cap" aria-hidden="true"><span class="k">ALAN RIHM · 1:49</span><span class="t">Why we built this</span></span>
+  </button>
+  <button type="button" class="hm-chip-sound" aria-pressed="false">
+    <svg class="i-muted" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M22 9l-6 6"/><path d="M16 9l6 6"/></svg>
+    <svg class="i-sound" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></svg>
+    <span>Unmute</span>
+  </button>
+  <button type="button" class="hm-chip-close" aria-label="Dismiss video"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+</div>
+
+<!-- ============ COOKIE NOTICE ============ -->
+<div id="dr-cookie-root" hidden role="dialog" aria-modal="true" aria-labelledby="dr-cookie-title">
+  <div id="dr-cookie-card">
+    <div id="dr-cookie-main">
+      <h2 id="dr-cookie-title">diligenceready.com</h2>
+      <p>We use cookies to run the site and improve it.</p>
+      <button type="button" id="dr-cookie-accept">Accept all</button>
+      <button type="button" id="dr-cookie-essential">Essential only</button>
+      <button type="button" id="dr-cookie-prefs-open">Preferences</button>
+      <a class='dr-cookie-legal' href='./privacy'>Privacy Policy</a>
+    </div>
+    <div id="dr-cookie-prefs-panel" hidden>
+      <h2>Cookie Preferences</h2>
+      <p>Choose which cookies we can use. Essential cookies are always on.</p>
+      <label><input type="checkbox" checked disabled /> Essential (required)</label>
+      <label><input type="checkbox" id="dr-cookie-analytics" /> Analytics</label>
+      <label><input type="checkbox" id="dr-cookie-marketing" /> Marketing</label>
+      <button type="button" id="dr-cookie-save">Save Preferences</button>
+      <button type="button" id="dr-cookie-back">Back</button>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var KEY = 'dr_cookie_consent';
+  var root = document.getElementById('dr-cookie-root');
+  if (!root) return;
+  var main = document.getElementById('dr-cookie-main');
+  var panel = document.getElementById('dr-cookie-prefs-panel');
+  var cbA = document.getElementById('dr-cookie-analytics');
+  var cbM = document.getElementById('dr-cookie-marketing');
+
+  function apply(c) {
+    if (typeof gtag !== 'function') return;
+    gtag('consent', 'update', {
+      analytics_storage: c.analytics ? 'granted' : 'denied',
+      ad_storage: c.marketing ? 'granted' : 'denied',
+      ad_user_data: c.marketing ? 'granted' : 'denied',
+      ad_personalization: c.marketing ? 'granted' : 'denied'
+    });
+  }
+  function save(c) {
+    c.ts = new Date().toISOString();
+    try { localStorage.setItem(KEY, JSON.stringify(c)); } catch (e) {}
+    apply(c);
+    root.hidden = true;
+  }
+  function read() {
+    try { return JSON.parse(localStorage.getItem(KEY)); } catch (e) { return null; }
+  }
+
+  var stored = read();
+  if (stored && typeof stored.analytics === 'boolean') {
+    apply(stored);
+  } else {
+    root.hidden = false;
+  }
+
+  document.getElementById('dr-cookie-accept').addEventListener('click', function () {
+    save({ analytics: true, marketing: true });
+  });
+  document.getElementById('dr-cookie-essential').addEventListener('click', function () {
+    save({ analytics: false, marketing: false });
+  });
+  document.getElementById('dr-cookie-prefs-open').addEventListener('click', function () {
+    main.hidden = true; panel.hidden = false;
+  });
+  document.getElementById('dr-cookie-back').addEventListener('click', function () {
+    panel.hidden = true; main.hidden = false;
+  });
+  document.getElementById('dr-cookie-save').addEventListener('click', function () {
+    save({ analytics: !!cbA.checked, marketing: !!cbM.checked });
+  });
+})();
+</script>
+<script>
+// signup_click: GA4 event on every signup / Start free link (21 Oct 2026)
+document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href*="app.diligenceready.com/signup"]'):null;if(!a||typeof gtag!=='function')return;var s='';try{s=new URL(a.href).searchParams.get('src')||''}catch(x){}gtag('event','signup_click',{src:s,link_text:(a.textContent||'').replace(/\s+/g,' ').trim().slice(0,60),link_url:a.href});});
+</script>
+<script src="home.js?v=1110" defer></script>
+<div id="dr-preview-flag" style="position:fixed;left:16px;bottom:16px;z-index:9999;padding:8px 12px;border-radius:8px;background:#0F1E3D;color:#fff;font:500 12px/1.3 Inter,system-ui,sans-serif;box-shadow:0 8px 24px -8px rgba(0,0,0,.4);pointer-events:none;">Preview copy · not the live site</div>
+<script>document.addEventListener("submit",function(e){var f=e.target;if(f&&f.tagName==="FORM"){e.preventDefault();var b=f.querySelector("[type=submit]");if(b){b.textContent="Forms are off in this preview";b.disabled=true;}}},true);</script>
+</body>
+</html>

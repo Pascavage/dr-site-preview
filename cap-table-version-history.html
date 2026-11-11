@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) — GA4 + Google Ads -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  // Consent Mode default denied; wait briefly for CMP / stored apply below
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    wait_for_update: 500
+  });
+
+  // Apply stored preference BEFORE config / conversion (same KEY as footer banner)
+  (function () {
+    var KEY = 'dr_cookie_consent';
+    var c = null;
+    try { c = JSON.parse(localStorage.getItem(KEY)); } catch (e) { c = null; }
+    if (c && typeof c.analytics === 'boolean') {
+      gtag('consent', 'update', {
+        analytics_storage: c.analytics ? 'granted' : 'denied',
+        ad_storage: c.marketing ? 'granted' : 'denied',
+        ad_user_data: c.marketing ? 'granted' : 'denied',
+        ad_personalization: c.marketing ? 'granted' : 'denied'
+      });
+    }
+  })();
+
+  gtag('config', 'G-5SE3GQ5GK4');
+  gtag('config', 'AW-18371579900');
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Track cap table changes over time with version history that helps founders and finance practitioners understand the record behind ownership." />
+<title>Cap Table Version History and Audit Trail</title>
+<link rel="canonical" href="https://diligenceready.com/cap-table-version-history" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#0F1E3D" />
+<link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@300;400;450;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Diligence Ready" />
+<meta property="og:title" content="Cap Table Version History and Audit Trail" />
+<meta property="og:description" content="Track cap table changes over time with version history that helps founders and finance practitioners understand the record behind ownership." />
+<meta property="og:url" content="https://diligenceready.com/cap-table-version-history" />
+<meta property="og:image" content="https://diligenceready.com/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Cap Table Version History and Audit Trail" />
+<meta name="twitter:description" content="Track cap table changes over time with version history that helps founders and finance practitioners understand the record behind ownership." />
+<meta name="twitter:image" content="https://diligenceready.com/og-image.png" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://diligenceready.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Version History",
+      "item": "https://diligenceready.com/cap-table-version-history"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a aria-label='Diligence Ready' class='brand' href='./'>
+      <span class="mono-circle">dr</span>
+      <span class="wordmark">Diligence Ready<span class="dot">.</span></span>
+    </a>
+    <nav class="nav-links">
+      <div class="nav-dd" data-dd>
+        <button type="button" class="nav-dd-btn" aria-expanded="false">Product <span class="caret">▾</span></button>
+        <div class="nav-dd-menu">
+          <a href='./cap-table'><span class="t">Cap Table</span><span class="d">Every security class, reconciled</span></a>
+          <a href='./scenario-modeling'><span class="t">Scenario Modeling</span><span class="d">Rounds, dilution &amp; waterfalls</span></a>
+          <a href='./diligence-room'><span class="t">Diligence Room</span><span class="d">Be ready before they ask</span></a>
+          <a href='./ai-assistant'><span class="t">AI Assistant</span><span class="d">It does the work, you approve</span></a>
+          <div class="dd-sep"></div>
+          <a class='dd-all' href='./features'><span class="t">See all features</span><span class="arr">→</span></a>
+        </div>
+      </div>
+      <a href='./for-advisors'>Trusted Advisors</a>
+      <a href='./learn/'>Learn</a>
+      <a href='./pricing'>Pricing</a>
+    </nav>
+    <div class="nav-cta">
+      <a class='link sales-link' href='./#contact'>Contact us</a>
+      <a class="link" href="https://app.diligenceready.com/login">Customer Login</a>
+      <a class="btn btn-accent" href="https://app.diligenceready.com/signup?src=cap-table-version-history">Sign up <span class="arr">→</span></a>
+    </div>
+    <a class="btn btn-accent nav-cta-m" href="https://app.diligenceready.com/signup?src=cap-table-version-history">Start free</a>
+    <button type="button" class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mm-group">Product</div>
+  <a class='sub' href='./cap-table'>Cap Table</a>
+  <a class='sub' href='./scenario-modeling'>Scenario Modeling</a>
+  <a class='sub' href='./diligence-room'>Diligence Room</a>
+  <a class='sub' href='./ai-assistant'>AI Assistant</a>
+  <a class='sub' href='./features'>All Features</a>
+  <div class="mm-group">Explore</div>
+  <a href='./for-advisors'>Trusted Advisors</a>
+  <a href='./learn/'>Learn</a>
+  <a href='./pricing'>Pricing</a>
+  <a href='./why-diligence-ready'>Why Diligence Ready</a>
+  <div class="mm-cta">
+    <a class='btn btn-ghost btn-lg' href='./#contact'>Contact us</a>
+    <a class="btn btn-ghost btn-lg" href="https://app.diligenceready.com/login">Customer Login</a>
+    <a class="btn btn-accent btn-lg" href="https://app.diligenceready.com/signup?src=cap-table-version-history">Sign up</a>
+  </div>
+</div>
+
+<main>
+
+
+<!-- ============ FEATURE HERO ============ -->
+<section class="feat-hero" data-screen-label="Version history hero">
+  <div class="wrap">
+    <div class="breadcrumb reveal">
+      <a href='./'>Home</a><span class="sep">/</span><a href='./cap-table'>Cap Table</a><span class="sep">/</span><span class="cur">Version History</span>
+    </div>
+    <div class="feat-hero-grid">
+      <div>
+        <span class="eyebrow reveal">Cap table version history</span>
+        <h1 class="reveal" style="transition-delay:.05s;margin-top:18px;">Know what changed in your cap table.</h1>
+        <p class="lead reveal" style="transition-delay:.1s">A spreadsheet shows the latest numbers and nothing else. Version history shows every change behind those numbers, who it affected, and when it happened, for founders and for the CFOs, advisors, and accountants working alongside them.</p>
+        <div class="hero-cta reveal" style="transition-delay:.15s">
+          <a class="btn btn-accent btn-lg" href="https://app.diligenceready.com/signup?src=cap-table-version-history">Start free <span class="arr">→</span></a>
+          <a class='btn btn-ghost btn-lg' href='./cap-table'>Explore cap table software</a>
+        </div>
+        <div class="hero-note reveal" style="transition-delay:.2s"><span><span class="dot"></span> Full audit trail</span><span><span class="dot"></span> Every change attributed</span></div>
+
+      </div>
+      <div class="showcase-art reveal" style="transition-delay:.18s">
+        <div class="art-frame">
+          <div style="padding:18px;font-size:12.5px;">
+            <div class="cap-head">
+              <h5 style="font-family:var(--serif);font-size:18px;font-weight:600;">Version history</h5>
+              <span class="badge-live"><span class="d"></span> v41 current</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:9px;">
+              <div style="border:1px solid var(--coral-line);background:var(--coral-wash);border-radius:11px;padding:11px 14px;display:flex;align-items:center;justify-content:space-between;"><span style="font-weight:600;color:var(--ink);">v41 · SAFE added — Catalyst Ventures</span><span style="font-family:var(--mono);font-size:11px;color:var(--coral-ink-s);">Today</span></div>
+              <div style="border:1px solid var(--line);border-radius:11px;padding:11px 14px;display:flex;align-items:center;justify-content:space-between;"><span style="font-weight:600;color:var(--ink);">v40 · Option grant — 2 employees</span><span style="font-family:var(--mono);font-size:11px;color:var(--faint);">Aug 22</span></div>
+              <div style="border:1px solid var(--line);border-radius:11px;padding:11px 14px;display:flex;align-items:center;justify-content:space-between;"><span style="font-weight:600;color:var(--ink);">v39 · Series A closed</span><span style="font-family:var(--mono);font-size:11px;color:var(--faint);">Jul 3</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPREADSHEET DRIFT ============ -->
+<section class="sec-pad-sm" data-screen-label="The problem">
+  <div class="wrap-narrow center">
+    <span class="eyebrow center reveal">Why the record drifts</span>
+    <h2 class="section-title reveal" style="margin-top:22px;transition-delay:.05s">A spreadsheet only shows the last save.</h2>
+    <p class="lead reveal" style="margin-top:24px;transition-delay:.1s">Every new tab, every overwritten cell, and every emailed copy erases the version that came before it. When someone asks what changed since the last round, the answer usually depends on whoever still has the old file.</p>
+    <p class="lead reveal" style="margin-top:18px;transition-delay:.15s"><strong style="color:var(--ink);font-weight:600;">A recorded transaction history</strong> keeps every change in place instead of overwriting it.</p>
+  </div>
+</section>
+
+<!-- ============ TRANSACTIONS vs VERSIONS vs EXPORTS ============ -->
+<section class="sec-pad" id="workflow" data-screen-label="Three layers" style="padding-top:24px;">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Three different things</span>
+      <h2 class="section-title" style="margin-top:20px;">Transactions, versions, and exports <span class="accent-line">are not the same record.</span></h2>
+      <p class="lead" style="margin-top:20px;max-width:680px;">Keeping them distinct is what makes the history useful instead of confusing.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar reveal">
+        <div class="pic">①</div>
+        <h3>Transactions</h3>
+        <p>A single recorded event: an issuance, a transfer, a grant, or a conversion. Each one is logged on its own.</p>
+      </div>
+      <div class="pillar reveal" style="transition-delay:.06s">
+        <div class="pic coral">②</div>
+        <h3>Version snapshots</h3>
+        <p>The state of the whole cap table at a point in time, built from the transactions recorded up to that point.</p>
+      </div>
+      <div class="pillar reveal" style="transition-delay:.12s">
+        <div class="pic">③</div>
+        <h3>Exports</h3>
+        <p>A copy of a version pulled out for sharing, such as a document handed to an investor or an advisor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEW WORKFLOW / PRODUCT UI ============ -->
+<section class="sec-pad" style="padding-top:0;" data-screen-label="Review workflow proof">
+  <div class="wrap">
+    <div class="showcase-row">
+      <div class="showcase-copy reveal">
+        <span class="eyebrow">Review, not reconstruction</span>
+        <h2>See what changed, <span class="accent-line">who it affected, and when.</span></h2>
+        <p class="lead">Each version lists the transactions that produced it, a plain-language summary of the change, and the ownership context it affected. Founders review their own history; advisors review the same history across every client they support.</p>
+        <ul class="feat-list">
+          <li><span class="ck">✓</span> Every version linked back to the transactions that built it</li>
+          <li><span class="ck">✓</span> Change summaries in plain language, not raw ledger entries</li>
+          <li><span class="ck">✓</span> Ownership context shown alongside each change</li>
+        </ul>
+      </div>
+      <div class="showcase-art reveal" style="transition-delay:.1s">
+        <div class="art-frame">
+          <div style="padding:20px;font-size:12.5px;">
+            <div class="cap-head">
+              <h5 style="font-family:var(--serif);font-size:18px;font-weight:600;">Version history — Acme Corp LLC</h5>
+              <span class="badge-live"><span class="d"></span> v41 current</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:10px;margin-top:6px;">
+              <div style="border:1px solid var(--coral-line);background:var(--coral-wash);border-radius:11px;padding:13px 16px;">
+                <div style="display:flex;justify-content:space-between;align-items:baseline;">
+                  <span style="font-weight:600;color:var(--ink);">v41 · Sep 12, 2026</span>
+                  <span style="font-family:var(--mono);font-size:11px;color:var(--coral-ink-s);">Current</span>
+                </div>
+                <div style="margin-top:4px;color:var(--ink);">SAFE added for Catalyst Ventures, $500,000 at a $12M cap.</div>
+                <div style="margin-top:6px;font-family:var(--mono);font-size:11px;color:var(--faint);">Ownership: option pool unaffected until conversion. 1 transaction.</div>
+                <a class='more' href='#' style='margin-top:8px;display:inline-block;font-size:13px;' aria-disabled="true">Review this version →</a>
+              </div>
+              <div style="border:1px solid var(--line);border-radius:11px;padding:13px 16px;">
+                <div style="display:flex;justify-content:space-between;align-items:baseline;">
+                  <span style="font-weight:600;color:var(--ink);">v40 · Aug 22, 2026</span>
+                  <span style="font-family:var(--mono);font-size:11px;color:var(--faint);">Archived</span>
+                </div>
+                <div style="margin-top:4px;color:var(--ink);">Option grants issued to 2 employees, 45,000 shares combined.</div>
+                <div style="margin-top:6px;font-family:var(--mono);font-size:11px;color:var(--faint);">Ownership: option pool reduced from 14.4% to 14.0%. 2 transactions.</div>
+                <a class='more' href='#' style='margin-top:8px;display:inline-block;font-size:13px;' aria-disabled="true">Review this version →</a>
+              </div>
+              <div style="border:1px solid var(--line);border-radius:11px;padding:13px 16px;">
+                <div style="display:flex;justify-content:space-between;align-items:baseline;">
+                  <span style="font-weight:600;color:var(--ink);">v39 · Jul 3, 2026</span>
+                  <span style="font-family:var(--mono);font-size:11px;color:var(--faint);">Archived</span>
+                </div>
+                <div style="margin-top:4px;color:var(--ink);">Series A closed. Catalyst Ventures issued 2,480,000 preferred shares.</div>
+                <div style="margin-top:6px;font-family:var(--mono);font-size:11px;color:var(--faint);">Ownership: founders diluted from 61.0% to 48.6%. 1 transaction.</div>
+                <a class='more' href='#' style='margin-top:8px;display:inline-block;font-size:13px;' aria-disabled="true">Review this version →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOR ADVISORS ============ -->
+<section class="sec-pad" data-screen-label="For advisors" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+  <div class="wrap-narrow center">
+    <span class="eyebrow center reveal">For CFOs, advisors &amp; accountants</span>
+    <h2 class="section-title reveal" style="margin-top:20px;">The same history, <span class="accent-line">across every client.</span></h2>
+    <p class="lead reveal" style="margin-top:22px;">When a client asks what changed since the last time you looked, the version history has the answer without a call to the founder. Review is separate from writing to the ledger, so nothing changes until the client commits it.</p>
+  </div>
+</section>
+
+<!-- ============ CROSS-LINKS ============ -->
+<section class="sec-pad" data-screen-label="Explore">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Related</span>
+      <h2 class="section-title" style="margin-top:18px;">More on the cap table.</h2>
+    </div>
+    <div class="xlinks">
+      <a class='xlink reveal' href='./cap-table'>
+        <span class="xt">Cap table</span>
+        <span class="xd">The reconciled ledger the version history is built from.</span>
+        <span class="xm">Explore →</span>
+      </a>
+      <a class='xlink reveal' href='./scenario-modeling' style='transition-delay:.04s'>
+        <span class="xt">Scenario modeling</span>
+        <span class="xd">Model a change before it becomes a version.</span>
+        <span class="xm">Explore →</span>
+      </a>
+      <a class='xlink reveal' href='./for-advisors' style='transition-delay:.08s'>
+        <span class="xt">For advisors</span>
+        <span class="xd">Review history across every client you support.</span>
+        <span class="xm">Explore →</span>
+      </a>
+      <a class='xlink reveal' href='./for-founders' style='transition-delay:.12s'>
+        <span class="xt">For founders</span>
+        <span class="xd">Keep your own company continuously ready.</span>
+        <span class="xm">Explore →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="sec-pad" style="padding-top:0;" data-screen-label="Final CTA">
+  <div class="wrap">
+    <div class="final-card reveal">
+      <span class="eyebrow on-dark" style="justify-content:center;display:flex;">Cap table version history</span>
+      <h2 class="display" style="margin-top:22px;">Know what changed in your cap table.</h2>
+      <p class="lead">Every transaction recorded, every version kept, reviewable by you and by the advisors you work with.</p>
+      <div class="hero-cta">
+        <a class="btn btn-accent btn-lg" href="https://app.diligenceready.com/signup?src=cap-table-version-history">Start free <span class="arr">→</span></a>
+        <a class="btn btn-ghost btn-lg" href="./cap-table">Explore cap table software</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+<div class="mcta" id="mcta"><a class="p" href="https://app.diligenceready.com/signup?src=cap-table-version-history">Start free <span class="arr">→</span></a><a class='s' href='./#contact'>Contact</a></div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a aria-label='Diligence Ready' class='brand on-dark' href='./'>
+          <span class="mono-circle">dr</span>
+          <span class="wordmark">Diligence Ready<span class="dot">.</span></span>
+        </a>
+        <div class="promise">Readiness is the standard.</div>
+      </div>
+      <div class="foot-col">
+        <h6>Product</h6>
+        <a href='./cap-table'>Cap table</a>
+        <a href='./scenario-modeling'>What-if modeling</a>
+        <a href='./diligence-room'>Diligence room</a>
+        <a href='./ai-assistant'>AI assistant</a>
+        <a href='./for-advisors'>For Trusted Advisors</a>
+        <a href='./features'>All features</a>
+      </div>
+      <div class="foot-col">
+        <h6>Company</h6>
+        <a href='./why-diligence-ready'>Why Diligence Ready</a>
+        <a href='./#contact'>Request a demo</a>
+        <a href='./pricing'>Pricing</a>
+        <a href='./#contact'>Become a Trusted Advisor</a>
+        <a href='./#contact'>Contact</a>
+      </div>
+      <div class="foot-col">
+        <h6>Legal</h6>
+        <a href='./privacy'>Privacy</a>
+        <a href='./terms'>Terms</a>
+        <a href='./security'>Security &amp; trust</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Diligence Ready. All rights reserved.</span>
+      <div class="legal"><span>diligenceready.com</span><span>Built for the way modern founders raise.</span></div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ REVEAL JS ============ -->
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+  onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
+  if (!document.hidden) {
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  }
+
+  // Product dropdown — click/keyboard toggle (hover handled in CSS)
+  document.querySelectorAll('[data-dd]').forEach(dd => {
+    const btn = dd.querySelector('.nav-dd-btn');
+    btn.addEventListener('click', (e) => { e.stopPropagation(); const open = dd.classList.toggle('open'); btn.setAttribute('aria-expanded', open); });
+  });
+  document.addEventListener('click', () => document.querySelectorAll('[data-dd].open').forEach(dd => { dd.classList.remove('open'); dd.querySelector('.nav-dd-btn').setAttribute('aria-expanded', 'false'); }));
+
+  // Mobile menu toggle
+  const burger = document.getElementById('navBurger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (burger && mobileMenu) {
+    const closeMenu = () => { burger.classList.remove('open'); mobileMenu.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; document.body.classList.remove('menu-open'); };
+    burger.addEventListener('click', () => {
+      const open = burger.classList.toggle('open');
+      mobileMenu.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.style.overflow = open ? 'hidden' : ''; document.body.classList.toggle('menu-open', open);
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  }
+</script>
+
+<script>
+  (function(){
+    var bar = document.getElementById('mcta'); if(!bar) return;
+    var stop = document.getElementById('contact') || document.querySelector('footer');
+    var tick = function(){
+      var past = window.scrollY > 520;
+      var near = stop && stop.getBoundingClientRect().top < window.innerHeight * 0.75;
+      bar.classList.toggle('up', past && !near);
+    };
+    tick(); window.addEventListener('scroll', tick, { passive: true });
+  })();
+</script>
+
+<!-- ============ COOKIE NOTICE ============ -->
+<!-- ============ COOKIE NOTICE ============ -->
+<div id="dr-cookie-root" hidden role="dialog" aria-modal="true" aria-labelledby="dr-cookie-title">
+  <div id="dr-cookie-card">
+    <div id="dr-cookie-main">
+      <h2 id="dr-cookie-title">diligenceready.com</h2>
+      <p>We use cookies to run the site and improve it.</p>
+      <button type="button" id="dr-cookie-accept">Accept all</button>
+      <button type="button" id="dr-cookie-essential">Essential only</button>
+      <button type="button" id="dr-cookie-prefs-open">Preferences</button>
+      <a class='dr-cookie-legal' href='./privacy'>Privacy Policy</a>
+    </div>
+    <div id="dr-cookie-prefs-panel" hidden>
+      <h2>Cookie Preferences</h2>
+      <p>Choose which cookies we can use. Essential cookies are always on.</p>
+      <label><input type="checkbox" checked disabled /> Essential (required)</label>
+      <label><input type="checkbox" id="dr-cookie-analytics" /> Analytics</label>
+      <label><input type="checkbox" id="dr-cookie-marketing" /> Marketing</label>
+      <button type="button" id="dr-cookie-save">Save Preferences</button>
+      <button type="button" id="dr-cookie-back">Back</button>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var KEY = 'dr_cookie_consent';
+  var root = document.getElementById('dr-cookie-root');
+  if (!root) return;
+  var main = document.getElementById('dr-cookie-main');
+  var panel = document.getElementById('dr-cookie-prefs-panel');
+  var cbA = document.getElementById('dr-cookie-analytics');
+  var cbM = document.getElementById('dr-cookie-marketing');
+
+  function apply(c) {
+    if (typeof gtag !== 'function') return;
+    gtag('consent', 'update', {
+      analytics_storage: c.analytics ? 'granted' : 'denied',
+      ad_storage: c.marketing ? 'granted' : 'denied',
+      ad_user_data: c.marketing ? 'granted' : 'denied',
+      ad_personalization: c.marketing ? 'granted' : 'denied'
+    });
+  }
+  function save(c) {
+    c.ts = new Date().toISOString();
+    try { localStorage.setItem(KEY, JSON.stringify(c)); } catch (e) {}
+    apply(c);
+    root.hidden = true;
+  }
+  function read() {
+    try { return JSON.parse(localStorage.getItem(KEY)); } catch (e) { return null; }
+  }
+
+  var stored = read();
+  if (stored && typeof stored.analytics === 'boolean') {
+    apply(stored);
+  } else {
+    root.hidden = false;
+  }
+
+  document.getElementById('dr-cookie-accept').addEventListener('click', function () {
+    save({ analytics: true, marketing: true });
+  });
+  document.getElementById('dr-cookie-essential').addEventListener('click', function () {
+    save({ analytics: false, marketing: false });
+  });
+  document.getElementById('dr-cookie-prefs-open').addEventListener('click', function () {
+    main.hidden = true; panel.hidden = false;
+  });
+  document.getElementById('dr-cookie-back').addEventListener('click', function () {
+    panel.hidden = true; main.hidden = false;
+  });
+  document.getElementById('dr-cookie-save').addEventListener('click', function () {
+    save({ analytics: !!cbA.checked, marketing: !!cbM.checked });
+  });
+})();
+</script>
+
+
+<script>
+// signup_click: GA4 event on every signup / Start free link (21 Oct 2026)
+document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href*="app.diligenceready.com/signup"]'):null;if(!a||typeof gtag!=='function')return;var s='';try{s=new URL(a.href).searchParams.get('src')||''}catch(x){}gtag('event','signup_click',{src:s,link_text:(a.textContent||'').replace(/\s+/g,' ').trim().slice(0,60),link_url:a.href});});
+</script>
+<div id="dr-preview-flag" style="position:fixed;left:16px;bottom:16px;z-index:9999;padding:8px 12px;border-radius:8px;background:#0F1E3D;color:#fff;font:500 12px/1.3 Inter,system-ui,sans-serif;box-shadow:0 8px 24px -8px rgba(0,0,0,.4);pointer-events:none;">Preview copy · not the live site</div>
+<script>document.addEventListener("submit",function(e){var f=e.target;if(f&&f.tagName==="FORM"){e.preventDefault();var b=f.querySelector("[type=submit]");if(b){b.textContent="Forms are off in this preview";b.disabled=true;}}},true);</script>
+</body>
+</html>
