@@ -128,3 +128,16 @@
   .tr-hot::after { animation: none; }
   .tr-copy, .tr-tip { animation: none; }
 }
+
+/* full screen button: icon + label */
+.tr-ctl.tr-full { display: inline-flex; align-items: center; width: auto; gap: 8px; padding: 0 13px 0 11px; font: 500 13.5px/1 var(--sans); white-space: nowrap; }
+.tr-ctl.tr-full svg { flex: none; }
+/* full screen: an outline button (icon on the left), same height and shape as Start free beside it */
+.tr-ctl.tr-full { height: 34px; padding: 0 14px 0 12px; border: 1px solid rgba(197,214,242,.35); border-radius: 9px; background: rgba(15,30,61,.55); font: 500 14px/1 var(--sans); color: #fff; }
+.tr-ctl.tr-full:hover { background: rgba(197,214,242,.12); border-color: rgba(197,214,242,.65); }
+.tr-ctl.tr-full svg { width: 14px; height: 14px; }
+
+/* pulsing outline: grows the same distance on every side (a scale made wide boxes pulse unevenly) */
+.tr-hot::after { inset: -2px; animation: trPulseEven 1.8s ease-out infinite; }
+@keyframes trPulseEven { 0% { inset: -2px; opacity: .9; } 100% { inset: -14px; opacity: 0; border-radius: 16px; } }
+@media (prefers-reduced-motion: reduce) { .tr-hot::after { animation: none; } }

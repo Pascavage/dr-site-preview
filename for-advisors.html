@@ -140,23 +140,24 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..700,0..100,0..1;1,9..144,400..600,0..100,0..1&family=Inter:wght@300;400;450;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css" />
-<link rel="stylesheet" href="home.css?v=1110" />
+<link rel="stylesheet" href="styles.css?v=1112" />
+<link rel="stylesheet" href="home.css?v=1112" />
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
 
+<script src="preview-video.js"></script>
 </head>
 <body class="home-page">
 
 <!-- ============ NAV ============ -->
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
-    <a class="brand" href="#top" aria-label="Diligence Ready">
+    <a class="brand" href="./" aria-label="Diligence Ready">
       <span class="mono-circle">dr</span>
       <span class="wordmark">Diligence Ready<span class="dot">.</span></span>
     </a>
     <nav class="nav-links">
       <div class="nav-dd" data-dd>
-        <button type="button" class="nav-dd-btn" aria-expanded="false">Product <span class="caret">▾</span></button>
+        <button type="button" class="nav-dd-btn" aria-expanded="false">Product <svg class="caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4.75 6 7.75l3-3"/></svg></button>
         <div class="nav-dd-menu">
           <a href='./cap-table'><span class="t">Cap Table</span><span class="d">Every security class, reconciled</span></a>
           <a href='./scenario-modeling'><span class="t">Scenario Modeling</span><span class="d">Rounds, dilution &amp; waterfalls</span></a>
@@ -167,13 +168,13 @@
         </div>
       </div>
       <a href='./for-advisors'>Trusted Advisors</a>
-      <a href='./tour'>Tour</a>
+      <a href='./tour'>Take a tour</a>
       <a href='./learn/'>Learn</a>
       <a href='./pricing'>Pricing</a>
     </nav>
     <div class="nav-cta">
-      <a class="link sales-link" href="./#contact">Contact us</a>
-      <a class="link" href="https://app.diligenceready.com/login">Customer Login</a>
+      <a class="link sales-link" href="./#contact"><svg class="nav-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Contact</a>
+      <a class="link" href="https://app.diligenceready.com/login"><svg class="nav-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="M10 17l5-5-5-5"/><path d="M15 12H3"/></svg>Login</a>
       <a class="btn btn-accent" href="https://app.diligenceready.com/signup?src=for-advisors">Sign up <span class="arr">→</span></a>
     </div>
     <a class="btn btn-accent nav-cta-m" href="https://app.diligenceready.com/signup?src=for-advisors">Start free</a>
@@ -189,13 +190,13 @@
   <a class='sub' href='./features'>All Features</a>
   <div class="mm-group">Explore</div>
   <a href='./for-advisors'>Trusted Advisors</a>
-  <a href='./tour'>Product tour</a>
+  <a href='./tour'>Take a tour</a>
   <a href='./learn/'>Learn</a>
   <a href='./pricing'>Pricing</a>
   <a href='./why-diligence-ready'>Why Diligence Ready</a>
   <div class="mm-cta">
-    <a class='btn btn-ghost btn-lg' href='./#contact'>Contact us</a>
-    <a class="btn btn-ghost btn-lg" href="https://app.diligenceready.com/login">Customer Login</a>
+    <a class='btn btn-ghost btn-lg' href='./#contact'>Contact</a>
+    <a class="btn btn-ghost btn-lg" href="https://app.diligenceready.com/login">Login</a>
     <a class="btn btn-accent btn-lg" href="https://app.diligenceready.com/signup?src=for-advisors">Sign up</a>
   </div>
 </div>
@@ -225,7 +226,7 @@
         <span><svg viewBox="0 0 15 15" fill="none" stroke="#FF6B5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1.875 1.875H6.25V6.25H1.875V1.875Z"/><path d="M8.75 1.875H13.125V6.25H8.75V1.875Z"/><path d="M8.75 8.75H13.125V13.125H8.75V8.75Z"/><path d="M1.875 8.75H6.25V13.125H1.875V8.75Z"/></svg> Clients pay for usage and upgrades</span>
       </div>
     </div>
-    <div class="lp-side" aria-label="Every client in one place">
+    <div class="lp-side" aria-label="Preparing a client for diligence">
       <div class="lp-deco" aria-hidden="true">
         <img class="hm-deco hm-drift" src="assets/home/hero/shot-glow.svg" alt="" style="left:-4.19%;top:-23.32%;width:108.37%;height:134.99%;--dx:22px;--dy:14px;--s:1.1;--t:18s">
         <img class="hm-deco hm-drift" src="assets/home/hero/glow.svg" alt="" style="left:-5.65%;top:-9.15%;width:111.29%;height:128.30%;--dx:22px;--dy:16px;--s:1.12;--t:16s;--d:-4s">
@@ -241,26 +242,19 @@
         <img class="hm-deco hm-drift" src="assets/home/hero/deco3.svg" alt="" style="left:4.16%;top:4.92%;width:11.86%;height:18.87%;--dx:24px;--dy:18px;--s:1.12;--t:17s;--d:-3s">
         <img class="hm-deco hm-drift" src="assets/home/hero/deco0.svg" alt="" style="left:-0.40%;top:-1.88%;width:18.32%;height:29.15%;--dx:30px;--dy:20px;--s:1.12;--t:20s">
       </div>
-      <div class="portfolio">
-        <div class="pf-top">
-          <div class="ttl"><span style="width:22px;height:22px;border-radius:6px;background:var(--midnight);color:#fff;display:grid;place-items:center;font-size:11px;font-weight:700;">S</span> Smith Advisory · Portfolio</div>
-          <div class="ct">14 companies</div>
+      <!-- The advisor preparing one client for diligence. Content and animation are built by lp-advisors.js. -->
+      <div class="portfolio dp" aria-label="An advisor preparing a client's diligence checklist">
+        <div class="dp-top">
+          <div class="dp-co"><span class="dp-av">A</span><div><div class="nm">Acme Corp LLC</div><div class="sub">Preparing for Series A · Smith Advisory</div></div></div>
+          <span class="status dp-badge st-review">8 items open</span>
         </div>
-        <div class="pf-row"><span class="av">AC</span><div><div class="nm">Acme Corp LLC</div><div class="sub">Series A · Founder Free</div></div><span class="status st-ready">Diligence ready</span></div>
-        <div class="pf-row"><span class="av" style="background:var(--coral)">HB</span><div><div class="nm">Harbor Logistics</div><div class="sub">Seed · raising now</div></div><span class="status st-review">3 items open</span></div>
-        <div class="pf-row"><span class="av" style="background:var(--midnight-3)">GT</span><div><div class="nm">Gritty Tech</div><div class="sub">Series B · Standard</div></div><span class="status st-ready">Diligence ready</span></div>
-        <div class="pf-row"><span class="av" style="background:#6b7689">IM</span><div><div class="nm">Innov Med</div><div class="sub">Pre-seed · onboarding</div></div><span class="status st-draft">Setting up</span></div>
-        <div class="pf-row"><span class="av" style="background:#3f6d8a">BH</span><div><div class="nm">Bluepeak Health</div><div class="sub">Series A · Standard</div></div><span class="status st-ready">Diligence ready</span></div>
-        <div class="pf-row"><span class="av" style="background:#7a5c99">RR</span><div><div class="nm">Ridgeline Robotics</div><div class="sub">Series A · Standard</div></div><span class="status st-ready">Diligence ready</span></div>
-        <div class="pf-row"><span class="av" style="background:var(--coral)">CF</span><div><div class="nm">Copperfield Foods</div><div class="sub">Seed · raising now</div></div><span class="status st-review">2 items open</span></div>
-        <div class="pf-row"><span class="av" style="background:#2f7a6b">SG</span><div><div class="nm">Summit Grid Energy</div><div class="sub">Series B · Standard</div></div><span class="status st-ready">Diligence ready</span></div>
-        <div class="pf-row"><span class="av" style="background:#6b7689">LH</span><div><div class="nm">Lakehouse Analytics</div><div class="sub">Pre-seed · onboarding</div></div><span class="status st-draft">Setting up</span></div>
-        <div class="pf-row"><span class="av" style="background:var(--midnight)">OP</span><div><div class="nm">Orchard Pay</div><div class="sub">Series A · Founder Free</div></div><span class="status st-ready">Diligence ready</span></div>
-        <div class="pf-row"><span class="av" style="background:#3f6d8a">TM</span><div><div class="nm">Tidewater Marine</div><div class="sub">Seed · Standard</div></div><span class="status st-ready">Diligence ready</span></div>
-        <div class="pf-row"><span class="av" style="background:var(--midnight-3)">NL</span><div><div class="nm">Northwind Labs</div><div class="sub">Seed · raising now</div></div><span class="status st-review">1 item open</span></div>
-        <div class="pf-row"><span class="av" style="background:#2f7a6b">HC</span><div><div class="nm">Halcyon Bio</div><div class="sub">Series A · Standard</div></div><span class="status st-ready">Diligence ready</span></div>
-        <div class="pf-row"><span class="av" style="background:#6b7689">KF</span><div><div class="nm">Keystone Freight</div><div class="sub">Pre-seed · onboarding</div></div><span class="status st-draft">Setting up</span></div>
-      <!-- swap for the real “all clients” screen from the app when Mike sends it -->
+        <div class="dp-prog">
+          <div class="dp-prog-row"><span><b class="dp-done">70</b> of 78 complete</span><span class="dp-pct">90%</span></div>
+          <div class="dp-bar"><span style="width:89.7%"></span></div>
+        </div>
+        <div class="dp-areas" role="list"></div>
+        <div class="dp-list"></div>
+      </div>
     </div>
   </div>
 </section>
@@ -311,12 +305,13 @@
       <p class="lead">Fractional CFOs, accounting firms, law firms, angel groups and PE firms: if you carry more than one company, they arrive with a clean ledger, current financials, and a room that already knows what’s missing. One workspace covers all of them, with secure, gated drill-down into each. The relationship stays yours.</p>
       </div>
       <div class="showcase-art reveal" style="transition-delay:.1s">
-      <!-- PLACEHOLDER: advisor video from Alan goes here (waiting on the file). Wire it like the homepage "Why we built this" lightbox. -->
-      <button type="button" class="lp-video" data-advisor-video aria-label="Why advisors run their book on Diligence Ready, a video from Alan Rihm (coming soon)">
+      <!-- Alan's product demo (Nov 2026). Web copy compressed from the 4K original; opens in a lightbox (home.js). -->
+      <button type="button" class="lp-video has-video" data-lb-src="media/diligence-ready-demo.mp4" data-lb-poster="media/diligence-ready-demo-poster.jpg" data-lb-title="Diligence Ready, from cap tables to data rooms" data-lb-meta="Alan Rihm · CEO &amp; Co-founder, Diligence Ready · 14:20" aria-label="Play the Diligence Ready product demo with Alan Rihm, 14 minutes">
+        <img class="lp-video-poster" src="media/diligence-ready-demo-poster.jpg" alt="" loading="lazy">
         <span class="lp-video-rings" aria-hidden="true"></span>
         <span class="lp-video-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#fff"><path d="M8 5.5v13l10.5-6.5z"/></svg></span>
-        <span class="lp-video-title">Why advisors run their book on Diligence Ready</span>
-        <span class="lp-video-foot"><span><strong>Alan Rihm</strong>CEO &amp; Co-founder, Diligence Ready</span><span class="lp-video-soon">Video coming soon</span></span>
+        <span class="lp-video-title">See it all, from cap tables to data rooms</span>
+        <span class="lp-video-foot"><span><strong>Alan Rihm</strong>CEO &amp; Co-founder, Diligence Ready</span><span class="lp-video-soon">14 min demo</span></span>
       </button>
       </div>
     </div>
@@ -521,7 +516,7 @@
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a class="brand" href="#top">
+        <a class="brand" href="./">
           <span class="mono-circle">dr</span>
           <span class="wordmark">Diligence Ready<span class="dot">.</span></span>
         </a>
@@ -536,6 +531,7 @@
         <a href='./ai-assistant'>AI assistant</a>
         <a href='./for-advisors'>For Trusted Advisors</a>
         <a href='./features'>All features</a>
+        <a href='./tour'>Take a tour</a>
       </div>
       <div class="foot-col">
         <h6>Company</h6>
@@ -619,36 +615,7 @@
   })();
 </script>
 
-<!-- ============ "WHY WE BUILT THIS" VIDEO (lightbox + floating chip) ============
-     Shown only when SHOW_FOUNDER_VIDEO is true in home.js. Sources are attached by home.js on first use,
-     so nothing downloads until the chip appears or someone opens the video. -->
-<div class="hm-lb" id="hmVideoBox" role="dialog" aria-modal="true" aria-labelledby="hmVideoTitle" hidden>
-  <div class="hm-lb-backdrop" data-lb-close></div>
-  <div class="hm-lb-card">
-    <div class="hm-lb-media">
-      <video controls playsinline preload="none" data-poster="media/why-we-built-this-poster.jpg" data-video-src="media/why-we-built-this"></video>
-      <button type="button" class="hm-lb-close" data-lb-close aria-label="Close video"><svg viewBox="0 0 24 24" fill="none" stroke="#0B162D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
-    </div>
-    <div class="hm-lb-caption">
-      <h2 id="hmVideoTitle">Why we built Diligence Ready</h2>
-      <p><strong>Alan Rihm</strong> · CEO &amp; Co-founder, Diligence Ready · <span class="hm-lb-dur">1:49</span></p>
-    </div>
-  </div>
-</div>
 
-<div class="hm-chip" id="hmChip" hidden>
-  <button type="button" class="hm-chip-open" aria-label="Play “Why we built this”, a 1 minute 49 second video from Alan Rihm">
-    <video muted loop playsinline preload="none" data-poster="media/why-we-built-this-poster-sm.jpg" data-video-src="media/why-we-built-this" aria-hidden="true"></video>
-    <span class="hm-chip-scrim" aria-hidden="true"></span>
-    <span class="hm-chip-cap" aria-hidden="true"><span class="k">ALAN RIHM · 1:49</span><span class="t">Why we built this</span></span>
-  </button>
-  <button type="button" class="hm-chip-sound" aria-pressed="false">
-    <svg class="i-muted" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M22 9l-6 6"/><path d="M16 9l6 6"/></svg>
-    <svg class="i-sound" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></svg>
-    <span>Unmute</span>
-  </button>
-  <button type="button" class="hm-chip-close" aria-label="Dismiss video"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
-</div>
 
 <!-- ============ COOKIE NOTICE ============ -->
 <div id="dr-cookie-root" hidden role="dialog" aria-modal="true" aria-labelledby="dr-cookie-title">
@@ -729,8 +696,9 @@
 // signup_click: GA4 event on every signup / Start free link (21 Oct 2026)
 document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href*="app.diligenceready.com/signup"]'):null;if(!a||typeof gtag!=='function')return;var s='';try{s=new URL(a.href).searchParams.get('src')||''}catch(x){}gtag('event','signup_click',{src:s,link_text:(a.textContent||'').replace(/\s+/g,' ').trim().slice(0,60),link_url:a.href});});
 </script>
-<script src="home.js?v=1110" defer></script>
-<script src="lp-advisors.js" defer></script>
+<script src="home.js?v=1112" defer></script>
+<script src="lp-advisors.js?v=1112" defer></script>
+<script src="nav.js?v=1112" defer></script>
 <div id="dr-preview-flag" style="position:fixed;left:16px;bottom:16px;z-index:9999;padding:8px 12px;border-radius:8px;background:#0F1E3D;color:#fff;font:500 12px/1.3 Inter,system-ui,sans-serif;box-shadow:0 8px 24px -8px rgba(0,0,0,.4);pointer-events:none;">Preview copy · not the live site</div>
 <script>document.addEventListener("submit",function(e){var f=e.target;if(f&&f.tagName==="FORM"){e.preventDefault();var b=f.querySelector("[type=submit]");if(b){b.textContent="Forms are off in this preview";b.disabled=true;}}},true);</script>
 </body>

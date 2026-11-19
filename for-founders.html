@@ -140,23 +140,24 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..700,0..100,0..1;1,9..144,400..600,0..100,0..1&family=Inter:wght@300;400;450;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css" />
-<link rel="stylesheet" href="home.css?v=1110" />
+<link rel="stylesheet" href="styles.css?v=1112" />
+<link rel="stylesheet" href="home.css?v=1112" />
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
 
+<script src="preview-video.js"></script>
 </head>
 <body class="home-page">
 
 <!-- ============ NAV ============ -->
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
-    <a class="brand" href="#top" aria-label="Diligence Ready">
+    <a class="brand" href="./" aria-label="Diligence Ready">
       <span class="mono-circle">dr</span>
       <span class="wordmark">Diligence Ready<span class="dot">.</span></span>
     </a>
     <nav class="nav-links">
       <div class="nav-dd" data-dd>
-        <button type="button" class="nav-dd-btn" aria-expanded="false">Product <span class="caret">▾</span></button>
+        <button type="button" class="nav-dd-btn" aria-expanded="false">Product <svg class="caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4.75 6 7.75l3-3"/></svg></button>
         <div class="nav-dd-menu">
           <a href='./cap-table'><span class="t">Cap Table</span><span class="d">Every security class, reconciled</span></a>
           <a href='./scenario-modeling'><span class="t">Scenario Modeling</span><span class="d">Rounds, dilution &amp; waterfalls</span></a>
@@ -167,13 +168,13 @@
         </div>
       </div>
       <a href='./for-advisors'>Trusted Advisors</a>
-      <a href='./tour'>Tour</a>
+      <a href='./tour'>Take a tour</a>
       <a href='./learn/'>Learn</a>
       <a href='./pricing'>Pricing</a>
     </nav>
     <div class="nav-cta">
-      <a class="link sales-link" href="./#contact">Contact us</a>
-      <a class="link" href="https://app.diligenceready.com/login">Customer Login</a>
+      <a class="link sales-link" href="./#contact"><svg class="nav-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Contact</a>
+      <a class="link" href="https://app.diligenceready.com/login"><svg class="nav-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="M10 17l5-5-5-5"/><path d="M15 12H3"/></svg>Login</a>
       <a class="btn btn-accent" href="https://app.diligenceready.com/signup?src=for-founders">Sign up <span class="arr">→</span></a>
     </div>
     <a class="btn btn-accent nav-cta-m" href="https://app.diligenceready.com/signup?src=for-founders">Start free</a>
@@ -189,13 +190,13 @@
   <a class='sub' href='./features'>All Features</a>
   <div class="mm-group">Explore</div>
   <a href='./for-advisors'>Trusted Advisors</a>
-  <a href='./tour'>Product tour</a>
+  <a href='./tour'>Take a tour</a>
   <a href='./learn/'>Learn</a>
   <a href='./pricing'>Pricing</a>
   <a href='./why-diligence-ready'>Why Diligence Ready</a>
   <div class="mm-cta">
-    <a class='btn btn-ghost btn-lg' href='./#contact'>Contact us</a>
-    <a class="btn btn-ghost btn-lg" href="https://app.diligenceready.com/login">Customer Login</a>
+    <a class='btn btn-ghost btn-lg' href='./#contact'>Contact</a>
+    <a class="btn btn-ghost btn-lg" href="https://app.diligenceready.com/login">Login</a>
     <a class="btn btn-accent btn-lg" href="https://app.diligenceready.com/signup?src=for-founders">Sign up</a>
   </div>
 </div>
@@ -217,7 +218,7 @@
       </div>
       <div class="hm-cta">
         <a class="hm-btn hm-btn-coral" href="https://app.diligenceready.com/signup?src=for-founders" data-cta="start_free" data-loc="hero">Start free <svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.33333 8H12.6667"/><path d="M8 3.33333L12.6667 8L8 12.6667"/></svg></a>
-        <a class="hm-btn hm-btn-outline" href="./tour" data-cta="tour" data-loc="hero"><svg viewBox="0 0 16 16" fill="none" stroke="#C5D6F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.6667 8C14.6667 11.6819 11.6819 14.6667 8 14.6667C4.3181 14.6667 1.33333 11.6819 1.33333 8C1.33333 4.3181 4.3181 1.33333 8 1.33333C11.6819 1.33333 14.6667 4.3181 14.6667 8Z"/><path d="M6.66667 5.33333L10.6667 8L6.66667 10.6667V5.33333Z" fill="#C5D6F2" stroke-width=".5"/></svg> Take the 2-minute tour</a>
+        <a class="hm-btn hm-btn-outline" href="./tour" data-cta="tour" data-loc="hero"><svg class="hm-ic-tour" viewBox="0 0 24 24" fill="none" stroke="#C5D6F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4.1 12 6"/><path d="m5.1 8-2.9-.8"/><path d="m6 12-1.9 2"/><path d="M7.2 2.2 8 5.1"/><path d="M9.04 9.71a.5.5 0 0 1 .67-.67l10.83 4.46a.5.5 0 0 1-.04.94l-4.28 1.32a1 1 0 0 0-.65.65l-1.32 4.28a.5.5 0 0 1-.94.04z"/></svg> Take the 2-minute tour</a>
       </div>
       <div class="hm-trust">
         <span><svg viewBox="0 0 15 15" fill="none" stroke="#FF6B5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.5 7.5V13.75H2.5V7.5"/><path d="M1.25 4.375H13.75V7.5H1.25V4.375Z"/><path d="M7.5 13.75V4.375"/><path d="M7.5 4.375H4.6875C4.2731 4.375 3.87567 4.21038 3.58265 3.91735C3.28962 3.62433 3.125 3.2269 3.125 2.8125C3.125 2.3981 3.28962 2.00067 3.58265 1.70765C3.87567 1.41462 4.2731 1.25 4.6875 1.25C6.875 1.25 7.5 4.375 7.5 4.375Z"/><path d="M7.5 4.375H10.3125C10.7269 4.375 11.1243 4.21038 11.4174 3.91735C11.7104 3.62433 11.875 3.2269 11.875 2.8125C11.875 2.3981 11.7104 2.00067 11.4174 1.70765C11.1243 1.41462 10.7269 1.25 10.3125 1.25C8.125 1.25 7.5 4.375 7.5 4.375Z"/></svg> Free forever for one company</span>
@@ -589,7 +590,7 @@
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a class="brand" href="#top">
+        <a class="brand" href="./">
           <span class="mono-circle">dr</span>
           <span class="wordmark">Diligence Ready<span class="dot">.</span></span>
         </a>
@@ -604,6 +605,7 @@
         <a href='./ai-assistant'>AI assistant</a>
         <a href='./for-advisors'>For Trusted Advisors</a>
         <a href='./features'>All features</a>
+        <a href='./tour'>Take a tour</a>
       </div>
       <div class="foot-col">
         <h6>Company</h6>
@@ -687,36 +689,7 @@
   })();
 </script>
 
-<!-- ============ "WHY WE BUILT THIS" VIDEO (lightbox + floating chip) ============
-     Shown only when SHOW_FOUNDER_VIDEO is true in home.js. Sources are attached by home.js on first use,
-     so nothing downloads until the chip appears or someone opens the video. -->
-<div class="hm-lb" id="hmVideoBox" role="dialog" aria-modal="true" aria-labelledby="hmVideoTitle" hidden>
-  <div class="hm-lb-backdrop" data-lb-close></div>
-  <div class="hm-lb-card">
-    <div class="hm-lb-media">
-      <video controls playsinline preload="none" data-poster="media/why-we-built-this-poster.jpg" data-video-src="media/why-we-built-this"></video>
-      <button type="button" class="hm-lb-close" data-lb-close aria-label="Close video"><svg viewBox="0 0 24 24" fill="none" stroke="#0B162D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
-    </div>
-    <div class="hm-lb-caption">
-      <h2 id="hmVideoTitle">Why we built Diligence Ready</h2>
-      <p><strong>Alan Rihm</strong> · CEO &amp; Co-founder, Diligence Ready · <span class="hm-lb-dur">1:49</span></p>
-    </div>
-  </div>
-</div>
 
-<div class="hm-chip" id="hmChip" hidden>
-  <button type="button" class="hm-chip-open" aria-label="Play “Why we built this”, a 1 minute 49 second video from Alan Rihm">
-    <video muted loop playsinline preload="none" data-poster="media/why-we-built-this-poster-sm.jpg" data-video-src="media/why-we-built-this" aria-hidden="true"></video>
-    <span class="hm-chip-scrim" aria-hidden="true"></span>
-    <span class="hm-chip-cap" aria-hidden="true"><span class="k">ALAN RIHM · 1:49</span><span class="t">Why we built this</span></span>
-  </button>
-  <button type="button" class="hm-chip-sound" aria-pressed="false">
-    <svg class="i-muted" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M22 9l-6 6"/><path d="M16 9l6 6"/></svg>
-    <svg class="i-sound" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></svg>
-    <span>Unmute</span>
-  </button>
-  <button type="button" class="hm-chip-close" aria-label="Dismiss video"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
-</div>
 
 <!-- ============ COOKIE NOTICE ============ -->
 <div id="dr-cookie-root" hidden role="dialog" aria-modal="true" aria-labelledby="dr-cookie-title">
@@ -797,7 +770,8 @@
 // signup_click: GA4 event on every signup / Start free link (21 Oct 2026)
 document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href*="app.diligenceready.com/signup"]'):null;if(!a||typeof gtag!=='function')return;var s='';try{s=new URL(a.href).searchParams.get('src')||''}catch(x){}gtag('event','signup_click',{src:s,link_text:(a.textContent||'').replace(/\s+/g,' ').trim().slice(0,60),link_url:a.href});});
 </script>
-<script src="home.js?v=1110" defer></script>
+<script src="home.js?v=1112" defer></script>
+<script src="nav.js?v=1112" defer></script>
 <div id="dr-preview-flag" style="position:fixed;left:16px;bottom:16px;z-index:9999;padding:8px 12px;border-radius:8px;background:#0F1E3D;color:#fff;font:500 12px/1.3 Inter,system-ui,sans-serif;box-shadow:0 8px 24px -8px rgba(0,0,0,.4);pointer-events:none;">Preview copy · not the live site</div>
 <script>document.addEventListener("submit",function(e){var f=e.target;if(f&&f.tagName==="FORM"){e.preventDefault();var b=f.querySelector("[type=submit]");if(b){b.textContent="Forms are off in this preview";b.disabled=true;}}},true);</script>
 </body>

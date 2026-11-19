@@ -5,7 +5,7 @@
 
   // "Why we built this": hero button, lightbox and floating chip. The one switch for all three.
   // Off for now (Oct 2026): waiting on a new video. Set to true to bring all three back.
-  var SHOW_FOUNDER_VIDEO = false;
+  var SHOW_FOUNDER_VIDEO = true;
 
   var HV = window.DR_HERO_VERSION || 'a';
   var reduceMotion = !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
@@ -51,26 +51,7 @@
     if (card) track('role_card_click', { card: card.dataset.roleCard, link_url: el.href || '' });
   });
 
-  // ---------------------------------------------------------------- logo hover (nav + footer)
-  // The shared logo is one masked image + one text run. Here (homepage only) we add nine real squares so
-  // the hover animation in home.css can move them individually; the wordmark stays still.
-  document.querySelectorAll('#nav .brand, footer .brand').forEach(function (brand) {
-    if (!brand.hasAttribute('aria-label')) brand.setAttribute('aria-label', 'Diligence Ready');
-    var mark = brand.querySelector('.mono-circle');
-    if (mark) {
-      var grid = document.createElement('span');
-      grid.className = 'hm-logo-grid';
-      grid.setAttribute('aria-hidden', 'true');
-      for (var i = 0; i < 9; i++) {
-        var cell = document.createElement('i');
-        cell.style.setProperty('--d', ((i % 3) + Math.floor(i / 3)) * 55 + 'ms');   // diagonal ripple
-        if (i === 8) cell.className = 'is-coral';
-        grid.appendChild(cell);
-      }
-      mark.appendChild(grid);
-    }
-    brand.classList.add('hm-logo');
-  });
+  // logo hover squares + current-page marker in the nav: nav.js (shared by every page)
 
   // ---------------------------------------------------------------- background "universe"
   // Soft dot patches (the advisor card's grid), occasional faint ring groups (2-3 concentric rings), blurred
@@ -274,7 +255,8 @@
   }
 
   function setAudience(next) {
-    if (next === aud || !rotItems[next]) return;
+    // the landing pages have one audience only, so there is nothing to rotate to
+    if (next === aud || !rotItems[next] || !rotItems[aud]) return;
     var out = rotItems[aud], inn = rotItems[next];
     clearTimeout(swapTimer);
     Object.keys(rotItems).forEach(function (k) { rotItems[k].classList.remove('is-out', 'is-in', 'is-pending'); });
@@ -332,7 +314,7 @@
   if (!reduceMotion) setAuto(true);              // reduced motion: no auto-rotation, clicks crossfade
   if (whyBtn) whyBtn.hidden = !SHOW_FOUNDER_VIDEO;
   var standIn = hero.querySelector('[data-video-stand-in]');   // "Contact us" holds the spot while the video is off
-  if (standIn) standIn.hidden = SHOW_FOUNDER_VIDEO;
+  if (standIn) standIn.hidden = SHOW_FOUNDER_VIDEO;   // Watch demo takes Talk to us's spot
 
   // ---------------------------------------------------------------- "Why we built this" video
   if (SHOW_FOUNDER_VIDEO) setupVideo();
@@ -354,7 +336,8 @@
       poster(v);
       if (v.dataset.loaded) return;
       var base = v.dataset.videoSrc;
-      [['webm', 'video/webm'], ['mp4', 'video/mp4']].forEach(function (s) {
+      var types = (v.dataset.videoTypes || 'webm,mp4').split(',');
+      [['webm', 'video/webm'], ['mp4', 'video/mp4']].filter(function (s) { return types.indexOf(s[0]) > -1; }).forEach(function (s) {
         var el = document.createElement('source');
         el.src = base + '.' + s[0];
         el.type = s[1];
@@ -417,7 +400,7 @@
       else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
       else if (!box.contains(document.activeElement)) { e.preventDefault(); first.focus(); }
     }, true);
-    if (whyBtn) whyBtn.addEventListener('click', function () { openBox('hero_button', whyBtn); });
+    if (whyBtn && !whyBtn.hasAttribute('data-lb-src')) whyBtn.addEventListener('click', function () { openBox('hero_button', whyBtn); });
 
     // ---- floating chip: slides up once the hero is mostly out of view (about one screen down)
     function dismissed() { try { return sessionStorage.getItem(DISMISS_KEY) === '1'; } catch (e) { return false; } }
@@ -595,34 +578,7 @@
   document.body.appendChild(tag);
 })();
 
-/* No widows: glue the last two words of every text block together so a line
-   never ends with one word on its own. Runs once on load; CSS text-wrap:pretty
-   does the same job in browsers that support it. */
-(function () {
-  'use strict';
-  var SEL = 'h1,h2,h3,h4,p,li,dd,dt,summary,blockquote,figcaption,.st,.how-note,.hm-lead,.hm-card-link,.lp-tier-n';
-  function glue(el) {
-    var tw = document.createTreeWalker(el, NodeFilter.SHOW_TEXT), nodes = [], n;
-    while ((n = tw.nextNode())) nodes.push(n);
-    var words = 0;
-    nodes.forEach(function (t) { words += (t.data.match(/\S+/g) || []).length; });
-    if (words < 4) return;
-    for (var i = nodes.length - 1; i >= 0; i--) {
-      var d = nodes[i].data, trimmed = d.replace(/\s+$/, '');
-      if (!trimmed) continue;
-      var sp = trimmed.search(/[ \t\n]+\S+$/);
-      if (sp > 0) { nodes[i].data = trimmed.slice(0, sp) + ' ' + trimmed.slice(sp).replace(/^\s+/, '') + d.slice(trimmed.length); return; }
-      // the last word starts this node (e.g. inside <em>): glue the space before it
-      for (var j = i - 1; j >= 0; j--) {
-        if (/\s$/.test(nodes[j].data)) { nodes[j].data = nodes[j].data.replace(/\s+$/, ' '); return; }
-        if (/\S/.test(nodes[j].data)) return;
-      }
-      return;
-    }
-  }
-  function run() { document.querySelectorAll(SEL).forEach(glue); }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
-})();
+/* No widows: nav.js (shared by every page) */
 
 /* Section eyebrows: draw the highlighter stroke on as each one scrolls into view. */
 (function () {
@@ -654,4 +610,45 @@
       link.click();
     });
   });
+})();
+
+/* Wide video lightbox: any element with data-lb-src opens its video in a lightbox
+   (the advisor page's product demo). Uses the same look as the homepage's "Why we built this". */
+(function () {
+  'use strict';
+  var triggers = document.querySelectorAll('[data-lb-src]');
+  if (!triggers.length) return;
+  var box, video, title, meta, lastFocus;
+  function build() {
+    box = document.createElement('div');
+    box.className = 'hm-lb hm-lb-wide'; box.hidden = true;
+    box.setAttribute('role', 'dialog'); box.setAttribute('aria-modal', 'true'); box.setAttribute('aria-labelledby', 'lbWideTitle');
+    box.innerHTML = '<div class="hm-lb-backdrop" data-lb-x></div><div class="hm-lb-card"><div class="hm-lb-media"><video controls playsinline preload="none"></video>' +
+      '<button type="button" class="hm-lb-close" data-lb-x aria-label="Close video"><svg viewBox="0 0 24 24" fill="none" stroke="#0B162D" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button></div>' +
+      '<div class="hm-lb-caption"><h2 id="lbWideTitle"></h2><p></p></div></div>';
+    document.body.appendChild(box);
+    video = box.querySelector('video'); title = box.querySelector('h2'); meta = box.querySelector('p');
+    box.addEventListener('click', function (e) { if (e.target.closest('[data-lb-x]')) close(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && box && !box.hidden) close(); });
+  }
+  function open(t) {
+    if (!box) build();
+    lastFocus = t;
+    if (video.getAttribute('src') !== t.dataset.lbSrc) { video.src = t.dataset.lbSrc; video.poster = t.dataset.lbPoster || ''; }
+    title.textContent = t.dataset.lbTitle || '';
+    meta.textContent = t.dataset.lbMeta || '';
+    box.hidden = false; void box.offsetWidth; box.classList.add('is-open');
+    document.documentElement.classList.add('hm-lb-lock');
+    box.querySelector('.hm-lb-close').focus();
+    var p = video.play(); if (p && p.catch) p.catch(function () {});
+    try { if (window.gtag) window.gtag('event', 'video_open', { video: t.dataset.lbSrc }); } catch (e) {}
+  }
+  function close() {
+    video.pause();
+    box.classList.remove('is-open');
+    document.documentElement.classList.remove('hm-lb-lock');
+    setTimeout(function () { box.hidden = true; }, 250);
+    if (lastFocus) lastFocus.focus();
+  }
+  triggers.forEach(function (t) { t.addEventListener('click', function () { open(t); }); });
 })();

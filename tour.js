@@ -94,7 +94,7 @@
   var bBack = el('button', 'tr-ctl', BACK); bBack.type = 'button'; bBack.setAttribute('aria-label', 'Back');
   var bFwd = el('button', 'tr-ctl', ARROW); bFwd.type = 'button'; bFwd.setAttribute('aria-label', 'Forward');
   controls.appendChild(bRestart); controls.appendChild(bBack); controls.appendChild(bFwd);
-  var bFull = el('button', 'tr-ctl tr-full', FULL); bFull.type = 'button'; bFull.setAttribute('aria-label', 'Full screen');
+  var bFull = el('button', 'tr-ctl tr-full', FULL + '<span>Full screen</span>'); bFull.type = 'button';
   // Start free is always one click away, on every screen of the tour
   var cta = el('a', 'tr-cta', 'Start free ' + ARROW); cta.href = SIGNUP; cta.setAttribute('data-cta', 'start_free'); cta.setAttribute('data-loc', 'tour');
   var topRight = el('div', 'tr-topright'); topRight.appendChild(cta); topRight.appendChild(bFull);
@@ -264,7 +264,7 @@
     if (e.key === 'Escape') closeMenu();
   });
   window.addEventListener('resize', function () { if (state.v === 'step') placeTip(); });
-  document.addEventListener('fullscreenchange', function () { setTimeout(function () { if (state.v === 'step') placeTip(); }, 60); });
+  document.addEventListener('fullscreenchange', function () { bFull.querySelector('span').textContent = document.fullscreenElement ? 'Exit full screen' : 'Full screen'; setTimeout(function () { if (state.v === 'step') placeTip(); }, 60); });
   shot.addEventListener('load', function () { if (state.v === 'step') placeTip(); });
 
   // ------------------------------------------------------------------ start (deep link with #chapter)
