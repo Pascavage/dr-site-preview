@@ -1888,3 +1888,16 @@ header.nav > .nav-inner { max-width: none; padding-left: clamp(20px, 3vw, 48px);
 
 /* breadcrumbs are hidden on every page (the structured data for search engines stays in each page) */
 .breadcrumb { display: none !important; }
+
+
+/* ============ WELCOME PAGES (/welcome-founders, /welcome-advisors): after sign-up ============ */
+.wl-steps { margin-top: 0; }
+.wl-steps .step { gap: 12px; }
+.wl-steps .step .wl-go { align-self: flex-start; margin-top: auto; }
+.wl-steps .step p { margin-bottom: 8px; }
+.wl-help { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 28px; margin-top: 36px; font-size: 15px; color: var(--muted); }
+.wl-help-k { font-weight: 600; color: var(--ink); }
+.wl-help a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(255,107,92,.55); }
+.wl-help a:hover { color: var(--coral-ink-s); }
+@media (max-width: 860px) { .wl-help { flex-direction: column; gap: 10px; } }
+.wl-sec { padding-bottom: clamp(16px, 2vw, 28px) !important; }
