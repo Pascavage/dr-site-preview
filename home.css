@@ -754,3 +754,5 @@ h1, h2, h3, h4, li, blockquote, summary, .hm-lead { text-wrap: pretty; }
 
 /* founder page: the video + quote block is hidden for now, so the pricing card sits at the top of its section */
 .lp-proof-hidden[hidden] + .lp-price { margin-top: 0; }
+/* with that block hidden, tighten the space above and below the pricing card */
+.home-page #proof:has(.lp-proof-hidden[hidden]) { padding-top: clamp(8px, 1.2vw, 16px); padding-bottom: clamp(16px, 2vw, 28px); }
