@@ -751,3 +751,6 @@ h1, h2, h3, h4, li, blockquote, summary, .hm-lead { text-wrap: pretty; }
   .lp-side { left: 560px; width: min(600px, calc((50vw - 60px) / 1.1)); zoom: 1.1; }   /* zoom scales left too: 560 x 1.1 = 616px */
 }
 .hm-btn svg.hm-ic-tour { width: 20px; height: 20px; }
+
+/* founder page: the video + quote block is hidden for now, so the pricing card sits at the top of its section */
+.lp-proof-hidden[hidden] + .lp-price { margin-top: 0; }
