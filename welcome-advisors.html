@@ -47,7 +47,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@300;400;450;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css?v=1112" />
 </head>
-<body>
+<body data-welcome="advisors">
 
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
@@ -103,13 +103,13 @@
 
 <main>
 <!-- WELCOME PAGE (welcome-advisors): where new advisors land right after signing up.
-     Mike: point the app's post-sign-up redirect here. The step buttons all open the app for now;
+     Mike: point the app's post-sign-up redirect here, adding ?name=FIRST&company=COMPANY so the greeting is personal (welcome.js; both optional). The step buttons all open the app for now;
      swap each href for the matching screen in the app when you have it. Not in the sitemap, and noindex. -->
 <section class="sec-pad-sm page-hero" data-screen-label="Welcome hero">
   <div class="wrap">
     <div class="sec-head center reveal" style="margin-top:8px;">
-      <span class="eyebrow center">Welcome, trusted advisors</span>
-      <h1 class="section-title" style="margin-top:20px;">Welcome. <span class="accent-line">Let’s set up your first client.</span></h1>
+      <span class="eyebrow center" data-wl="eyebrow">Welcome, trusted advisors</span>
+      <h1 class="section-title" style="margin-top:20px;"><span data-wl="lead">Welcome.</span> <span class="accent-line" data-wl="accent">Let’s set up your first client.</span></h1>
       <p class="lead" style="margin-top:20px;max-width:600px;margin-left:auto;margin-right:auto;">Diligence Ready is free for advisors. Add a client, bring them in, and work through what they need, all in one place.</p>
     </div>
   </div>
@@ -160,6 +160,7 @@
 </section>
 <div class="hm-uni" id="hmUniverse" aria-hidden="true"></div>
 </main>
+<script src="welcome.js?v=1120"></script>
 <div class="mcta" id="mcta"><a class="p" href="https://app.diligenceready.com/">Open the app <span class="arr">→</span></a><a class='s' href='./#contact'>Contact</a></div>
 
 <footer data-screen-label="Footer">
