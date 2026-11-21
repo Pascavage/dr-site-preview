@@ -63,6 +63,10 @@ body[data-welcome] .lead { color: var(--ice, #C5D6F2); }
 .wk-chip-bar.is-ready .wk-bar b { background: #2fa66a; }
 .wk-chip-bar.is-ready small { color: #7fd6a6; opacity: 1; }
 .wk-chip-bar small { font-variant-numeric: tabular-nums; }
+.wk-bar-ok { flex: none; display: grid; place-items: center; width: 26px; height: 26px; margin-left: 6px; border-radius: 50%; background: #2fa66a; color: #fff; box-shadow: 0 0 0 0 rgba(47,166,106,.5); transform: scale(0); transition: transform .2s ease; }
+.wk-bar-ok svg { width: 13px; height: 13px; }
+.wk-chip-bar.is-ready .wk-bar-ok { transform: scale(1); transition: transform .45s cubic-bezier(.3,1.7,.5,1); animation: wkOkRing .9s ease-out .1s; }
+@keyframes wkOkRing { from { box-shadow: 0 0 0 0 rgba(47,166,106,.55); } to { box-shadow: 0 0 0 12px rgba(47,166,106,0); } }
 /* founders: the assistant chip types out a few questions */
 .wk-chip-ask { width: 356px; }
 .wk-chip-ask strong { min-height: 1.3em; white-space: nowrap; }
@@ -236,4 +240,4 @@ body[data-welcome] .lead { color: var(--ice, #C5D6F2); }
   .wk-ring-n { left: 18px; width: 80px; }
   .wk-help-i { padding: 18px 18px 18px 20px; }
 }
-@media (prefers-reduced-motion: reduce) { .wk-dot { animation: none; } .wk-step, .wk-prompt { transition: none; } .wk-chip, .wk-skip { animation: none; opacity: 1; transform: none; } .wk-chip-ok { animation: none; transform: none; } .wk-bar b { animation: none; width: 67%; } .wk-caret { animation: none; } .wk-ring .wk-ring-fill { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .wk-dot { animation: none; } .wk-step, .wk-prompt { transition: none; } .wk-chip, .wk-skip { animation: none; opacity: 1; transform: none; } .wk-chip-ok { animation: none; transform: none; } .wk-bar b { animation: none; width: 67%; } .wk-caret { animation: none; } .wk-bar-ok { transition: none; } .wk-ring .wk-ring-fill { transition: none; } }
