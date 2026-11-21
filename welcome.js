@@ -88,6 +88,48 @@
   });
   paint();
 
+  // ---- advisors: the readiness chip in the hero fills up, turns green, then starts over
+  var barChip = $('.wk-chip-bar');
+  if (barChip && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+    var bt = barChip.querySelector('strong'), bs = barChip.querySelector('small'), bb = barChip.querySelector('.wk-bar b');
+    var TOTAL = 78, FROM = 12, label = bt.textContent;
+    var show = function (n) { bb.style.width = (n / TOTAL * 100) + '%'; bs.textContent = n + ' of ' + TOTAL + ' in place'; };
+    var run = function () {
+      barChip.classList.remove('is-ready'); bt.textContent = label; show(FROM);
+      var t0 = null, dur = 4200;
+      var tick = function (t) {
+        if (t0 === null) t0 = t;
+        var k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 2.2);
+        show(Math.round(FROM + (TOTAL - FROM) * e));
+        if (k < 1) return requestAnimationFrame(tick);
+        barChip.classList.add('is-ready'); bt.textContent = 'Ready for diligence';
+        setTimeout(run, 2800);
+      };
+      setTimeout(function () { requestAnimationFrame(tick); }, 500);
+    };
+    setTimeout(function () { barChip.classList.add('is-live'); run(); }, 2600);
+  }
+
+  // ---- founders: the assistant chip types out a few questions, with a blinking cursor
+  var typed = $('.wk-typed');
+  if (typed && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+    var asks = [typed.textContent, 'Can you import my cap table?', 'What will investors ask for?', 'How do I record founder shares?', 'Can I try it with sample data?'];
+    var qi = 0;
+    var erase = function (cb) {
+      var t = typed.textContent;
+      if (!t) return cb();
+      typed.textContent = t.slice(0, -1);
+      setTimeout(function () { erase(cb); }, 22);
+    };
+    var type = function (str, i) {
+      typed.textContent = str.slice(0, i);
+      if (i < str.length) return setTimeout(function () { type(str, i + 1); }, 45 + Math.random() * 45);
+      setTimeout(function () { erase(function () { qi = (qi + 1) % asks.length; setTimeout(function () { type(asks[qi], 1); }, 350); }); }, 2400);
+    };
+    typed.textContent = '';
+    setTimeout(function () { type(asks[0], 1); }, 2400);
+  }
+
   // ---- advisors: copy the invite email
   var copyBtn = $('[data-copy-email]');
   if (copyBtn) copyBtn.addEventListener('click', function () {

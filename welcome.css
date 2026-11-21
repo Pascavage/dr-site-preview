@@ -59,6 +59,15 @@ body[data-welcome] .lead { color: var(--ice, #C5D6F2); }
 .wk-chip-bar { padding: 14px 18px; }
 .wk-bar { display: block; width: 180px; height: 6px; margin-top: 10px; border-radius: 5px; background: rgba(197,214,242,.18); overflow: hidden; }
 .wk-bar b { display: block; height: 100%; width: 0; border-radius: inherit; background: var(--coral); animation: wkBar 1.4s cubic-bezier(.3,.8,.3,1) calc(var(--d, .5s) + .5s) forwards; }
+.wk-chip-bar.is-live .wk-bar b { animation: none; transition: background .4s ease; }
+.wk-chip-bar.is-ready .wk-bar b { background: #2fa66a; }
+.wk-chip-bar.is-ready small { color: #7fd6a6; opacity: 1; }
+.wk-chip-bar small { font-variant-numeric: tabular-nums; }
+/* founders: the assistant chip types out a few questions */
+.wk-chip-ask { width: 356px; }
+.wk-chip-ask strong { min-height: 1.3em; white-space: nowrap; }
+.wk-caret { display: inline-block; width: 2px; height: 1em; margin-left: 2px; vertical-align: -.12em; background: var(--coral); animation: wkBlink 1s steps(1) infinite; }
+@keyframes wkBlink { 50% { opacity: 0; } }
 .wk-chip-tl { top: 0; left: -44px; --ft: 6.5s; --fx: 4px; --f: -14px; --fr: -1.5deg; }
 .wk-chip-tr { top: 14px; right: -34px; --ft: 5.5s; --fx: -5px; --f: 12px; --fr: 1.5deg; }
 .wk-chip-bl { bottom: 30px; left: -64px; --ft: 7s; --fx: 6px; --f: -12px; --fr: 1deg; }
@@ -203,6 +212,7 @@ body[data-welcome] .lead { color: var(--ice, #C5D6F2); }
   .wk-email-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 760px) {
+  .wk-chip-ask { width: auto; }
   .wk-step { grid-template-columns: 44px minmax(0, 1fr); gap: 14px 16px; padding: 18px; }
   .wk-num { width: 44px; height: 44px; font-size: 19px; }
   .wk-mins { grid-column: 2; }
@@ -226,4 +236,4 @@ body[data-welcome] .lead { color: var(--ice, #C5D6F2); }
   .wk-ring-n { left: 18px; width: 80px; }
   .wk-help-i { padding: 18px 18px 18px 20px; }
 }
-@media (prefers-reduced-motion: reduce) { .wk-dot { animation: none; } .wk-step, .wk-prompt { transition: none; } .wk-chip, .wk-skip { animation: none; opacity: 1; transform: none; } .wk-chip-ok { animation: none; transform: none; } .wk-bar b { animation: none; width: 67%; } .wk-ring .wk-ring-fill { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .wk-dot { animation: none; } .wk-step, .wk-prompt { transition: none; } .wk-chip, .wk-skip { animation: none; opacity: 1; transform: none; } .wk-chip-ok { animation: none; transform: none; } .wk-bar b { animation: none; width: 67%; } .wk-caret { animation: none; } .wk-ring .wk-ring-fill { transition: none; } }
