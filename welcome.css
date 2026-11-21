@@ -156,10 +156,33 @@ body[data-welcome] .lead { color: var(--ice, #C5D6F2); }
 .wk-copy:hover, .wk-copy.is-done { background: var(--ink); color: #fff; }
 .wk-email-body { padding: 22px 24px 26px; white-space: pre-line; font-size: 15.5px; line-height: 1.6; color: var(--ink-2, #2b3954); }
 
+/* advisors: the email on the left, what happens next on the right */
+.wk-email-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(28px, 4vw, 56px); align-items: start; margin-top: 28px; }
+.wk-email-grid .wk-email { margin-top: 0; max-width: none; }
+.wk-after { padding: 28px 30px 26px; border-radius: 20px; background: #172a52; border: 1px solid rgba(197,214,242,.2); box-shadow: 0 30px 60px -34px rgba(0,0,0,.7); }
+.wk-after h3 { margin: 8px 0 0; font-family: var(--serif); font-weight: 500; font-size: 26px; letter-spacing: -.015em; color: #fff; }
+.wk-flow { list-style: none; margin: 22px 0 0; padding: 0; }
+.wk-flow li { position: relative; display: flex; gap: 16px; padding-bottom: 22px; }
+.wk-flow li:last-child { padding-bottom: 0; }
+.wk-flow li:not(:last-child)::before { content: ""; position: absolute; left: 21px; top: 48px; bottom: 6px; border-left: 2px dashed rgba(255,107,92,.4); }
+.wk-flow-ic { flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; background: rgba(255,107,92,.14); color: var(--coral); }
+.wk-flow-ic svg { width: 22px; height: 22px; }
+.wk-flow strong { display: block; padding-top: 2px; font-size: 16.5px; font-weight: 600; color: #fff; }
+.wk-flow p { margin: 4px 0 0; font-size: 14.5px; line-height: 1.5; color: #c9d6ee; }
+.wk-tip { margin-top: 24px; padding: 14px 16px; border-radius: 12px; background: rgba(255,107,92,.1); border: 1px solid rgba(255,107,92,.28); font-size: 14.5px; line-height: 1.5; color: #e6ecf7; }
+.wk-tip strong { color: var(--coral); font-weight: 600; }
+
 /* help */
 .wk-help { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 .wk-help-i { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 22px 22px 24px; border-radius: 16px; border: 1px solid rgba(197,214,242,.2); background: #172a52; transition: border-color .18s ease, background .18s ease; }
 .wk-help-i:hover { border-color: rgba(255,107,92,.55); background: #1b3060; }
+.wk-help-i { position: relative; cursor: pointer; }
+.wk-help-i a::after { content: ""; position: absolute; inset: 0; border-radius: 16px; }
+.wk-help-i a:focus-visible { outline: none; }
+.wk-help-i:has(a:focus-visible) { outline: 2px solid var(--coral); outline-offset: 3px; }
+.wk-help-ic { transition: background .18s ease, color .18s ease, transform .18s ease; }
+.wk-help-i:hover .wk-help-ic { background: var(--coral); color: #fff; transform: translateY(-2px); }
+.wk-help-i:hover a { color: #fff; text-decoration-color: var(--coral); }
 .wk-help-ic { flex: none; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 14px; background: rgba(255,107,92,.14); color: var(--coral); }
 .wk-help-ic svg { width: 24px; height: 24px; }
 .wk-help-k { display: block; font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #9fb2d6; }
@@ -175,6 +198,7 @@ body[data-welcome] .lead { color: var(--ice, #C5D6F2); }
   .wk-chip-tl, .wk-chip-bl { left: -12px; }
   .wk-chip-tr, .wk-chip-br { right: -12px; }
   .wk-two { grid-template-columns: 1fr; }
+  .wk-email-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 760px) {
   .wk-step { grid-template-columns: 44px minmax(0, 1fr); gap: 14px 16px; padding: 18px; }
