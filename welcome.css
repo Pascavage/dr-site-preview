@@ -83,14 +83,14 @@ body[data-welcome] .lead { color: var(--ice, #C5D6F2); }
 
 /* first steps: one row per step, the whole row reads left to right */
 .wk-steps { list-style: none; margin: 36px 0 0; padding: 0; display: grid; gap: 12px; counter-reset: none; }
-.wk-step { display: grid; grid-template-columns: 52px minmax(0, 1fr) auto auto; align-items: center; gap: 22px; padding: 20px 22px 20px 20px; background: #172a52; border: 1px solid rgba(197,214,242,.2); border-radius: 16px; transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease; }
+.wk-step { display: grid; grid-template-columns: 52px minmax(0, 1fr) auto 200px; align-items: center; gap: 22px; padding: 20px 22px 20px 20px; background: #172a52; border: 1px solid rgba(197,214,242,.2); border-radius: 16px; transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease; }
 .wk-step:hover { border-color: rgba(255,107,92,.55); background: #1b3060; box-shadow: 0 14px 30px -18px rgba(0,0,0,.5); transform: translateY(-1px); }
 .wk-num { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 14px; background: rgba(255,107,92,.14); color: var(--coral); font: 500 22px/1 var(--serif); }
 .wk-step.is-next .wk-num { background: var(--coral); color: #fff; }
 .wk-step h3 { margin: 0; font-family: var(--serif); font-weight: 500; font-size: 21px; letter-spacing: -.015em; color: #fff; }
 .wk-step p { margin: 4px 0 0; font-size: 15px; line-height: 1.5; color: #c9d6ee; }
 .wk-mins { font-family: var(--mono); font-size: 11.5px; letter-spacing: .04em; color: #9fb2d6; white-space: nowrap; }
-.wk-go { display: inline-flex; align-items: center; gap: 8px; height: 42px; padding: 0 16px; border-radius: 10px; border: 1px solid rgba(255,255,255,.32); color: #fff; font-size: 14.5px; font-weight: 500; white-space: nowrap; transition: background .18s ease, color .18s ease; }
+.wk-go { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 42px; padding: 0 16px; border-radius: 10px; border: 1px solid rgba(255,255,255,.32); color: #fff; font-size: 14.5px; font-weight: 500; white-space: nowrap; transition: background .18s ease, color .18s ease; }
 .wk-go svg { width: 14px; height: 14px; transition: transform .18s ease; }
 .wk-go:hover { background: #fff; border-color: #fff; color: var(--ink); }
 .wk-go:hover svg { transform: translateX(3px); }
