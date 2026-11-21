@@ -27,9 +27,10 @@
   if (company) {
     set('[data-wl="cardname"]', company);
     set('[data-wl="initial"]', company.charAt(0).toUpperCase());
-    set('[data-wl="eyebrow"]', page === 'founders' ? 'Welcome to Diligence Ready' : company + ' · Trusted advisor');
+    set('[data-wl="eyebrow"]', company + (page === 'founders' ? ' · Founders plan' : ' · Trusted advisor'));
     set('[data-email-firm]', company);
   }
+  if (name) set('[data-wl="avatar"]', name.charAt(0).toUpperCase());
   if (name) document.title = 'Welcome, ' + name + ' | Diligence Ready';
 
   // ---- buttons into the app: with a company ID they open the exact screen
