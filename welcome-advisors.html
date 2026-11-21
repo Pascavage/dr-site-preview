@@ -46,7 +46,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@300;400;450;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css?v=1112" />
-<link rel="stylesheet" href="welcome.css?v=1122" />
+<link rel="stylesheet" href="welcome.css?v=1123" />
 </head>
 <body data-welcome="advisors">
 
@@ -141,14 +141,25 @@
 
 <section class="sec-pad wk-sec" id="first-steps" data-screen-label="First steps">
   <div class="wrap">
-    <div class="wk-head reveal">
-      <span class="eyebrow on-dark">Start here</span>
-      <h2 class="section-title" style="margin-top:18px;">Your first client in <span class="accent-line">10 minutes.</span></h2>
-      <p class="lead">Set them up yourself and hand over the keys, or invite them in and work through it together.</p>
+    <div class="wk-steps-top">
+      <div class="wk-head reveal">
+        <span class="eyebrow on-dark">Start here</span>
+        <h2 class="section-title" style="margin-top:18px;">Your first client in <span class="accent-line">10 minutes.</span></h2>
+        <p class="lead">Set them up yourself and hand over the keys, or invite them in and work through it together.</p>
+      </div>
+      <div class="wk-progress reveal" data-progress>
+        <svg class="wk-ring" viewBox="0 0 88 88" aria-hidden="true"><circle cx="44" cy="44" r="38"/><circle class="wk-ring-fill" cx="44" cy="44" r="38" pathLength="100"/></svg>
+        <div class="wk-ring-n" aria-hidden="true"><b data-done>0</b><span>of 5</span></div>
+        <div class="wk-progress-txt">
+          <strong data-progress-title>Nothing done yet</strong>
+          <span data-progress-sub>About 10 minutes in all</span>
+          <small>Open a step and it’s ticked off here. We’ll remember on this device.</small>
+        </div>
+      </div>
     </div>
     <ol class="wk-steps">
-      <li class="wk-step reveal">
-        <span class="wk-num" aria-hidden="true">1</span>
+      <li class="wk-step is-next reveal" data-step="advisors-1" data-mins="2">
+        <span class="wk-num" aria-hidden="true"><b>1</b><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg></span>
         <div class="wk-step-txt">
           <h3>Pick their diligence template</h3>
           <p>Seed through Series A. Every item is created and grouped into Legal, Financial, Technical and Business.</p>
@@ -156,8 +167,8 @@
         <span class="wk-mins">About 2 min</span>
         <a class="wk-go" href="https://app.diligenceready.com/" data-app-path="diligence" data-cta="welcome_step" data-loc="advisors:1">Pick a template <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.33 8h9.34M8 3.33 12.67 8 8 12.67"/></svg></a>
       </li>
-      <li class="wk-step reveal">
-        <span class="wk-num" aria-hidden="true">2</span>
+      <li class="wk-step reveal" data-step="advisors-2" data-mins="2">
+        <span class="wk-num" aria-hidden="true"><b>2</b><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg></span>
         <div class="wk-step-txt">
           <h3>Connect their document storage</h3>
           <p>Link the client’s Google Drive or OneDrive so documents can be matched without moving them.</p>
@@ -165,8 +176,8 @@
         <span class="wk-mins">About 2 min</span>
         <a class="wk-go" href="https://app.diligenceready.com/" data-app-path="settings/integrations" data-cta="welcome_step" data-loc="advisors:2">Connect storage <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.33 8h9.34M8 3.33 12.67 8 8 12.67"/></svg></a>
       </li>
-      <li class="wk-step reveal">
-        <span class="wk-num" aria-hidden="true">3</span>
+      <li class="wk-step reveal" data-step="advisors-3" data-mins="3">
+        <span class="wk-num" aria-hidden="true"><b>3</b><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg></span>
         <div class="wk-step-txt">
           <h3>Add their stakeholders</h3>
           <p>Founders, employees, investors and advisors: everyone who holds equity.</p>
@@ -174,8 +185,8 @@
         <span class="wk-mins">About 3 min</span>
         <a class="wk-go" href="https://app.diligenceready.com/" data-app-path="stakeholders" data-cta="welcome_step" data-loc="advisors:3">Add stakeholders <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.33 8h9.34M8 3.33 12.67 8 8 12.67"/></svg></a>
       </li>
-      <li class="wk-step reveal">
-        <span class="wk-num" aria-hidden="true">4</span>
+      <li class="wk-step reveal" data-step="advisors-4" data-mins="1">
+        <span class="wk-num" aria-hidden="true"><b>4</b><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg></span>
         <div class="wk-step-txt">
           <h3>Invite the founder or CFO</h3>
           <p>Bring them in so they can add documents and see what’s still open.</p>
@@ -183,8 +194,8 @@
         <span class="wk-mins">About 1 min</span>
         <a class="wk-go" href="https://app.diligenceready.com/" data-app-path="settings/team" data-cta="welcome_step" data-loc="advisors:4">Invite your client <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.33 8h9.34M8 3.33 12.67 8 8 12.67"/></svg></a>
       </li>
-      <li class="wk-step reveal">
-        <span class="wk-num" aria-hidden="true">5</span>
+      <li class="wk-step reveal" data-step="advisors-5" data-mins="2">
+        <span class="wk-num" aria-hidden="true"><b>5</b><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg></span>
         <div class="wk-step-txt">
           <h3>Work through what’s missing</h3>
           <p>The checklist shows what’s matched and what’s missing in each area. Fill the gaps together.</p>
@@ -254,15 +265,15 @@ Happy to walk through it together.
 <section class="sec-pad wk-sec" data-screen-label="Help">
   <div class="wrap">
     <div class="wk-help reveal">
-      <div class="wk-help-i"><span class="wk-help-k">See it first</span><a href="./tour" data-cta="tour" data-loc="advisors">Take the 2-minute tour</a></div>
-      <div class="wk-help-i"><span class="wk-help-k">Talk to a person</span><a href="tel:+12155982221" data-cta="call" data-loc="advisors">(215) 598-2221</a></div>
-      <div class="wk-help-i"><span class="wk-help-k">Rather write?</span><a href="./#contact" data-cta="contact" data-loc="advisors">Send us a message</a></div>
+      <div class="wk-help-i"><div><span class="wk-help-k">See it first</span><a href="./tour" data-cta="tour" data-loc="advisors">Take the 2-minute tour</a></div><span class="wk-help-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3l14 7.5-6.2 1.7L10 18.5z"/><path d="M13 12.5l5 5"/></svg></span></div>
+      <div class="wk-help-i"><div><span class="wk-help-k">Talk to a person</span><a href="tel:+12155982221" data-cta="call" data-loc="advisors">(215) 598-2221</a></div><span class="wk-help-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3.5l1.5 4-2.2 1.4a11 11 0 0 0 6.8 6.8L16 14l4 1.5V19a1.5 1.5 0 0 1-1.6 1.5A16 16 0 0 1 3.5 5.6 1.5 1.5 0 0 1 5 4z"/></svg></span></div>
+      <div class="wk-help-i"><div><span class="wk-help-k">Rather write?</span><a href="./#contact" data-cta="contact" data-loc="advisors">Send us a message</a></div><span class="wk-help-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5h16v10H9l-5 4z"/></svg></span></div>
     </div>
   </div>
 </section>
 </main>
 <a class="wk-skip" href="https://app.diligenceready.com/" data-app-path="" data-cta="welcome_skip" data-loc="advisors">Skip to the app <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.33 8h9.34M8 3.33 12.67 8 8 12.67"/></svg></a>
-<script src="welcome.js?v=1122"></script>
+<script src="welcome.js?v=1123"></script>
 <div class="mcta" id="mcta"><a class="p" href="https://app.diligenceready.com/" data-app-path="">Skip to the app <span class="arr">→</span></a><a class='s' href='/#contact'>Contact</a></div>
 
 <footer data-screen-label="Footer">

@@ -56,6 +56,38 @@
     });
   });
 
+  // ---- step progress: opening a step ticks it off (remembered in this browser only)
+  var SKEY = 'dr_welcome_steps';
+  var done = {};
+  try { done = JSON.parse(localStorage.getItem(SKEY)) || {}; } catch (e) { done = {}; }
+  var steps = [].slice.call(document.querySelectorAll('.wk-step[data-step]'));
+  var prog = $('[data-progress]');
+  function paint() {
+    var n = 0, left = 0, total = 0; var next = null;
+    steps.forEach(function (li) {
+      var m = +li.getAttribute('data-mins') || 0, d = !!done[li.getAttribute('data-step')];
+      li.classList.toggle('is-done', d);
+      if (!d && !next) next = li;
+      total += m; if (d) n++; else left += m;
+    });
+    steps.forEach(function (li) { li.classList.toggle('is-next', li === next); });
+    if (!prog) return;
+    prog.style.setProperty('--p', steps.length ? n / steps.length * 100 : 0);
+    prog.classList.toggle('is-complete', n === steps.length);
+    set('[data-done]', String(n));
+    set('[data-progress-title]', n === 0 ? 'Nothing done yet' : n === steps.length ? 'All set. Nice work.' : n + ' of ' + steps.length + ' done');
+    set('[data-progress-sub]', n === steps.length ? 'You’re ready when they ask' : (n ? 'About ' + left + ' minutes left' : 'About ' + total + ' minutes in all'));
+  }
+  steps.forEach(function (li) {
+    var go = li.querySelector('.wk-go');
+    if (go) go.addEventListener('click', function () {
+      done[li.getAttribute('data-step')] = true;
+      try { localStorage.setItem(SKEY, JSON.stringify(done)); } catch (e) {}
+      paint();
+    });
+  });
+  paint();
+
   // ---- advisors: copy the invite email
   var copyBtn = $('[data-copy-email]');
   if (copyBtn) copyBtn.addEventListener('click', function () {
