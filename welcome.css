@@ -157,9 +157,10 @@ body[data-welcome] .lead { color: var(--ice, #C5D6F2); }
 .wk-email-body { padding: 22px 24px 26px; white-space: pre-line; font-size: 15.5px; line-height: 1.6; color: var(--ink-2, #2b3954); }
 
 /* advisors: the email on the left, what happens next on the right */
-.wk-email-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(28px, 4vw, 56px); align-items: start; margin-top: 28px; }
-.wk-email-grid .wk-email { margin-top: 0; max-width: none; }
-.wk-after { padding: 28px 30px 26px; border-radius: 20px; background: #172a52; border: 1px solid rgba(197,214,242,.2); box-shadow: 0 30px 60px -34px rgba(0,0,0,.7); }
+.wk-email-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(28px, 4vw, 56px); align-items: stretch; margin-top: 28px; }
+.wk-email-grid .wk-email { margin-top: 0; max-width: none; display: flex; flex-direction: column; transform: none; }
+.wk-email-grid .wk-email-body { flex: 1; }
+.wk-after { display: flex; flex-direction: column; padding: 28px 30px 26px; border-radius: 20px; background: #172a52; border: 1px solid rgba(197,214,242,.2); box-shadow: 0 30px 60px -34px rgba(0,0,0,.7); }
 .wk-after h3 { margin: 8px 0 0; font-family: var(--serif); font-weight: 500; font-size: 26px; letter-spacing: -.015em; color: #fff; }
 .wk-flow { list-style: none; margin: 22px 0 0; padding: 0; }
 .wk-flow li { position: relative; display: flex; gap: 16px; padding-bottom: 22px; }
@@ -169,7 +170,8 @@ body[data-welcome] .lead { color: var(--ice, #C5D6F2); }
 .wk-flow-ic svg { width: 22px; height: 22px; }
 .wk-flow strong { display: block; padding-top: 2px; font-size: 16.5px; font-weight: 600; color: #fff; }
 .wk-flow p { margin: 4px 0 0; font-size: 14.5px; line-height: 1.5; color: #c9d6ee; }
-.wk-tip { margin-top: 24px; padding: 14px 16px; border-radius: 12px; background: rgba(255,107,92,.1); border: 1px solid rgba(255,107,92,.28); font-size: 14.5px; line-height: 1.5; color: #e6ecf7; }
+.wk-flow { margin-bottom: 24px; }
+.wk-tip { margin-top: auto; padding: 14px 16px; border-radius: 12px; background: rgba(255,107,92,.1); border: 1px solid rgba(255,107,92,.28); font-size: 14.5px; line-height: 1.5; color: #e6ecf7; }
 .wk-tip strong { color: var(--coral); font-weight: 600; }
 
 /* help */
